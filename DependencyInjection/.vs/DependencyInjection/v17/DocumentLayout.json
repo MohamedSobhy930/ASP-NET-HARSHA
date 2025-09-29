@@ -1,0 +1,294 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A508D6D8-DEDF-4A91-9820-FAD9790DEDBA}|DependencyInjection\\DependencyInjection.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\dependencyinjection\\dependencyinjection\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A508D6D8-DEDF-4A91-9820-FAD9790DEDBA}|DependencyInjection\\DependencyInjection.csproj|solutionrelative:dependencyinjection\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A508D6D8-DEDF-4A91-9820-FAD9790DEDBA}|DependencyInjection\\DependencyInjection.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\dependencyinjection\\dependencyinjection\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A508D6D8-DEDF-4A91-9820-FAD9790DEDBA}|DependencyInjection\\DependencyInjection.csproj|solutionrelative:dependencyinjection\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A508D6D8-DEDF-4A91-9820-FAD9790DEDBA}|DependencyInjection\\DependencyInjection.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\dependencyinjection\\dependencyinjection\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A508D6D8-DEDF-4A91-9820-FAD9790DEDBA}|DependencyInjection\\DependencyInjection.csproj|solutionrelative:dependencyinjection\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A508D6D8-DEDF-4A91-9820-FAD9790DEDBA}|DependencyInjection\\DependencyInjection.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\dependencyinjection\\dependencyinjection\\views\\home\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A508D6D8-DEDF-4A91-9820-FAD9790DEDBA}|DependencyInjection\\DependencyInjection.csproj|solutionrelative:dependencyinjection\\views\\home\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7F8D748-5238-4D74-B968-17661D426A37}|Services\\Services.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\dependencyinjection\\services\\citiesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7F8D748-5238-4D74-B968-17661D426A37}|Services\\Services.csproj|solutionrelative:services\\citiesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B350A8DC-1398-4A70-8832-91FDE6DEC1A3}|IServices\\IServices.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\dependencyinjection\\iservices\\icitiesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B350A8DC-1398-4A70-8832-91FDE6DEC1A3}|IServices\\IServices.csproj|solutionrelative:iservices\\icitiesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A508D6D8-DEDF-4A91-9820-FAD9790DEDBA}|DependencyInjection\\DependencyInjection.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\dependencyinjection\\dependencyinjection\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A508D6D8-DEDF-4A91-9820-FAD9790DEDBA}|DependencyInjection\\DependencyInjection.csproj|solutionrelative:dependencyinjection\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A508D6D8-DEDF-4A91-9820-FAD9790DEDBA}|DependencyInjection\\DependencyInjection.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\dependencyinjection\\dependencyinjection\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A508D6D8-DEDF-4A91-9820-FAD9790DEDBA}|DependencyInjection\\DependencyInjection.csproj|solutionrelative:dependencyinjection\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E6B5E70-D234-4091-971A-6B5F302FCBC0}|Models\\Models.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\dependencyinjection\\models\\cityweather.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E6B5E70-D234-4091-971A-6B5F302FCBC0}|Models\\Models.csproj|solutionrelative:models\\cityweather.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A508D6D8-DEDF-4A91-9820-FAD9790DEDBA}|DependencyInjection\\DependencyInjection.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\dependencyinjection\\dependencyinjection\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A508D6D8-DEDF-4A91-9820-FAD9790DEDBA}|DependencyInjection\\DependencyInjection.csproj|solutionrelative:dependencyinjection\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A508D6D8-DEDF-4A91-9820-FAD9790DEDBA}|DependencyInjection\\DependencyInjection.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\dependencyinjection\\dependencyinjection\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A508D6D8-DEDF-4A91-9820-FAD9790DEDBA}|DependencyInjection\\DependencyInjection.csproj|solutionrelative:dependencyinjection\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7F8D748-5238-4D74-B968-17661D426A37}|Services\\Services.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\dependencyinjection\\services\\services.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D7F8D748-5238-4D74-B968-17661D426A37}|Services\\Services.csproj|solutionrelative:services\\services.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A508D6D8-DEDF-4A91-9820-FAD9790DEDBA}|DependencyInjection\\DependencyInjection.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\dependencyinjection\\dependencyinjection\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A508D6D8-DEDF-4A91-9820-FAD9790DEDBA}|DependencyInjection\\DependencyInjection.csproj|solutionrelative:dependencyinjection\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A508D6D8-DEDF-4A91-9820-FAD9790DEDBA}|DependencyInjection\\DependencyInjection.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\dependencyinjection\\dependencyinjection\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A508D6D8-DEDF-4A91-9820-FAD9790DEDBA}|DependencyInjection\\DependencyInjection.csproj|solutionrelative:dependencyinjection\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 372,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "site.css",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\DependencyInjection\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "DependencyInjection\\wwwroot\\css\\site.css",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\DependencyInjection\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "DependencyInjection\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAKIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-29T01:51:38.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\DependencyInjection\\Views\\Home\\Details.cshtml",
+              "RelativeDocumentMoniker": "DependencyInjection\\Views\\Home\\Details.cshtml",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\DependencyInjection\\Views\\Home\\Details.cshtml",
+              "RelativeToolTip": "DependencyInjection\\Views\\Home\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-29T01:48:58.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\DependencyInjection\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "DependencyInjection\\Views\\_ViewImports.cshtml",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\DependencyInjection\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "DependencyInjection\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-29T01:17:24.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CityWeather.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\Models\\CityWeather.cs",
+              "RelativeDocumentMoniker": "Models\\CityWeather.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\Models\\CityWeather.cs",
+              "RelativeToolTip": "Models\\CityWeather.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T01:05:01.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ICitiesService.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\IServices\\ICitiesService.cs",
+              "RelativeDocumentMoniker": "IServices\\ICitiesService.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\IServices\\ICitiesService.cs",
+              "RelativeToolTip": "IServices\\ICitiesService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T00:59:56.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CitiesService.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\Services\\CitiesService.cs",
+              "RelativeDocumentMoniker": "Services\\CitiesService.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\Services\\CitiesService.cs",
+              "RelativeToolTip": "Services\\CitiesService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T00:59:31.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\DependencyInjection\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "DependencyInjection\\Views\\Home\\Index.cshtml",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\DependencyInjection\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "DependencyInjection\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAB0AAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-29T00:54:05.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Services",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\Services\\Services.csproj",
+              "RelativeDocumentMoniker": "Services\\Services.csproj",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\Services\\Services.csproj",
+              "RelativeToolTip": "Services\\Services.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-29T01:00:40.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\DependencyInjection\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "DependencyInjection\\Controllers\\HomeController.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\DependencyInjection\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "DependencyInjection\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwB4AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T00:50:51.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\DependencyInjection\\Program.cs",
+              "RelativeDocumentMoniker": "DependencyInjection\\Program.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\DependencyInjection\\Program.cs",
+              "RelativeToolTip": "DependencyInjection\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T00:49:22.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\DependencyInjection\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "DependencyInjection\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\DependencyInjection\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "DependencyInjection\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-29T01:17:39.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\DependencyInjection\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "DependencyInjection\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\DependencyInjection\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "DependencyInjection\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-29T01:17:41.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\DependencyInjection\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "DependencyInjection\\Models\\ErrorViewModel.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\DependencyInjection\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "DependencyInjection\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T00:50:46.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\DependencyInjection\\appsettings.json",
+              "RelativeDocumentMoniker": "DependencyInjection\\appsettings.json",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\DependencyInjection\\appsettings.json",
+              "RelativeToolTip": "DependencyInjection\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-29T00:49:20.926Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 378,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

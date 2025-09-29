@@ -1,0 +1,28 @@
+﻿@using Models
+@model CityWeather
+
+@{
+    ViewData["Title"] = $"{Model.CityName} Weather";
+}
+
+<h1>Weather</h1>
+
+<div class="details-container">
+
+    <div class="details-card">
+        <div class="weather-left">
+            <h2>@Model.CityName</h2>
+            <p class="detail-date">@Model.DateAndTime.ToString("dd MMM yyyy")</p>
+            <p>@Model.DateAndTime.ToString("hh:mm tt")</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="weather-right">
+            <span class="temperature">@Model.TemperatureFahrenheit</span>
+            <span class="unit">°F</span>
+        </div>
+    </div>
+
+    <a class="back-link" asp-action="Index">Back to Weather Home Page</a>
+</div>

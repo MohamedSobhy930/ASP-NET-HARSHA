@@ -1,0 +1,42 @@
+﻿@using Models
+@model IEnumerable<CityWeather> 
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <div class="weather-container">
+    @foreach (var weather in Model)
+    {
+        string cardColorClass;
+        if (weather.TemperatureFahrenheit < 44)
+        {
+            cardColorClass = "blue-back";
+        }
+        else if (weather.TemperatureFahrenheit < 75)
+        {
+            cardColorClass = "green-back";
+        }
+        else
+        {
+            cardColorClass = "orange-back";
+        }
+
+        <div class="weather-card @cardColorClass">
+            <div class="weather-left">
+                <h2>@weather.CityName</h2>
+                <p>@weather.DateAndTime.ToString("hh:mm tt")</p>
+                <a href="/weather/@weather.CityUniqueCode">Details</a>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="weather-right">
+                <span class="temperature">@weather.TemperatureFahrenheit</span>
+                <span class="unit">°F</span>
+            </div>
+        </div>
+    }
+    </div>
+</div>

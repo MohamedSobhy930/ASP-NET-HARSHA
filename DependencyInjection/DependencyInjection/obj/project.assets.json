@@ -1,0 +1,150 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "IServices/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/IServices.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/IServices.dll": {}
+        }
+      },
+      "Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Models.dll": {}
+        }
+      },
+      "Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "IServices": "1.0.0",
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "IServices/1.0.0": {
+      "type": "project",
+      "path": "../IServices/IServices.csproj",
+      "msbuildProject": "../IServices/IServices.csproj"
+    },
+    "Models/1.0.0": {
+      "type": "project",
+      "path": "../Models/Models.csproj",
+      "msbuildProject": "../Models/Models.csproj"
+    },
+    "Services/1.0.0": {
+      "type": "project",
+      "path": "../Services/Services.csproj",
+      "msbuildProject": "../Services/Services.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "IServices >= 1.0.0",
+      "Models >= 1.0.0",
+      "Services >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\KF9\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\DependencyInjection\\DependencyInjection.csproj",
+      "projectName": "DependencyInjection",
+      "projectPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\DependencyInjection\\DependencyInjection.csproj",
+      "packagesPath": "C:\\Users\\KF9\\.nuget\\packages\\",
+      "outputPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\DependencyInjection\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\KF9\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\IServices\\IServices.csproj": {
+              "projectPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\IServices\\IServices.csproj"
+            },
+            "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\Models\\Models.csproj": {
+              "projectPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\Models\\Models.csproj"
+            },
+            "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\Services\\Services.csproj": {
+              "projectPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\DependencyInjection\\Services\\Services.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
