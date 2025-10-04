@@ -1,0 +1,112 @@
+﻿@using StockAppWithConfigurationAssignment.Models
+@model StockTrade
+
+@{
+    ViewBag.Title = "Stocks";
+}
+
+<div class="box trading-panel">
+    <input type="hidden" id="stockSymbol" value="@Model.StockSymbol" />
+
+    <div class="stock-details">
+        <span class="stock-name">@Model.StockName</span>
+        <span class="stock-symbol">(@Model.StockSymbol)</span>
+    </div>
+
+    <div class="stock-price">
+        $ <span id="price">@Model.Price.ToString("N2")</span>
+    </div>
+</div>
+
+@section scripts {
+    <script type="text/javascript">
+        // Get the stock symbol and token from the model
+        const stockSymbol = document.getElementById("stockSymbol").value;
+        const token = "@Model.FinnhubToken";
+        let socket = null;
+
+        function connectWebSocket() {
+            // Create a WebSocket connection
+            socket = new WebSocket(`wss://ws.finnhub.io?token=${token}`);
+
+            // Connection opened
+            socket.addEventListener('open', function (event) {
+                console.log('WebSocket connection opened.');
+                // Subscribe to the stock symbol
+                socket.send(JSON.stringify({ 'type': 'subscribe', 'symbol': stockSymbol }));
+            });
+
+            // Listen for messages
+            socket.addEventListener('message', function (event) {
+                const message = JSON.parse(event.data);
+                if (message.type === 'trade' && message.data) {
+                    // Get the last trade from the data array
+                    const lastTrade = message.data[message.data.length - 1];
+                    if (lastTrade && lastTrade.p) {
+                         // Update the price on the UI
+                        const priceElement = document.getElementById("price");
+                        priceElement.innerText = lastTrade.p.toFixed(2);
+                    }
+                }
+            });
+
+            // Handle connection close
+            socket.addEventListener('close', function (event) {
+                console.log('WebSocket connection closed.');
+            });
+
+            // Handle connection error
+            socket.addEventListener('error', function(event) {
+                console.error('WebSocket error:', event);
+            });
+        }
+
+        function disconnectWebSocket() {
+            if (socket) {
+                 // Unsubscribe before closing
+                socket.send(JSON.stringify({ 'type': 'unsubscribe', 'symbol': stockSymbol }));
+                socket.close();
+                console.log('WebSocket connection closed and unsubscribed.');
+            }
+        }
+
+        // Connect when the page loads
+        connectWebSocket();
+
+        // Disconnect when the page is closed to prevent memory leaks
+        window.addEventListener('beforeunload', function (event) {
+            disconnectWebSocket();
+        });
+    </script>
+}
+
+<style>
+    .trading-panel {
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        max-width: 500px;
+        margin: 2rem auto;
+    }
+
+    .stock-details {
+        margin-bottom: 10px;
+    }
+
+    .stock-name {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #007bff;
+    }
+
+    .stock-symbol {
+        font-size: 1.5rem;
+        color: #6c757d;
+    }
+
+    .stock-price {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #28a745;
+    }
+</style>
