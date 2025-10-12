@@ -1,0 +1,16 @@
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\ServiceContacts\bin\Debug\net8.0\ServiceContacts.deps.json
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\ServiceContacts\bin\Debug\net8.0\ServiceContacts.dll
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\ServiceContacts\bin\Debug\net8.0\ServiceContacts.pdb
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\ServiceContacts\bin\Debug\net8.0\Entities.dll
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\ServiceContacts\bin\Debug\net8.0\Entities.pdb
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\ServiceContacts\obj\Debug\net8.0\ServiceContacts.csproj.AssemblyReference.cache
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\ServiceContacts\obj\Debug\net8.0\ServiceContacts.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\ServiceContacts\obj\Debug\net8.0\ServiceContacts.AssemblyInfoInputs.cache
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\ServiceContacts\obj\Debug\net8.0\ServiceContacts.AssemblyInfo.cs
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\ServiceContacts\obj\Debug\net8.0\ServiceContacts.csproj.CoreCompileInputs.cache
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\ServiceContacts\obj\Debug\net8.0\ServiceContacts.sourcelink.json
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\ServiceContacts\obj\Debug\net8.0\ServiceC.0F789737.Up2Date
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\ServiceContacts\obj\Debug\net8.0\ServiceContacts.dll
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\ServiceContacts\obj\Debug\net8.0\refint\ServiceContacts.dll
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\ServiceContacts\obj\Debug\net8.0\ServiceContacts.pdb
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\ServiceContacts\obj\Debug\net8.0\ref\ServiceContacts.dll

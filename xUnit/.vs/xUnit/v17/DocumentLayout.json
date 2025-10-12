@@ -1,0 +1,314 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F119905F-FCD2-4858-BC9F-D47000D14B2B}|Services\\Services.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\xunit\\services\\personservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F119905F-FCD2-4858-BC9F-D47000D14B2B}|Services\\Services.csproj|solutionrelative:services\\personservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{316E2A7E-E040-4B27-B16D-2E0178959AFE}|ServiceContacts\\ServiceContacts.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\xunit\\servicecontacts\\ipersonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{316E2A7E-E040-4B27-B16D-2E0178959AFE}|ServiceContacts\\ServiceContacts.csproj|solutionrelative:servicecontacts\\ipersonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{316E2A7E-E040-4B27-B16D-2E0178959AFE}|ServiceContacts\\ServiceContacts.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\xunit\\servicecontacts\\dtos\\persondto\\personresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{316E2A7E-E040-4B27-B16D-2E0178959AFE}|ServiceContacts\\ServiceContacts.csproj|solutionrelative:servicecontacts\\dtos\\persondto\\personresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{947513C1-F4EB-4AA5-A875-E84EE8A5F173}|xUnitTests\\xUnitTests.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\xunit\\xunittests\\personservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{947513C1-F4EB-4AA5-A875-E84EE8A5F173}|xUnitTests\\xUnitTests.csproj|solutionrelative:xunittests\\personservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{316E2A7E-E040-4B27-B16D-2E0178959AFE}|ServiceContacts\\ServiceContacts.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\xunit\\servicecontacts\\dtos\\persondto\\personupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{316E2A7E-E040-4B27-B16D-2E0178959AFE}|ServiceContacts\\ServiceContacts.csproj|solutionrelative:servicecontacts\\dtos\\persondto\\personupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{316E2A7E-E040-4B27-B16D-2E0178959AFE}|ServiceContacts\\ServiceContacts.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\xunit\\servicecontacts\\dtos\\persondto\\personaddrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{316E2A7E-E040-4B27-B16D-2E0178959AFE}|ServiceContacts\\ServiceContacts.csproj|solutionrelative:servicecontacts\\dtos\\persondto\\personaddrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{316E2A7E-E040-4B27-B16D-2E0178959AFE}|ServiceContacts\\ServiceContacts.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\xunit\\servicecontacts\\enums\\sortdirectionoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{316E2A7E-E040-4B27-B16D-2E0178959AFE}|ServiceContacts\\ServiceContacts.csproj|solutionrelative:servicecontacts\\enums\\sortdirectionoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F119905F-FCD2-4858-BC9F-D47000D14B2B}|Services\\Services.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\xunit\\services\\countriesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F119905F-FCD2-4858-BC9F-D47000D14B2B}|Services\\Services.csproj|solutionrelative:services\\countriesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{947513C1-F4EB-4AA5-A875-E84EE8A5F173}|xUnitTests\\xUnitTests.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\xunit\\xunittests\\countriesservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{947513C1-F4EB-4AA5-A875-E84EE8A5F173}|xUnitTests\\xUnitTests.csproj|solutionrelative:xunittests\\countriesservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{316E2A7E-E040-4B27-B16D-2E0178959AFE}|ServiceContacts\\ServiceContacts.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\xunit\\servicecontacts\\icountriesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{316E2A7E-E040-4B27-B16D-2E0178959AFE}|ServiceContacts\\ServiceContacts.csproj|solutionrelative:servicecontacts\\icountriesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F119905F-FCD2-4858-BC9F-D47000D14B2B}|Services\\Services.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\xunit\\services\\helpers\\validationhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F119905F-FCD2-4858-BC9F-D47000D14B2B}|Services\\Services.csproj|solutionrelative:services\\helpers\\validationhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADFF3C16-DB1E-4965-BE77-06638F167F0F}|Entities\\Entities.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\xunit\\entities\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADFF3C16-DB1E-4965-BE77-06638F167F0F}|Entities\\Entities.csproj|solutionrelative:entities\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADFF3C16-DB1E-4965-BE77-06638F167F0F}|Entities\\Entities.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\xunit\\entities\\country.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADFF3C16-DB1E-4965-BE77-06638F167F0F}|Entities\\Entities.csproj|solutionrelative:entities\\country.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{947513C1-F4EB-4AA5-A875-E84EE8A5F173}|xUnitTests\\xUnitTests.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\xunit\\xunittests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{947513C1-F4EB-4AA5-A875-E84EE8A5F173}|xUnitTests\\xUnitTests.csproj|solutionrelative:xunittests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{947513C1-F4EB-4AA5-A875-E84EE8A5F173}|xUnitTests\\xUnitTests.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\xunit\\xunittests\\mathoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{947513C1-F4EB-4AA5-A875-E84EE8A5F173}|xUnitTests\\xUnitTests.csproj|solutionrelative:xunittests\\mathoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 372,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PersonUpdateRequest.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\ServiceContacts\\DTOs\\PersonDto\\PersonUpdateRequest.cs",
+              "RelativeDocumentMoniker": "ServiceContacts\\DTOs\\PersonDto\\PersonUpdateRequest.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\ServiceContacts\\DTOs\\PersonDto\\PersonUpdateRequest.cs",
+              "RelativeToolTip": "ServiceContacts\\DTOs\\PersonDto\\PersonUpdateRequest.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAmwBoAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T18:19:51.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PersonService.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Services\\PersonService.cs",
+              "RelativeDocumentMoniker": "Services\\PersonService.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Services\\PersonService.cs",
+              "RelativeToolTip": "Services\\PersonService.cs",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAmwJgAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T18:05:21.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IPersonService.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\ServiceContacts\\IPersonService.cs",
+              "RelativeDocumentMoniker": "ServiceContacts\\IPersonService.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\ServiceContacts\\IPersonService.cs",
+              "RelativeToolTip": "ServiceContacts\\IPersonService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T18:03:11.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PersonAddRequest.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\ServiceContacts\\DTOs\\PersonDto\\PersonAddRequest.cs",
+              "RelativeDocumentMoniker": "ServiceContacts\\DTOs\\PersonDto\\PersonAddRequest.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\ServiceContacts\\DTOs\\PersonDto\\PersonAddRequest.cs",
+              "RelativeToolTip": "ServiceContacts\\DTOs\\PersonDto\\PersonAddRequest.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAABMAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T15:19:02.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PersonResponse.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\ServiceContacts\\DTOs\\PersonDto\\PersonResponse.cs",
+              "RelativeDocumentMoniker": "ServiceContacts\\DTOs\\PersonDto\\PersonResponse.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\ServiceContacts\\DTOs\\PersonDto\\PersonResponse.cs",
+              "RelativeToolTip": "ServiceContacts\\DTOs\\PersonDto\\PersonResponse.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T15:19:18.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PersonServiceTest.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\xUnitTests\\PersonServiceTest.cs",
+              "RelativeDocumentMoniker": "xUnitTests\\PersonServiceTest.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\xUnitTests\\PersonServiceTest.cs",
+              "RelativeToolTip": "xUnitTests\\PersonServiceTest.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAA4wAgBAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T18:08:07.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SortDirectionOptions.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\ServiceContacts\\Enums\\SortDirectionOptions.cs",
+              "RelativeDocumentMoniker": "ServiceContacts\\Enums\\SortDirectionOptions.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\ServiceContacts\\Enums\\SortDirectionOptions.cs",
+              "RelativeToolTip": "ServiceContacts\\Enums\\SortDirectionOptions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T18:15:03.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CountriesServiceTest.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\xUnitTests\\CountriesServiceTest.cs",
+              "RelativeDocumentMoniker": "xUnitTests\\CountriesServiceTest.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\xUnitTests\\CountriesServiceTest.cs",
+              "RelativeToolTip": "xUnitTests\\CountriesServiceTest.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAEgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T17:31:47.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CountriesService.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Services\\CountriesService.cs",
+              "RelativeDocumentMoniker": "Services\\CountriesService.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Services\\CountriesService.cs",
+              "RelativeToolTip": "Services\\CountriesService.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAqwCEAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T17:28:03.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ICountriesService.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\ServiceContacts\\ICountriesService.cs",
+              "RelativeDocumentMoniker": "ServiceContacts\\ICountriesService.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\ServiceContacts\\ICountriesService.cs",
+              "RelativeToolTip": "ServiceContacts\\ICountriesService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T02:13:40.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ValidationHelper.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Services\\Helpers\\ValidationHelper.cs",
+              "RelativeDocumentMoniker": "Services\\Helpers\\ValidationHelper.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Services\\Helpers\\ValidationHelper.cs",
+              "RelativeToolTip": "Services\\Helpers\\ValidationHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T16:28:40.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Person.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Entities\\Person.cs",
+              "RelativeDocumentMoniker": "Entities\\Person.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Entities\\Person.cs",
+              "RelativeToolTip": "Entities\\Person.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T15:12:08.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Country.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Entities\\Country.cs",
+              "RelativeDocumentMoniker": "Entities\\Country.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Entities\\Country.cs",
+              "RelativeToolTip": "Entities\\Country.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T02:12:37.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MathOperations.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\xUnitTests\\MathOperations.cs",
+              "RelativeDocumentMoniker": "xUnitTests\\MathOperations.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\xUnitTests\\MathOperations.cs",
+              "RelativeToolTip": "xUnitTests\\MathOperations.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T02:00:15.418Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\xUnitTests\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "xUnitTests\\UnitTest1.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\xUnitTests\\UnitTest1.cs",
+              "RelativeToolTip": "xUnitTests\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T01:59:23.454Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 378,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
