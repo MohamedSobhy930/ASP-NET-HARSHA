@@ -20,7 +20,7 @@ namespace xUnitTests
         public PersonServiceTest() 
         {
             _personService = new PersonService();
-            _countryService = new CountriesService();
+            _countryService = new CountriesService(false);
         }
         #region AddPerson
         [Fact]

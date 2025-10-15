@@ -20,7 +20,7 @@ namespace ServiceContacts.DTOs.PersonDto
         public GenderOptions? Gender { get; set; }
         public Guid? CountryId { get; set; }
         public string? Address { get; set; }
-        public bool? ReceiveNewsletter { get; set; }
+        public bool ReceiveNewsletter { get; set; }
 
         public Person ToPerson()
         {

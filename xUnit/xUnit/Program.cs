@@ -1,3 +1,6 @@
+using ServiceContacts;
+using Services;
+
 namespace xUnit
 {
     public class Program
@@ -8,6 +11,8 @@ namespace xUnit
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddSingleton<ICountriesService,CountriesService>();
+            builder.Services.AddSingleton<IPersonService,PersonService>();
 
             var app = builder.Build();
 

@@ -18,10 +18,55 @@ namespace Services
         private readonly List<Person> _persons;
         private readonly ICountriesService _countriesService;
         
-        public PersonService() 
+        public PersonService(bool initialize = true) 
         {
             _persons = new List<Person>();
             _countriesService = new CountriesService();
+            if (initialize)
+            {
+                var countries = _countriesService.GetAllCountries(); 
+
+                Guid? usaId = countries.FirstOrDefault(c => c.Name == "USA")?.Id;
+                Guid? egyptId = countries.FirstOrDefault(c => c.Name == "Egypt")?.Id;
+                Guid? ukId = countries.FirstOrDefault(c => c.Name == "United Kingdom")?.Id;
+
+                _persons.AddRange(new List<Person>()
+                {
+                    new Person()
+                    {
+                        PersonId = Guid.NewGuid(),
+                        Name = "John Smith",
+                        Email = "john.smith@example.com",
+                        DateOfBirth = new DateTime(1985, 4, 12),
+                        Gender = "Male",
+                        CountryId = usaId, 
+                        Address = "123 Main St, New York, NY",
+                        ReceiveNewsletter = true
+                    },
+                    new Person()
+                    {
+                        PersonId = Guid.NewGuid(),
+                        Name = "Fatima Al-Sayed",
+                        Email = "fatima.alsayed@example.com",
+                        DateOfBirth = new DateTime(1992, 8, 20),
+                        Gender = "Female",
+                        CountryId = egyptId, 
+                        Address = "456 Nile Corniche, Cairo",
+                        ReceiveNewsletter = false
+                    },
+                    new Person()
+                    {
+                        PersonId = Guid.NewGuid(),
+                        Name = "Jane Doe",
+                        Email = "jane.doe@example.com",
+                        DateOfBirth = new DateTime(1990, 1, 30),
+                        Gender = "Female",
+                        CountryId = ukId, 
+                        Address = "10 Downing St, London",
+                        ReceiveNewsletter = true
+                    }
+                });
+            }
         }
 
         public PersonResponse AddPerson(PersonAddRequest request)
@@ -56,7 +101,9 @@ namespace Services
            var personResponses = new List<PersonResponse>();
             foreach (var person in _persons)
             {
-                personResponses.Add(person.ToPersonResponse());
+                PersonResponse personResponse = person.ToPersonResponse();
+                personResponse.Country = _countriesService.GetCountryById(person.CountryId)?.Name;
+                personResponses.Add(personResponse);
             }
             return personResponses;
         }
