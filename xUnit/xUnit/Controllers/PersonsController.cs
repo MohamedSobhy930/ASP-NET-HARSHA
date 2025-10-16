@@ -28,14 +28,14 @@ namespace CRUDs.Controllers
             };
             var filteredPersons = _personService.GetFilteredPersons(searchBy,searchPhrase);
 
-            var persons = _personService.GetSortedPersons(filteredPersons, sortBy, sortDirection);
+            var sortedPersons = _personService.GetSortedPersons(filteredPersons, sortBy, sortDirection);
 
             ViewBag.CurrentSearchBy = searchBy;
             ViewBag.CurrentSearchPhrase = searchPhrase;
 
             ViewBag.CurrentSortBy = sortBy;
             ViewBag.CurrentSortDirection = sortDirection;
-            return View(persons);
+            return View(sortedPersons);
         }
         [HttpGet]
         public IActionResult Create()
@@ -47,7 +47,49 @@ namespace CRUDs.Controllers
         [HttpPost]
         public IActionResult Create(PersonAddRequest personAddRequest)
         {
-            _personService.AddPerson(personAddRequest);
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            PersonResponse person = _personService.AddPerson(personAddRequest);
+            return RedirectToAction("Index", person);
+        }
+        [HttpGet]
+        public IActionResult Update(Guid? id)
+        {
+            var person = _personService.GetPersonById(id);
+            if (person == null)
+                return RedirectToAction("Index");
+            PersonUpdateRequest personUpdateRequest = person.ToPersonUpdateRequest();
+            var countries = _countriesService.GetAllCountries();
+            ViewBag.Countries = new SelectList(countries, nameof(CountryResponse.Id), nameof(CountryResponse.Name));
+            return View(personUpdateRequest);
+        }
+        [HttpPost]
+        public IActionResult Update(PersonUpdateRequest request)
+        {
+            if(!ModelState.IsValid)
+            {
+                var countries = _countriesService.GetAllCountries();
+                ViewBag.Countries = new SelectList(countries, nameof(CountryResponse.Id), nameof(CountryResponse.Name));
+                return View(request);
+            }
+            _personService.UpdatePerson(request);
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public IActionResult Delete(Guid? id)
+        {
+            var person = _personService.GetPersonById(id);
+            if(person == null)
+                return RedirectToAction("Index");
+            return View(person);
+        }
+        [HttpPost]
+        [ActionName("Delete")]
+        public IActionResult DeleteConfirmation(Guid? Id)
+        {
+            _personService.DeletePerson(Id);
             return RedirectToAction("Index");
         }
     }

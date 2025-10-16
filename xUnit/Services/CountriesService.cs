@@ -48,12 +48,7 @@ namespace Services
         {
             if (_countries.Count == 0)
                 return new List<CountryResponse>();
-            var response = new List<CountryResponse>();
-            foreach (var country in _countries)
-            {
-                response.Add(country.ToCountryResponse());
-            }
-            return response;
+            return _countries.Select(c => c.ToCountryResponse()).ToList(); 
         }
         public CountryResponse? GetCountryById(Guid? id)
         {

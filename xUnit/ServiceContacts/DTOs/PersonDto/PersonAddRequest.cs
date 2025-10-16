@@ -26,13 +26,13 @@ namespace ServiceContacts.DTOs.PersonDto
         {
             return new Person
             {
-                Name = Name,
-                Email = Email,
-                DateOfBirth = DateOfBirth,
-                Gender = Gender.ToString(),
-                CountryId = CountryId,
-                Address = Address,
-                ReceiveNewsletter = ReceiveNewsletter,
+                Name = this.Name,
+                Email = this.Email,
+                DateOfBirth = this.DateOfBirth,
+                Gender = this.Gender.ToString(),
+                CountryId = this.CountryId,
+                Address = this.Address,
+                ReceiveNewsletter = this.ReceiveNewsletter
             };
         }
     }

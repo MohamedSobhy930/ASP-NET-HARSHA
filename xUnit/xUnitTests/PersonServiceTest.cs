@@ -19,8 +19,8 @@ namespace xUnitTests
         private ICountriesService _countryService;
         public PersonServiceTest() 
         {
-            _personService = new PersonService();
             _countryService = new CountriesService(false);
+            _personService = new PersonService(_countryService ,false);
         }
         #region AddPerson
         [Fact]
@@ -66,7 +66,6 @@ namespace xUnitTests
             var resultList = _personService.GetAllPersons();
             //assert
             result.Should().NotBeNull();
-            result.Id.Should().Be(Guid.Empty);
             resultList.Should().Contain(result);
         }
         #endregion

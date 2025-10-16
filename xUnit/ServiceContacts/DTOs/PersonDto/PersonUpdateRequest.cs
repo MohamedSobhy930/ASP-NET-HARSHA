@@ -16,8 +16,9 @@ namespace ServiceContacts.DTOs.PersonDto
         [Required(ErrorMessage = "Person Name can't be blank")]
         public string? Name { get; set; }
         [Required(ErrorMessage = "Email can't be blank")]
-        [EmailAddress]
+        [EmailAddress(ErrorMessage = "please Enter a Valid Email")]
         public string? Email { get; set; }
+        [Required]
         public Guid? CountryId { get; set; }
 
         public Person ToPersonResponse()

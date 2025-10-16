@@ -9,7 +9,7 @@
 <form asp-action="Create" asp-controller="Persons" method="post">
     @Html.AntiForgeryToken()
 
-    <div asp-validation-summary="All" class="text-danger mb-3"></div>
+    @* <div asp-validation-summary="All" class="text-danger mb-3"></div> *@
 
     <!-- Name -->
     <div class="mb-3">

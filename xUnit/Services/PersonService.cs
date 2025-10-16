@@ -18,10 +18,10 @@ namespace Services
         private readonly List<Person> _persons;
         private readonly ICountriesService _countriesService;
         
-        public PersonService(bool initialize = true) 
+        public PersonService(ICountriesService countriesService, bool initialize = true) 
         {
             _persons = new List<Person>();
-            _countriesService = new CountriesService();
+            _countriesService = countriesService;
             if (initialize)
             {
                 var countries = _countriesService.GetAllCountries(); 
@@ -77,7 +77,7 @@ namespace Services
             ValidationHelper.ModelValidation(request);
 
             Person person = request.ToPerson();
-            person.PersonId = new Guid();
+            person.PersonId = Guid.NewGuid();
             _persons.Add(person);
             PersonResponse personResponse = person.ToPersonResponse();
             personResponse.Country = (_countriesService.GetCountryById(person.CountryId))?.Name;
@@ -96,16 +96,12 @@ namespace Services
 
         public List<PersonResponse> GetAllPersons()
         {
-            if(_persons.Count == 0)
-                return new List<PersonResponse>();
-           var personResponses = new List<PersonResponse>();
-            foreach (var person in _persons)
+            return _persons.Select( person =>
             {
-                PersonResponse personResponse = person.ToPersonResponse();
-                personResponse.Country = _countriesService.GetCountryById(person.CountryId)?.Name;
-                personResponses.Add(personResponse);
-            }
-            return personResponses;
+                PersonResponse response = person.ToPersonResponse();
+                response.Country = _countriesService.GetCountryById(person.CountryId)?.Name;
+                return response;
+            }).ToList();
         }
 
         public List<PersonResponse> GetFilteredPersons(string searchBy, string? searchPhrase)
