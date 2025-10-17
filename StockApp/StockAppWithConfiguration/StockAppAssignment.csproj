@@ -7,4 +7,9 @@
     <UserSecretsId>aa2a5ca9-ee05-4b2b-afd1-d2c03b0f7d39</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\IServicesContracts\IServicesContracts.csproj" />
+    <ProjectReference Include="..\Services\Services.csproj" />
+  </ItemGroup>
+
 </Project>

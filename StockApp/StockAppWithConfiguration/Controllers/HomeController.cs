@@ -1,28 +1,21 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using StockAppWithConfiguration.Models;
-using StockAppWithConfigurationAssignment.IServices;
+using IServicesContracts;
 using StockAppWithConfigurationAssignment.Models;
 using System.Diagnostics;
 
 namespace StockAppWithConfiguration.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController(ILogger<HomeController> logger,
+        IOptions<TradingOptions> options,
+        IConfiguration configuration,
+        IFinnhubService finnhubService) : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        private readonly TradingOptions _options;
-        private readonly IConfiguration _configuration;
-        private IFinnhubService _finnhubService;
-        public HomeController(ILogger<HomeController> logger,
-            IOptions<TradingOptions> options,
-            IConfiguration configuration,
-            IFinnhubService finnhubService)
-        {
-            _logger = logger;
-            _options = options.Value;
-            _finnhubService = finnhubService;
-            _configuration = configuration;
-        }
+        private readonly ILogger<HomeController> _logger = logger;
+        private readonly TradingOptions _options = options.Value;
+        private readonly IConfiguration _configuration = configuration;
+        private IFinnhubService _finnhubService = finnhubService;
 
         public async Task<IActionResult> Index()
         {

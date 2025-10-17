@@ -1,0 +1,12 @@
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\StockApp\Entities\bin\Debug\net8.0\Entities.deps.json
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\StockApp\Entities\bin\Debug\net8.0\Entities.dll
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\StockApp\Entities\bin\Debug\net8.0\Entities.pdb
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\StockApp\Entities\obj\Debug\net8.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\StockApp\Entities\obj\Debug\net8.0\Entities.AssemblyInfoInputs.cache
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\StockApp\Entities\obj\Debug\net8.0\Entities.AssemblyInfo.cs
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\StockApp\Entities\obj\Debug\net8.0\Entities.csproj.CoreCompileInputs.cache
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\StockApp\Entities\obj\Debug\net8.0\Entities.sourcelink.json
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\StockApp\Entities\obj\Debug\net8.0\Entities.dll
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\StockApp\Entities\obj\Debug\net8.0\refint\Entities.dll
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\StockApp\Entities\obj\Debug\net8.0\Entities.pdb
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\StockApp\Entities\obj\Debug\net8.0\ref\Entities.dll

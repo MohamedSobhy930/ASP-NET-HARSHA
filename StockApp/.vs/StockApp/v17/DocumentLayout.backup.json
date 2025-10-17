@@ -1,7 +1,68 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{89106F45-889C-4208-8D7F-389A1703ED64}|Test\\Test.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\stockapp\\test\\stockservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89106F45-889C-4208-8D7F-389A1703ED64}|Test\\Test.csproj|solutionrelative:test\\stockservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B31BF405-87E3-4795-BC93-F7CE68315DA7}|Services\\Services.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\stockapp\\services\\stockservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B31BF405-87E3-4795-BC93-F7CE68315DA7}|Services\\Services.csproj|solutionrelative:services\\stockservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E23BA71-1412-4AB8-8B44-D0C37C30E63E}|IServicesContracts\\IServicesContracts.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\stockapp\\iservicescontracts\\dtos\\sellorderresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E23BA71-1412-4AB8-8B44-D0C37C30E63E}|IServicesContracts\\IServicesContracts.csproj|solutionrelative:iservicescontracts\\dtos\\sellorderresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E23BA71-1412-4AB8-8B44-D0C37C30E63E}|IServicesContracts\\IServicesContracts.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\stockapp\\iservicescontracts\\dtos\\buyorderresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E23BA71-1412-4AB8-8B44-D0C37C30E63E}|IServicesContracts\\IServicesContracts.csproj|solutionrelative:iservicescontracts\\dtos\\buyorderresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E23BA71-1412-4AB8-8B44-D0C37C30E63E}|IServicesContracts\\IServicesContracts.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\stockapp\\iservicescontracts\\dtos\\sellorderrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E23BA71-1412-4AB8-8B44-D0C37C30E63E}|IServicesContracts\\IServicesContracts.csproj|solutionrelative:iservicescontracts\\dtos\\sellorderrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E23BA71-1412-4AB8-8B44-D0C37C30E63E}|IServicesContracts\\IServicesContracts.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\stockapp\\iservicescontracts\\dtos\\buyorderrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E23BA71-1412-4AB8-8B44-D0C37C30E63E}|IServicesContracts\\IServicesContracts.csproj|solutionrelative:iservicescontracts\\dtos\\buyorderrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68D304F6-C5E3-4181-A715-169079C99630}|Entities\\Entities.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\stockapp\\entities\\buyorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68D304F6-C5E3-4181-A715-169079C99630}|Entities\\Entities.csproj|solutionrelative:entities\\buyorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B31BF405-87E3-4795-BC93-F7CE68315DA7}|Services\\Services.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\stockapp\\services\\helpers\\validationhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B31BF405-87E3-4795-BC93-F7CE68315DA7}|Services\\Services.csproj|solutionrelative:services\\helpers\\validationhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E23BA71-1412-4AB8-8B44-D0C37C30E63E}|IServicesContracts\\IServicesContracts.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\stockapp\\iservicescontracts\\istockservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E23BA71-1412-4AB8-8B44-D0C37C30E63E}|IServicesContracts\\IServicesContracts.csproj|solutionrelative:iservicescontracts\\istockservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E23BA71-1412-4AB8-8B44-D0C37C30E63E}|IServicesContracts\\IServicesContracts.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\stockapp\\iservicescontracts\\ifinnhubservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E23BA71-1412-4AB8-8B44-D0C37C30E63E}|IServicesContracts\\IServicesContracts.csproj|solutionrelative:iservicescontracts\\ifinnhubservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E23BA71-1412-4AB8-8B44-D0C37C30E63E}|IServicesContracts\\IServicesContracts.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\stockapp\\iservicescontracts\\customvalidation\\datemustbeafter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E23BA71-1412-4AB8-8B44-D0C37C30E63E}|IServicesContracts\\IServicesContracts.csproj|solutionrelative:iservicescontracts\\customvalidation\\datemustbeafter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B05A7378-3D65-4FBD-8AD6-561AD142A9C4}|StockAppWithConfiguration\\StockAppAssignment.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\stockapp\\stockappwithconfiguration\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B05A7378-3D65-4FBD-8AD6-561AD142A9C4}|StockAppWithConfiguration\\StockAppAssignment.csproj|solutionrelative:stockappwithconfiguration\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B05A7378-3D65-4FBD-8AD6-561AD142A9C4}|StockAppWithConfiguration\\StockAppAssignment.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\stockapp\\stockappwithconfiguration\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B05A7378-3D65-4FBD-8AD6-561AD142A9C4}|StockAppWithConfiguration\\StockAppAssignment.csproj|solutionrelative:stockappwithconfiguration\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B31BF405-87E3-4795-BC93-F7CE68315DA7}|Services\\Services.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\stockapp\\services\\finnhubservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B31BF405-87E3-4795-BC93-F7CE68315DA7}|Services\\Services.csproj|solutionrelative:services\\finnhubservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68D304F6-C5E3-4181-A715-169079C99630}|Entities\\Entities.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\stockapp\\entities\\sellorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68D304F6-C5E3-4181-A715-169079C99630}|Entities\\Entities.csproj|solutionrelative:entities\\sellorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +79,201 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StockServiceTests.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\Test\\StockServiceTests.cs",
+              "RelativeDocumentMoniker": "Test\\StockServiceTests.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\Test\\StockServiceTests.cs",
+              "RelativeToolTip": "Test\\StockServiceTests.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAwwKsAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T14:13:53.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StockService.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\Services\\StockService.cs",
+              "RelativeDocumentMoniker": "Services\\StockService.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\Services\\StockService.cs",
+              "RelativeToolTip": "Services\\StockService.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwCUAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T13:54:31.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BuyOrderRequest.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\IServicesContracts\\DTOs\\BuyOrderRequest.cs",
+              "RelativeDocumentMoniker": "IServicesContracts\\DTOs\\BuyOrderRequest.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\IServicesContracts\\DTOs\\BuyOrderRequest.cs",
+              "RelativeToolTip": "IServicesContracts\\DTOs\\BuyOrderRequest.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwBoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T13:40:53.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BuyOrder.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\Entities\\BuyOrder.cs",
+              "RelativeDocumentMoniker": "Entities\\BuyOrder.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\Entities\\BuyOrder.cs",
+              "RelativeToolTip": "Entities\\BuyOrder.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAA6wCYAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T13:23:06.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SellOrderRequest.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\IServicesContracts\\DTOs\\SellOrderRequest.cs",
+              "RelativeDocumentMoniker": "IServicesContracts\\DTOs\\SellOrderRequest.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\IServicesContracts\\DTOs\\SellOrderRequest.cs",
+              "RelativeToolTip": "IServicesContracts\\DTOs\\SellOrderRequest.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBgAAACcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T13:41:26.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BuyOrderResponse.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\IServicesContracts\\DTOs\\BuyOrderResponse.cs",
+              "RelativeDocumentMoniker": "IServicesContracts\\DTOs\\BuyOrderResponse.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\IServicesContracts\\DTOs\\BuyOrderResponse.cs",
+              "RelativeToolTip": "IServicesContracts\\DTOs\\BuyOrderResponse.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAcwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T13:41:53.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SellOrderResponse.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\IServicesContracts\\DTOs\\SellOrderResponse.cs",
+              "RelativeDocumentMoniker": "IServicesContracts\\DTOs\\SellOrderResponse.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\IServicesContracts\\DTOs\\SellOrderResponse.cs",
+              "RelativeToolTip": "IServicesContracts\\DTOs\\SellOrderResponse.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAADwvy4AAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T13:42:17.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ValidationHelper.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\Services\\Helpers\\ValidationHelper.cs",
+              "RelativeDocumentMoniker": "Services\\Helpers\\ValidationHelper.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\Services\\Helpers\\ValidationHelper.cs",
+              "RelativeToolTip": "Services\\Helpers\\ValidationHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T14:06:07.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IStockService.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\IServicesContracts\\IStockService.cs",
+              "RelativeDocumentMoniker": "IServicesContracts\\IStockService.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\IServicesContracts\\IStockService.cs",
+              "RelativeToolTip": "IServicesContracts\\IStockService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T13:53:29.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DateMustBeAfter.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\IServicesContracts\\CustomValidation\\DateMustBeAfter.cs",
+              "RelativeDocumentMoniker": "IServicesContracts\\CustomValidation\\DateMustBeAfter.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\IServicesContracts\\CustomValidation\\DateMustBeAfter.cs",
+              "RelativeToolTip": "IServicesContracts\\CustomValidation\\DateMustBeAfter.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T13:50:32.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\StockAppWithConfiguration\\Program.cs",
+              "RelativeDocumentMoniker": "StockAppWithConfiguration\\Program.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\StockAppWithConfiguration\\Program.cs",
+              "RelativeToolTip": "StockAppWithConfiguration\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T13:31:54.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IFinnhubService.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\IServicesContracts\\IFinnhubService.cs",
+              "RelativeDocumentMoniker": "IServicesContracts\\IFinnhubService.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\IServicesContracts\\IFinnhubService.cs",
+              "RelativeToolTip": "IServicesContracts\\IFinnhubService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T13:26:01.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FinnhubService.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\Services\\FinnhubService.cs",
+              "RelativeDocumentMoniker": "Services\\FinnhubService.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\Services\\FinnhubService.cs",
+              "RelativeToolTip": "Services\\FinnhubService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T13:26:36.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SellOrder.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\Entities\\SellOrder.cs",
+              "RelativeDocumentMoniker": "Entities\\SellOrder.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\Entities\\SellOrder.cs",
+              "RelativeToolTip": "Entities\\SellOrder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T13:23:57.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\StockAppWithConfiguration\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "StockAppWithConfiguration\\Controllers\\HomeController.cs",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\StockAppWithConfiguration\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "StockAppWithConfiguration\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAQwAQAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T13:11:04.608Z",
+              "EditorCaption": ""
             }
           ]
         },
@@ -28,6 +284,10 @@
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
               "$type": "Bookmark",

@@ -1,52 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\Configuration\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{721C0199-937F-4776-ABD4-1A716774A37F}|StockAppWithConfiguration\\StockAppWithConfigurationAssignment.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\configuration\\stockappwithconfiguration\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{721C0199-937F-4776-ABD4-1A716774A37F}|StockAppWithConfiguration\\StockAppWithConfigurationAssignment.csproj|solutionrelative:stockappwithconfiguration\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{721C0199-937F-4776-ABD4-1A716774A37F}|StockAppWithConfiguration\\StockAppWithConfigurationAssignment.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\configuration\\stockappwithconfiguration\\services\\finnhubservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{721C0199-937F-4776-ABD4-1A716774A37F}|StockAppWithConfiguration\\StockAppWithConfigurationAssignment.csproj|solutionrelative:stockappwithconfiguration\\services\\finnhubservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{721C0199-937F-4776-ABD4-1A716774A37F}|StockAppWithConfiguration\\StockAppWithConfigurationAssignment.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\configuration\\stockappwithconfiguration\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{721C0199-937F-4776-ABD4-1A716774A37F}|StockAppWithConfiguration\\StockAppWithConfigurationAssignment.csproj|solutionrelative:stockappwithconfiguration\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{721C0199-937F-4776-ABD4-1A716774A37F}|StockAppWithConfiguration\\StockAppWithConfigurationAssignment.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\configuration\\stockappwithconfiguration\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{721C0199-937F-4776-ABD4-1A716774A37F}|StockAppWithConfiguration\\StockAppWithConfigurationAssignment.csproj|solutionrelative:stockappwithconfiguration\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3DA40E51-CFD6-42BE-A884-AFCB7750F097}|Configuration\\Configuration.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\configuration\\configuration\\services\\finnhubservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DA40E51-CFD6-42BE-A884-AFCB7750F097}|Configuration\\Configuration.csproj|solutionrelative:configuration\\services\\finnhubservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{721C0199-937F-4776-ABD4-1A716774A37F}|StockAppWithConfiguration\\StockAppWithConfigurationAssignment.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\configuration\\stockappwithconfiguration\\models\\stocktrade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{721C0199-937F-4776-ABD4-1A716774A37F}|StockAppWithConfiguration\\StockAppWithConfigurationAssignment.csproj|solutionrelative:stockappwithconfiguration\\models\\stocktrade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3DA40E51-CFD6-42BE-A884-AFCB7750F097}|Configuration\\Configuration.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\configuration\\configuration\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DA40E51-CFD6-42BE-A884-AFCB7750F097}|Configuration\\Configuration.csproj|solutionrelative:configuration\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{721C0199-937F-4776-ABD4-1A716774A37F}|StockAppWithConfiguration\\StockAppWithConfigurationAssignment.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\configuration\\stockappwithconfiguration\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{721C0199-937F-4776-ABD4-1A716774A37F}|StockAppWithConfiguration\\StockAppWithConfigurationAssignment.csproj|solutionrelative:stockappwithconfiguration\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{721C0199-937F-4776-ABD4-1A716774A37F}|StockAppWithConfiguration\\StockAppWithConfigurationAssignment.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\configuration\\stockappwithconfiguration\\models\\tradingoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{721C0199-937F-4776-ABD4-1A716774A37F}|StockAppWithConfiguration\\StockAppWithConfigurationAssignment.csproj|solutionrelative:stockappwithconfiguration\\models\\tradingoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{721C0199-937F-4776-ABD4-1A716774A37F}|StockAppWithConfiguration\\StockAppWithConfigurationAssignment.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\configuration\\stockappwithconfiguration\\iservices\\ifinnhubservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{721C0199-937F-4776-ABD4-1A716774A37F}|StockAppWithConfiguration\\StockAppWithConfigurationAssignment.csproj|solutionrelative:stockappwithconfiguration\\iservices\\ifinnhubservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{721C0199-937F-4776-ABD4-1A716774A37F}|StockAppWithConfiguration\\StockAppWithConfigurationAssignment.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\configuration\\stockappwithconfiguration\\stockappwithconfigurationassignment.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{721C0199-937F-4776-ABD4-1A716774A37F}|StockAppWithConfiguration\\StockAppWithConfigurationAssignment.csproj|solutionrelative:stockappwithconfiguration\\stockappwithconfigurationassignment.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -54,154 +9,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 372,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\Configuration\\StockAppWithConfiguration\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "StockAppWithConfiguration\\Views\\Home\\Index.cshtml",
-              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\Configuration\\StockAppWithConfiguration\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "StockAppWithConfiguration\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-04T12:04:21.771Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\Configuration\\StockAppWithConfiguration\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "StockAppWithConfiguration\\Controllers\\HomeController.cs",
-              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\Configuration\\StockAppWithConfiguration\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "StockAppWithConfiguration\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAYwCoAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T11:42:57.833Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\Configuration\\Configuration\\Program.cs",
-              "RelativeDocumentMoniker": "Configuration\\Program.cs",
-              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\Configuration\\Configuration\\Program.cs",
-              "RelativeToolTip": "Configuration\\Program.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T11:41:22.209Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\Configuration\\StockAppWithConfiguration\\Program.cs",
-              "RelativeDocumentMoniker": "StockAppWithConfiguration\\Program.cs",
-              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\Configuration\\StockAppWithConfiguration\\Program.cs",
-              "RelativeToolTip": "StockAppWithConfiguration\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABrAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T11:40:23.744Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TradingOptions.cs",
-              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\Configuration\\StockAppWithConfiguration\\Models\\TradingOptions.cs",
-              "RelativeDocumentMoniker": "StockAppWithConfiguration\\Models\\TradingOptions.cs",
-              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\Configuration\\StockAppWithConfiguration\\Models\\TradingOptions.cs",
-              "RelativeToolTip": "StockAppWithConfiguration\\Models\\TradingOptions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T11:40:00.359Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "StockTrade.cs",
-              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\Configuration\\StockAppWithConfiguration\\Models\\StockTrade.cs",
-              "RelativeDocumentMoniker": "StockAppWithConfiguration\\Models\\StockTrade.cs",
-              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\Configuration\\StockAppWithConfiguration\\Models\\StockTrade.cs",
-              "RelativeToolTip": "StockAppWithConfiguration\\Models\\StockTrade.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAQAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T11:34:37.226Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FinnhubService.cs",
-              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\Configuration\\Configuration\\Services\\FinnhubService.cs",
-              "RelativeDocumentMoniker": "Configuration\\Services\\FinnhubService.cs",
-              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\Configuration\\Configuration\\Services\\FinnhubService.cs",
-              "RelativeToolTip": "Configuration\\Services\\FinnhubService.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBgAAABpAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T11:17:30.154Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FinnhubService.cs",
-              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\Configuration\\StockAppWithConfiguration\\Services\\FinnhubService.cs",
-              "RelativeDocumentMoniker": "StockAppWithConfiguration\\Services\\FinnhubService.cs",
-              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\Configuration\\StockAppWithConfiguration\\Services\\FinnhubService.cs*",
-              "RelativeToolTip": "StockAppWithConfiguration\\Services\\FinnhubService.cs*",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAzwBYAAABTAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T11:13:43.603Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IFinnhubService.cs",
-              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\Configuration\\StockAppWithConfiguration\\IServices\\IFinnhubService.cs",
-              "RelativeDocumentMoniker": "StockAppWithConfiguration\\IServices\\IFinnhubService.cs",
-              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\Configuration\\StockAppWithConfiguration\\IServices\\IFinnhubService.cs",
-              "RelativeToolTip": "StockAppWithConfiguration\\IServices\\IFinnhubService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T11:12:43.25Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\Configuration\\StockAppWithConfiguration\\appsettings.json",
-              "RelativeDocumentMoniker": "StockAppWithConfiguration\\appsettings.json",
-              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\Configuration\\StockAppWithConfiguration\\appsettings.json",
-              "RelativeToolTip": "StockAppWithConfiguration\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-04T11:11:28.598Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "StockAppWithConfigurationAssignment",
-              "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\Configuration\\StockAppWithConfiguration\\StockAppWithConfigurationAssignment.csproj",
-              "RelativeDocumentMoniker": "StockAppWithConfiguration\\StockAppWithConfigurationAssignment.csproj",
-              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\Configuration\\StockAppWithConfiguration\\StockAppWithConfigurationAssignment.csproj",
-              "RelativeToolTip": "StockAppWithConfiguration\\StockAppWithConfigurationAssignment.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-04T11:12:12.076Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             }
           ]
         },
