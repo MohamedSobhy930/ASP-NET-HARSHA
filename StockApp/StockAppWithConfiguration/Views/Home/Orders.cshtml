@@ -1,0 +1,110 @@
+﻿@using StockAppAssignment.Models
+@model Orders
+@{
+    ViewBag.Title = "Orders";
+}
+
+<h1>All Orders</h1>
+
+<div class="orders-container">
+
+    <div class="order-list">
+        <h2>Buy Orders</h2>
+        @if (Model.BuyOrders.Any())
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Stock Symbol</th>
+                        <th>Stock Name</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Trade Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var order in Model.BuyOrders)
+                    {
+                        <tr>
+                            <td>@order.DateAndTimeOfOrder.ToString("yyyy-MM-dd HH:mm")</td>
+                            <td>@order.StockSymbol</td>
+                            <td>@order.StockName</td>
+                            <td>@order.Quantity</td>
+                            <td>$@order.Price.ToString("N2")</td>
+                            <td>$@order.TradeAmount.ToString("N2")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p>No buy orders placed yet.</p>
+        }
+    </div>
+
+    <div class="order-list">
+        <h2>Sell Orders</h2>
+        @if (Model.SellOrders.Any())
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Stock Symbol</th>
+                        <th>Stock Name</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Trade Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var order in Model.SellOrders)
+                    {
+                        <tr>
+                            <td>@order.DateAndTimeOfOrder.ToString("yyyy-MM-dd HH:mm")</td>
+                            <td>@order.StockSymbol</td>
+                            <td>@order.StockName</td>
+                            <td>@order.Quantity</td>
+                            <td>$@order.Price.ToString("N2")</td>
+                            <td>$@order.TradeAmount.ToString("N2")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p>No sell orders placed yet.</p>
+        }
+    </div>
+</div>
+
+<style>
+    .orders-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .order-list {
+        flex: 1; /* Each list takes half the space */
+    }
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+    }
+
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .table th {
+            background-color: #f4f4f4;
+        }
+</style>

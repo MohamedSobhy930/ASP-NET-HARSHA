@@ -52,3 +52,5 @@ E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultima
 E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\StockApp\StockAppWithConfiguration\obj\Debug\net8.0\StockAppAssignment.pdb
 E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\StockApp\StockAppWithConfiguration\obj\Debug\net8.0\StockAppAssignment.genruntimeconfig.cache
 E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\StockApp\StockAppWithConfiguration\obj\Debug\net8.0\ref\StockAppAssignment.dll
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\StockApp\StockAppWithConfiguration\bin\Debug\net8.0\Entities.dll
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\StockApp\StockAppWithConfiguration\bin\Debug\net8.0\Entities.pdb

@@ -3,33 +3,142 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - StockAppWithConfiguration</title>
+    <title>@ViewData["Title"] - Stocks</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/StockAppWithConfiguration.styles.css" asp-append-version="true" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <style>
+        /* New Header Styles */
+        .app-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 20px; /* Space between items */
+        }
+
+        .app-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 8px; /* Space between icon and text */
+            text-decoration: none;
+        }
+
+        .header-nav-links {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+            .header-nav-links a {
+                text-decoration: none;
+                color: #555;
+                font-size: 1rem;
+                font-weight: 500;
+                padding-bottom: 5px;
+            }
+
+                /* You can add a class here to show the active page */
+                .header-nav-links a.active {
+                    color: #007bff;
+                    border-bottom: 2px solid #007bff;
+                }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 15px; /* Space between items */
+        }
+
+        .search-form {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-input {
+            padding: 6px 10px;
+            border: 1px solid #ccc;
+            border-radius: 20px 0 0 20px; /* Rounded search bar */
+            font-size: 0.9rem;
+            outline: none;
+        }
+
+        .search-button {
+            padding: 6px 10px;
+            border: 1px solid #ccc;
+            border-left: none;
+            background-color: #f8f8f8;
+            cursor: pointer;
+            border-radius: 0 20px 20px 0; /* Rounded search bar */
+            color: #555;
+        }
+
+        .settings-icon {
+            font-size: 1.2rem;
+            color: #555;
+            cursor: pointer;
+        }
+
+        .btn-login {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">StockAppWithConfiguration</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
+        <nav class="app-header box-shadow">
+
+            <div class="header-left">
+                <a class="app-title" asp-controller="Stocks" asp-action="Index">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Stocks
+                </a>
+                <ul class="header-nav-links">
+                    <li>
+                        <a asp-controller="Home" asp-action="Index">Trade</a>
+                    </li>
+                    <li>
+                        <a asp-controller="Home" asp-action="Orders">Orders</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="header-right">
+
+                <form asp-controller="Home" asp-action="Index" method="get" class="search-form">
+                    <input type="search" name="stockSymbol" class="search-input"
+                           placeholder="Search Stocks" />
+                    <button type="submit" class="search-button">
+                        <i class="fa-solid fa-search"></i>
+                    </button>
+                </form>
+
+                <i class="fa-solid fa-cog settings-icon"></i>
+                <button class="btn-login">Login</button>
             </div>
         </nav>
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -38,9 +147,10 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2025 - StockAppWithConfiguration - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2025 - StockApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

@@ -1,6 +1,7 @@
 using StockAppWithConfigurationAssignment.Models;
 using IServicesContracts;
 using StockAppWithConfigurationAssignment.Services;
+using Services;
 
 namespace StockAppWithConfiguration
 {
@@ -14,7 +15,8 @@ namespace StockAppWithConfiguration
             builder.Services.AddControllersWithViews();
             builder.Services.AddHttpClient();
             builder.Services.Configure<TradingOptions>(builder.Configuration.GetSection("TradingOptions"));
-            builder.Services.AddScoped<IServicesContracts.IFinnhubService,FinnhubService>();
+            builder.Services.AddSingleton<IFinnhubService,FinnhubService>();
+            builder.Services.AddSingleton<IStockService,StockService>();
 
             var app = builder.Build();
 

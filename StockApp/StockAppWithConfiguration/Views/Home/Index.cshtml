@@ -1,20 +1,51 @@
 ﻿@using StockAppWithConfigurationAssignment.Models
 @model StockTrade
-
 @{
-    ViewBag.Title = "Stocks";
+    ViewBag.Title = Model.StockName ?? "Trade";
 }
 
 <div class="box trading-panel">
-    <input type="hidden" id="stockSymbol" value="@Model.StockSymbol" />
 
-    <div class="stock-details">
-        <span class="stock-name">@Model.StockName</span>
-        <span class="stock-symbol">(@Model.StockSymbol)</span>
+    <div class="stock-info">
+        <div class="stock-details">
+            <span class="stock-name">@Model.StockName</span>
+            <span class="stock-symbol">(@Model.StockSymbol)</span>
+        </div>
+
+        <div class="stock-price">
+            $ <span id="price">@Model.Price.ToString("N2")</span>
+        </div>
     </div>
 
-    <div class="stock-price">
-        $ <span id="price">@Model.Price.ToString("N2")</span>
+    <div class="order-panel">
+        <h4>New Order</h4>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <input type="hidden" id="stockSymbol" name="StockSymbol" value="@Model.StockSymbol" />
+            <input type="hidden" name="StockName" value="@Model.StockName" />
+
+            <input type="hidden" id="hidden_price" name="Price" value="@Model.Price" />
+
+            <div class="form-group">
+                <label for="Quantity">Quantity:</label>
+                <input type="number" id="Quantity" name="Quantity" class="form-control"
+                       value="100" min="1" max="100000" />
+            </div>
+
+            <div class="order-buttons">
+                <button type="submit" asp-action="SellOrder" class="btn btn-sell">
+                    <i class="fa-solid fa-arrow-down"></i>
+                    Sell
+                </button>
+                <button type="submit" asp-action="BuyOrder" class="btn btn-buy">
+                    <i class="fa-solid fa-arrow-up"></i>
+                    Buy
+                </button>
+            </div>
+        }
     </div>
 </div>
 
@@ -26,13 +57,11 @@
         let socket = null;
 
         function connectWebSocket() {
-            // Create a WebSocket connection
             socket = new WebSocket(`wss://ws.finnhub.io?token=${token}`);
 
             // Connection opened
             socket.addEventListener('open', function (event) {
                 console.log('WebSocket connection opened.');
-                // Subscribe to the stock symbol
                 socket.send(JSON.stringify({ 'type': 'subscribe', 'symbol': stockSymbol }));
             });
 
@@ -40,12 +69,17 @@
             socket.addEventListener('message', function (event) {
                 const message = JSON.parse(event.data);
                 if (message.type === 'trade' && message.data) {
-                    // Get the last trade from the data array
                     const lastTrade = message.data[message.data.length - 1];
                     if (lastTrade && lastTrade.p) {
-                         // Update the price on the UI
+                        const newPrice = lastTrade.p;
+
+                        // Update the visible price
                         const priceElement = document.getElementById("price");
-                        priceElement.innerText = lastTrade.p.toFixed(2);
+                        priceElement.innerText = newPrice.toFixed(2);
+
+                        // Update the hidden price field in the form
+                        const hiddenPriceElement = document.getElementById("hidden_price");
+                        hiddenPriceElement.value = newPrice;
                     }
                 }
             });
@@ -54,26 +88,19 @@
             socket.addEventListener('close', function (event) {
                 console.log('WebSocket connection closed.');
             });
-
-            // Handle connection error
-            socket.addEventListener('error', function(event) {
-                console.error('WebSocket error:', event);
-            });
         }
 
         function disconnectWebSocket() {
             if (socket) {
-                 // Unsubscribe before closing
                 socket.send(JSON.stringify({ 'type': 'unsubscribe', 'symbol': stockSymbol }));
                 socket.close();
-                console.log('WebSocket connection closed and unsubscribed.');
             }
         }
 
         // Connect when the page loads
         connectWebSocket();
 
-        // Disconnect when the page is closed to prevent memory leaks
+        // Disconnect when the page is closed
         window.addEventListener('beforeunload', function (event) {
             disconnectWebSocket();
         });
@@ -81,13 +108,34 @@
 }
 
 <style>
+    /* Add the same styles from the previous answer here */
     .trading-panel {
         padding: 20px;
         border: 1px solid #ddd;
         border-radius: 8px;
-        max-width: 500px;
+        max-width: 800px;
         margin: 2rem auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
     }
+
+    .stock-info {
+        flex-basis: 55%;
+    }
+
+    .order-panel {
+        flex-basis: 40%;
+        border: 1px solid #eee;
+        padding: 15px;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+    }
+
+        .order-panel h4 {
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
 
     .stock-details {
         margin-bottom: 10px;
@@ -108,5 +156,49 @@
         font-size: 3rem;
         font-weight: 700;
         color: #28a745;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+    .form-control {
+        width: 100%;
+        padding: 8px 12px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .order-buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btn {
+        padding: 10px 15px;
+        font-size: 1rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 48%;
+    }
+
+    .btn-sell {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    .btn-buy {
+        background-color: #28a745;
+        color: white;
     }
 </style>
