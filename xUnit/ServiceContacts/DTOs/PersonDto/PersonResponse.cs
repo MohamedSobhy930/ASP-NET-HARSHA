@@ -66,6 +66,7 @@ namespace ServiceContacts.DTOs.PersonDto
                     Address = person.Address,
                     ReceiveNewsletter = person.ReceiveNewsletter,
                     CountryId = person.CountryId,
+                    Country = person.Country?.Name,
                     Age = (person.DateOfBirth != null) ? Math.Round((DateTime.Now - person.DateOfBirth.Value).TotalDays / 365) : null,
                 };
             }

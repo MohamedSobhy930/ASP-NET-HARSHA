@@ -13,8 +13,8 @@ namespace xUnit
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-            builder.Services.AddSingleton<ICountriesService,CountriesService>();
-            builder.Services.AddSingleton<IPersonService,PersonService>();
+            builder.Services.AddScoped<ICountriesService,CountriesService>();
+            builder.Services.AddScoped<IPersonService,PersonService>();
 
             builder.Services.AddDbContext<AppDbContext>(
                 options =>

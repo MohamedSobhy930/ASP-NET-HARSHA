@@ -1,4 +1,6 @@
-﻿using FluentAssertions;
+﻿using Entities;
+using FluentAssertions;
+using Microsoft.EntityFrameworkCore;
 using ServiceContacts;
 using ServiceContacts.DTOs.CountryDto;
 using Services;
@@ -15,7 +17,7 @@ namespace xUnitTests
         private readonly ICountriesService _countriesService;
         public CountriesServiceTest()
         {
-            _countriesService = new CountriesService(false);
+            _countriesService = new CountriesService(new AppDbContext(new DbContextOptionsBuilder<AppDbContext>().Options));
         }
         #region AddCountry
         [Fact]

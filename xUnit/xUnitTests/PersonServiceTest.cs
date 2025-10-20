@@ -1,5 +1,6 @@
 ﻿using Entities;
 using FluentAssertions;
+using Microsoft.EntityFrameworkCore;
 using ServiceContacts;
 using ServiceContacts.DTOs.CountryDto;
 using ServiceContacts.DTOs.PersonDto;
@@ -19,8 +20,8 @@ namespace xUnitTests
         private ICountriesService _countryService;
         public PersonServiceTest() 
         {
-            _countryService = new CountriesService(false);
-            _personService = new PersonService(_countryService ,false);
+            _countryService = new CountriesService(new AppDbContext(new DbContextOptionsBuilder<AppDbContext>().Options));
+            _personService = new PersonService(_countryService , new AppDbContext(new DbContextOptionsBuilder<AppDbContext>().Options));
         }
         #region AddPerson
         [Fact]

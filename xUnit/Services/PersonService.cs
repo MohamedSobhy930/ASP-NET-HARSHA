@@ -1,5 +1,8 @@
-﻿using Entities;
+﻿using Azure.Identity;
+using Entities;
+using Microsoft.EntityFrameworkCore;
 using ServiceContacts;
+using ServiceContacts.DTOs.CountryDto;
 using ServiceContacts.DTOs.PersonDto;
 using ServiceContacts.Enums;
 using Services.Helpers;
@@ -15,70 +18,28 @@ namespace Services
 {
     public class PersonService : IPersonService
     {
-        private readonly List<Person> _persons;
+        private readonly AppDbContext _db;
         private readonly ICountriesService _countriesService;
         
-        public PersonService(ICountriesService countriesService, bool initialize = true) 
+        public PersonService(ICountriesService countriesService, AppDbContext db) 
         {
-            _persons = new List<Person>();
+            _db = db;
             _countriesService = countriesService;
-            if (initialize)
-            {
-                var countries = _countriesService.GetAllCountries(); 
-
-                Guid? usaId = countries.FirstOrDefault(c => c.Name == "USA")?.Id;
-                Guid? egyptId = countries.FirstOrDefault(c => c.Name == "Egypt")?.Id;
-                Guid? ukId = countries.FirstOrDefault(c => c.Name == "United Kingdom")?.Id;
-
-                _persons.AddRange(new List<Person>()
-                {
-                    new Person()
-                    {
-                        PersonId = Guid.NewGuid(),
-                        Name = "John Smith",
-                        Email = "john.smith@example.com",
-                        DateOfBirth = new DateTime(1985, 4, 12),
-                        Gender = "Male",
-                        CountryId = usaId, 
-                        Address = "123 Main St, New York, NY",
-                        ReceiveNewsletter = true
-                    },
-                    new Person()
-                    {
-                        PersonId = Guid.NewGuid(),
-                        Name = "Fatima Al-Sayed",
-                        Email = "fatima.alsayed@example.com",
-                        DateOfBirth = new DateTime(1992, 8, 20),
-                        Gender = "Female",
-                        CountryId = egyptId, 
-                        Address = "456 Nile Corniche, Cairo",
-                        ReceiveNewsletter = false
-                    },
-                    new Person()
-                    {
-                        PersonId = Guid.NewGuid(),
-                        Name = "Jane Doe",
-                        Email = "jane.doe@example.com",
-                        DateOfBirth = new DateTime(1990, 1, 30),
-                        Gender = "Female",
-                        CountryId = ukId, 
-                        Address = "10 Downing St, London",
-                        ReceiveNewsletter = true
-                    }
-                });
-            }
+            
         }
 
         public PersonResponse AddPerson(PersonAddRequest request)
         {
-            if(request == null) 
-                throw new ArgumentNullException(nameof(request));
+            ArgumentNullException.ThrowIfNull(request);
 
             ValidationHelper.ModelValidation(request);
 
             Person person = request.ToPerson();
             person.PersonId = Guid.NewGuid();
-            _persons.Add(person);
+            //_db.Add(person);
+            //_db.SaveChanges();
+            // using sp
+            _db.sp_InsertPerson(person);
             PersonResponse personResponse = person.ToPersonResponse();
             personResponse.Country = (_countriesService.GetCountryById(person.CountryId))?.Name;
             return personResponse;
@@ -88,20 +49,37 @@ namespace Services
         {
             if(id == null) 
                 throw new ArgumentNullException(nameof(id));
-            var person = _persons.FirstOrDefault(p => p.PersonId == id);
+            var person = _db.Persons.FirstOrDefault(p => p.PersonId == id);
             if (person == null)
                 return false;
-            return _persons.Remove(person);   
+            _db.Persons.Remove(person);
+            _db.SaveChanges();
+            return true;   
         }
 
         public List<PersonResponse> GetAllPersons()
         {
-            return _persons.Select( person =>
-            {
-                PersonResponse response = person.ToPersonResponse();
-                response.Country = _countriesService.GetCountryById(person.CountryId)?.Name;
-                return response;
-            }).ToList();
+            /*
+            return _db.Persons
+                .Include(p => p.Country)
+                .AsNoTracking()
+                .ToList()
+                .Select(person =>
+                {
+                    PersonResponse response = person.ToPersonResponse();
+                    response.Country = person.Country?.Name;
+                    return response;
+                })
+                .ToList();
+            */
+            /*
+             * STORED PROCEDURE
+             * 1 - add migration then create the sp then update database 
+             * 2 - use it inside the service instead of traditional retrieving 
+             */
+            return _db.Database
+                .SqlQuery<PersonResponse>($"EXEC sp_GetAllPersons")
+                .ToList();
         }
 
         public List<PersonResponse> GetFilteredPersons(string searchBy, string? searchPhrase)
@@ -152,7 +130,7 @@ namespace Services
         {
             if (id == null)
                 return null;
-            var person = _persons.FirstOrDefault(p => p.PersonId == id);
+            var person = _db.Persons.FirstOrDefault(p => p.PersonId == id);
             if (person == null)
                 return null;
             return person.ToPersonResponse();
@@ -201,12 +179,13 @@ namespace Services
             if (request == null)
                 throw new ArgumentNullException(nameof(request));
             ValidationHelper.ModelValidation(request);
-            var personFromDb = _persons.FirstOrDefault(p => p.PersonId == request.Id);
+            var personFromDb = _db.Persons.FirstOrDefault(p => p.PersonId == request.Id);
             if(personFromDb == null)
                 throw new ArgumentException("person Id not existed");
             personFromDb.Name = request.Name;
             personFromDb.Email = request.Email;
             personFromDb.CountryId = request.CountryId;
+            _db.SaveChanges();
 
             return personFromDb.ToPersonResponse();
         }
