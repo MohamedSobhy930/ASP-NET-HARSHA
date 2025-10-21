@@ -40,9 +40,7 @@ namespace Services
             //_db.SaveChanges();
             // using sp
             _db.sp_InsertPerson(person);
-            PersonResponse personResponse = person.ToPersonResponse();
-            personResponse.Country = (_countriesService.GetCountryById(person.CountryId))?.Name;
-            return personResponse;
+            return person.ToPersonResponse();
         }
 
         public bool DeletePerson(Guid? id)
@@ -59,27 +57,20 @@ namespace Services
 
         public List<PersonResponse> GetAllPersons()
         {
-            /*
-            return _db.Persons
-                .Include(p => p.Country)
-                .AsNoTracking()
-                .ToList()
-                .Select(person =>
-                {
-                    PersonResponse response = person.ToPersonResponse();
-                    response.Country = person.Country?.Name;
-                    return response;
-                })
+            var persons = _db.Persons.Include(p =>p.Country).ToList();
+            
+            return persons
+                .Select(person => person.ToPersonResponse())
                 .ToList();
-            */
+            
             /*
              * STORED PROCEDURE
              * 1 - add migration then create the sp then update database 
              * 2 - use it inside the service instead of traditional retrieving 
              */
-            return _db.Database
-                .SqlQuery<PersonResponse>($"EXEC sp_GetAllPersons")
-                .ToList();
+            //return _db.Database
+            //    .SqlQuery<PersonResponse>($"EXEC sp_GetAllPersons")
+            //    .ToList();
         }
 
         public List<PersonResponse> GetFilteredPersons(string searchBy, string? searchPhrase)
@@ -130,7 +121,7 @@ namespace Services
         {
             if (id == null)
                 return null;
-            var person = _db.Persons.FirstOrDefault(p => p.PersonId == id);
+            var person = _db.Persons.Include(p => p.Country).FirstOrDefault(p => p.PersonId == id);
             if (person == null)
                 return null;
             return person.ToPersonResponse();
