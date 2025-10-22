@@ -48,6 +48,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Programing/BackEnd .NET/Level_3/Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2/Solutions/xUnit/xUnit/Views/Persons/PersonsPDF.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uc1xQZXJzb25zUERGLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Programing/BackEnd .NET/Level_3/Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2/Solutions/xUnit/xUnit/Views/Persons/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uc1xVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -71,3 +75,7 @@ build_metadata.AdditionalFiles.CssScope =
 [E:/Programing/BackEnd .NET/Level_3/Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2/Solutions/xUnit/xUnit/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-qu9r9eyb32
+
+[E:/Programing/BackEnd .NET/Level_3/Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2/Solutions/xUnit/xUnit/Views/Shared/_PdfLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QZGZMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-7dk388zg33

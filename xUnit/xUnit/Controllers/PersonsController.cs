@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Rotativa.AspNetCore;
+using Rotativa.AspNetCore.Options;
 using ServiceContacts;
 using ServiceContacts.DTOs.CountryDto;
 using ServiceContacts.DTOs.PersonDto;
@@ -7,12 +9,12 @@ using ServiceContacts.Enums;
 
 namespace CRUDs.Controllers
 {
+    [Route("/[controller]/[action]")]
     public class PersonsController(IPersonService personService, ICountriesService countriesService) : Controller
     {
         private readonly IPersonService _personService = personService;
         private readonly ICountriesService _countriesService = countriesService;
 
-        [Route("/persons/index")]
         public async Task<IActionResult> Index
             (string searchBy ,
             string? searchPhrase,
@@ -91,6 +93,30 @@ namespace CRUDs.Controllers
         {
             await _personService.DeletePerson(Id);
             return RedirectToAction("Index");
+        }
+        public async Task<IActionResult> PersonsPDF()
+        {
+            List<PersonResponse> persons = await _personService.GetAllPersons();
+            return new ViewAsPdf(persons)
+            {
+                // Sets the name of the file the user will download
+                FileName = "PersonsList.pdf",
+
+                // Sets the page size (e.g., A4, Letter)
+                PageSize = Size.A4,
+
+                // Sets the orientation (Portrait or Landscape)
+                PageOrientation = Orientation.Landscape,
+
+                // Sets all margins in millimeters (top, right, bottom, left)
+                PageMargins = new Margins(10, 10, 10, 10),
+
+                // --- Advanced Properties ---
+
+                // This is used to pass any other command-line arguments to wkhtmltopdf
+                // For example, to add a footer with page numbers:
+                CustomSwitches = "--footer-right \"Page [page] of [topage]\" --footer-font-size 10"
+            };
         }
     }
 }
