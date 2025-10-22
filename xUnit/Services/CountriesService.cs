@@ -1,4 +1,5 @@
 ﻿using Entities;
+using Microsoft.EntityFrameworkCore;
 using ServiceContacts;
 using ServiceContacts.DTOs.CountryDto;
 
@@ -12,7 +13,7 @@ namespace Services
             _db = countries;
             
         }
-        public CountryResponse AddCountry(CountryAddRequest? countryAddRequest)
+        public async Task<CountryResponse> AddCountry(CountryAddRequest? countryAddRequest)
         {
             ArgumentNullException.ThrowIfNull(countryAddRequest);
             Country country = countryAddRequest.ToCountry();
@@ -27,20 +28,20 @@ namespace Services
                 throw new ArgumentException("A country with this name already exists.");
             }
             country.Id = new Guid();
-            _db.Countries.Add(country);
-            _db.SaveChanges();
+            await _db.Countries.AddAsync(country);
+            await _db.SaveChangesAsync();
 
             return country.ToCountryResponse();
         }
-        public List<CountryResponse> GetAllCountries()
+        public async  Task<List<CountryResponse>> GetAllCountries()
         {
-            return _db.Countries.Select(c => c.ToCountryResponse()).ToList(); 
+            return await _db.Countries.Select(c => c.ToCountryResponse()).ToListAsync();
         }
-        public CountryResponse? GetCountryById(Guid? id)
+        public async Task<CountryResponse?> GetCountryById(Guid? id)
         {
             if (id == null)
                 return null;
-            var country = _db.Countries.FirstOrDefault(c => c.Id  == id);
+            var country =await _db.Countries.FirstOrDefaultAsync(c => c.Id  == id);
             if (country == null)
                 return null;
             return country.ToCountryResponse();

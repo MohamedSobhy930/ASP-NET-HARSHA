@@ -4,8 +4,8 @@ namespace ServiceContacts
 {
     public interface ICountriesService
     {
-        CountryResponse AddCountry(CountryAddRequest? request);
-        List<CountryResponse> GetAllCountries(); 
-        CountryResponse? GetCountryById(Guid? id);
+        Task<CountryResponse> AddCountry(CountryAddRequest? request);
+        Task<List<CountryResponse>> GetAllCountries(); 
+        Task<CountryResponse?> GetCountryById(Guid? id);
     }
 }

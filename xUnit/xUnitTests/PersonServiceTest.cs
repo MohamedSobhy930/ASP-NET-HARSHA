@@ -25,14 +25,14 @@ namespace xUnitTests
         }
         #region AddPerson
         [Fact]
-        public void AddPerson_ThrowNullReferenceException()
+        public async Task AddPerson_ThrowNullReferenceException()
         {
             //arrange 
             PersonAddRequest? personAddRequest = null;
             //act 
-            Action act = () =>  _personService.AddPerson(personAddRequest);
+            Func<Task> act = async () =>await _personService.AddPerson(personAddRequest);
             //assert
-            act.Should().Throw<ArgumentNullException>();
+            await act.Should().ThrowAsync<ArgumentNullException>();
         }
         [Fact]
         public void AddPerson_PersonRequiredProperties_throwArgumentException()
@@ -44,12 +44,12 @@ namespace xUnitTests
                 Email = null,
             };
             //act
-            Action act = () => _personService.AddPerson(personAddRequest);
+            Action act = async () =>await _personService.AddPerson(personAddRequest);
             //assert
             act.Should().Throw<ArgumentException>();
         }
         [Fact]
-        public void AddPerson_ProperPersonDetails()
+        public async Task AddPerson_ProperPersonDetails()
         {
             //arrange
             PersonAddRequest personAddRequest = new PersonAddRequest()
@@ -63,8 +63,8 @@ namespace xUnitTests
                 ReceiveNewsletter = true
             };
             //act
-            var result = _personService.AddPerson(personAddRequest);
-            var resultList = _personService.GetAllPersons();
+            var result =await _personService.AddPerson(personAddRequest);
+            var resultList =await _personService.GetAllPersons();
             //assert
             result.Should().NotBeNull();
             resultList.Should().Contain(result);
@@ -73,12 +73,12 @@ namespace xUnitTests
 
         #region GetPersonById
         [Fact]
-        public void GetPersonById_PersonExists()
+        public async Task GetPersonById_PersonExists()
         {
             // Arrange
             var countryRequest = new CountryAddRequest()
             { CountryName = "Egypt"};
-            var countryResponse = _countryService.AddCountry(countryRequest);
+            var countryResponse =await _countryService.AddCountry(countryRequest);
 
             var personToAdd = new PersonAddRequest 
             { Name = "Ahmed",
@@ -89,10 +89,10 @@ namespace xUnitTests
                 Address = "blabla",
                 ReceiveNewsletter = true
             };
-            var personResponse = _personService.AddPerson(personToAdd); 
-
+            var personResponse =await _personService.AddPerson(personToAdd); 
+            
             // Act
-            var result = _personService.GetPersonById(personResponse.Id);
+            var result =await _personService.GetPersonById(personResponse.Id);
 
             // Assert
             result.Should().NotBeNull();
@@ -101,13 +101,13 @@ namespace xUnitTests
             result.Name.Should().Be("Ahmed");
         }
         [Fact]
-        public void GetPersonByName_NonExistedId()
+        public async Task GetPersonByName_NonExistedId()
         {
             // arrange 
             Guid? Id = null;
 
             // act
-            var result = _personService.GetPersonById(Id);
+            var result =await _personService.GetPersonById(Id);
 
             // assert
             result.Should().BeNull();
@@ -117,26 +117,26 @@ namespace xUnitTests
 
         #region GetAllPersons
         [Fact]
-        public void GetAll_WhenListIsEmpty_ShouldReturnEmptyList()
+        public async Task GetAll_WhenListIsEmpty_ShouldReturnEmptyList()
         {
             // Arrange
             var emptyPersonList = new List<Person>();
 
             // Act
-            var result = _personService.GetAllPersons();
+            var result =await _personService.GetAllPersons();
 
             // Assert
             result.Should().BeEmpty();
         }
         [Fact]
-        public void GetAllPersons_WhenPersonsExist_ShouldReturnListOfPersonResponses()
+        public async Task GetAllPersons_WhenPersonsExist_ShouldReturnListOfPersonResponses()
         {
             // Arrange
             var Country1 = new CountryAddRequest() { CountryName = "Egypt" };
             var Country2 = new CountryAddRequest() { CountryName = "USA" };
 
-            var countryResponse1 = _countryService.AddCountry(Country1);
-            var countryResponse2 = _countryService.AddCountry(Country2);
+            var countryResponse1 =await _countryService.AddCountry(Country1);
+            var countryResponse2 =await _countryService.AddCountry(Country2);
 
             var person1 = new PersonAddRequest() {
                 Name = "Ahmed",
@@ -153,10 +153,10 @@ namespace xUnitTests
                 CountryId = countryResponse2.Id,
                 ReceiveNewsletter = false,
             };
-            var PersonResponse1 = _personService.AddPerson(person1);
-            var PersonResponse2 = _personService.AddPerson(person2);
+            var PersonResponse1 =await _personService.AddPerson(person1);
+            var PersonResponse2 =await _personService.AddPerson(person2);
             // Act
-            var result = _personService.GetAllPersons();
+            var result =await _personService.GetAllPersons();
 
             // Assert
             result.Should().NotBeNull();
@@ -198,7 +198,7 @@ namespace xUnitTests
             // arrange 
             PersonUpdateRequest? request = null;
             // act 
-            Action act = () => _personService.UpdatePerson(request);
+            Action act = async () =>await _personService.UpdatePerson(request);
             // assert
             act.Should().Throw<ArgumentNullException>();
         }
@@ -208,43 +208,43 @@ namespace xUnitTests
             // arrange 
             PersonUpdateRequest? request = new PersonUpdateRequest() {Id = new Guid() };
             // act 
-            Action act = () => _personService.UpdatePerson(request);
+            Action act = async () =>await _personService.UpdatePerson(request);
             // assert
             act.Should().Throw<ArgumentException>();
         }
         [Fact]
-        public void UpdatePerson_NullPersonName()
+        public async Task UpdatePerson_NullPersonName()
         {
             // arrange 
             CountryAddRequest countryAddRequest = new CountryAddRequest() { CountryName = "Egypt" };
-            var countryResponse = _countryService.AddCountry(countryAddRequest);
+            var countryResponse =await _countryService.AddCountry(countryAddRequest);
 
             PersonAddRequest personAddRequest = new PersonAddRequest() { Name = "Ali", Email = "test@test.com", CountryId = countryResponse.Id };
-            var personResponse = _personService.AddPerson(personAddRequest);
+            var personResponse =await _personService.AddPerson(personAddRequest);
 
             PersonUpdateRequest personUpdateRequest = personResponse.ToPersonUpdateRequest();
             personUpdateRequest.Name = null;
             // act 
-            Action act = () => _personService.UpdatePerson(personUpdateRequest);
+            Action act = async () => await _personService.UpdatePerson(personUpdateRequest);
             // assert
             act.Should().Throw<ArgumentException>();
         }
         [Fact]
-        public void UpdatePerson_ProperPersonUpdated()
+        public async Task UpdatePerson_ProperPersonUpdated()
         {
             // arrange 
             CountryAddRequest countryAddRequest = new CountryAddRequest() { CountryName = "Egypt" };
             CountryAddRequest countryAddRequest1 = new CountryAddRequest() { CountryName = "USA" };
 
-            var countryResponse = _countryService.AddCountry(countryAddRequest);
-            var countryResponse1 = _countryService.AddCountry(countryAddRequest1);
+            var countryResponse =await _countryService.AddCountry(countryAddRequest);
+            var countryResponse1 =await _countryService.AddCountry(countryAddRequest1);
 
 
             PersonAddRequest personAddRequest = new PersonAddRequest() 
             { 
                Name = "Ali", Email = "test@test.com", CountryId = countryResponse.Id
             };
-            var personResponse = _personService.AddPerson(personAddRequest);
+            var personResponse =await _personService.AddPerson(personAddRequest);
 
             PersonUpdateRequest personUpdateRequest = personResponse.ToPersonUpdateRequest();
             personUpdateRequest.Name = "Mahmoud";
@@ -253,8 +253,8 @@ namespace xUnitTests
 
 
             // act 
-            var result = _personService.UpdatePerson(personUpdateRequest);
-            var resultFromGetById = _personService.GetPersonById(result.Id);
+            var result =await _personService.UpdatePerson(personUpdateRequest);
+            var resultFromGetById =await _personService.GetPersonById(result.Id);
 
             // assert
             resultFromGetById.Should().NotBeNull();
@@ -264,26 +264,26 @@ namespace xUnitTests
 
         #region DeletePerson
         [Fact]
-        public void DeletePerson_InvalidId()
+        public async Task DeletePerson_InvalidId()
         {
             // arrange
             
             // act 
-            bool isDeleted = _personService.DeletePerson(Guid.NewGuid());
+            bool isDeleted =await _personService.DeletePerson(Guid.NewGuid());
             // assert
             isDeleted.Should().BeFalse();
         }
         [Fact]
-        public void DeletePerson_validId()
+        public async Task DeletePerson_validId()
         {
             // arrange
             CountryAddRequest countryAddRequest = new CountryAddRequest() { CountryName = "Egypt" };
-            var countryResponse = _countryService.AddCountry(countryAddRequest);
+            var countryResponse =await _countryService.AddCountry(countryAddRequest);
 
             PersonAddRequest personAddRequest = new PersonAddRequest() { Name = "Ali", Email = "test@test.com", CountryId = countryResponse.Id };
-            var personResponse = _personService.AddPerson(personAddRequest);
+            var personResponse =await _personService.AddPerson(personAddRequest);
             // act 
-            bool isDeleted = _personService.DeletePerson(personResponse.Id);
+            bool isDeleted =await _personService.DeletePerson(personResponse.Id);
             // assert
             isDeleted.Should().BeTrue();
         }

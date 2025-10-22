@@ -28,22 +28,23 @@ namespace Services
             
         }
 
-        public PersonResponse AddPerson(PersonAddRequest request)
+        public async Task<PersonResponse> AddPerson(PersonAddRequest? request)
         {
-            ArgumentNullException.ThrowIfNull(request);
+            if(request == null)
+                throw new ArgumentNullException();
 
             ValidationHelper.ModelValidation(request);
 
             Person person = request.ToPerson();
             person.PersonId = Guid.NewGuid();
-            //_db.Add(person);
-            //_db.SaveChanges();
+            await _db.AddAsync(person);
+            await _db.SaveChangesAsync();
             // using sp
-            _db.sp_InsertPerson(person);
+            //_db.sp_InsertPerson(person);
             return person.ToPersonResponse();
         }
 
-        public bool DeletePerson(Guid? id)
+        public async Task<bool> DeletePerson(Guid? id)
         {
             if(id == null) 
                 throw new ArgumentNullException(nameof(id));
@@ -51,13 +52,13 @@ namespace Services
             if (person == null)
                 return false;
             _db.Persons.Remove(person);
-            _db.SaveChanges();
+            await _db.SaveChangesAsync();
             return true;   
         }
 
-        public List<PersonResponse> GetAllPersons()
+        public async Task<List<PersonResponse>> GetAllPersons()
         {
-            var persons = _db.Persons.Include(p =>p.Country).ToList();
+            var persons = await _db.Persons.Include(p => p.Country).ToListAsync();
             
             return persons
                 .Select(person => person.ToPersonResponse())
@@ -73,12 +74,12 @@ namespace Services
             //    .ToList();
         }
 
-        public List<PersonResponse> GetFilteredPersons(string searchBy, string? searchPhrase)
+        public async Task<List<PersonResponse>> GetFilteredPersons(string searchBy, string? searchPhrase)
         {
-            List<PersonResponse> allPersons = GetAllPersons();
-            List<PersonResponse> matchingPersons = allPersons;
+            List<PersonResponse> allPersons = await GetAllPersons();
+            List<PersonResponse> matchingPersons ;
             if(string.IsNullOrEmpty(searchBy) || string.IsNullOrEmpty(searchPhrase))
-                return matchingPersons;
+                return allPersons;
             
             switch(searchBy.Trim().ToLower())
             {
@@ -117,11 +118,11 @@ namespace Services
             return matchingPersons;
         }
 
-        public PersonResponse? GetPersonById(Guid? id)
+        public async Task<PersonResponse?> GetPersonById(Guid? id)
         {
             if (id == null)
                 return null;
-            var person = _db.Persons.Include(p => p.Country).FirstOrDefault(p => p.PersonId == id);
+            var person =await _db.Persons.Include(p => p.Country).FirstOrDefaultAsync(p => p.PersonId == id);
             if (person == null)
                 return null;
             return person.ToPersonResponse();
@@ -165,18 +166,18 @@ namespace Services
             return sortedPersons;
         }
 
-        public PersonResponse? UpdatePerson(PersonUpdateRequest? request)
+        public async Task<PersonResponse?> UpdatePerson(PersonUpdateRequest? request)
         {
             if (request == null)
                 throw new ArgumentNullException(nameof(request));
             ValidationHelper.ModelValidation(request);
-            var personFromDb = _db.Persons.FirstOrDefault(p => p.PersonId == request.Id);
+            var personFromDb =await _db.Persons.FirstOrDefaultAsync(p => p.PersonId == request.Id);
             if(personFromDb == null)
                 throw new ArgumentException("person Id not existed");
             personFromDb.Name = request.Name;
             personFromDb.Email = request.Email;
             personFromDb.CountryId = request.CountryId;
-            _db.SaveChanges();
+            await _db.SaveChangesAsync();
 
             return personFromDb.ToPersonResponse();
         }

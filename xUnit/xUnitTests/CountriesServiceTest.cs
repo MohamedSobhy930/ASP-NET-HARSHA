@@ -21,51 +21,51 @@ namespace xUnitTests
         }
         #region AddCountry
         [Fact]
-        public void AddCountry_CountryIsNull_ShouldThrowException()
+        public async Task AddCountry_CountryIsNull_ShouldThrowException()
         {
             //arrange
             CountryAddRequest? country = null;
 
             //act
-            Action act =  () => _countriesService.AddCountry(country);
+            Func<Task> act =  async () =>await  _countriesService.AddCountry(country);
             //assert
-            act.Should().Throw<ArgumentNullException>();
+            await act.Should().ThrowAsync<ArgumentNullException>();
         }
         [Fact]
-        public void AddCountry_CountryNameIsNull_ShouldThrowException()
+        public async Task AddCountry_CountryNameIsNull_ShouldThrowException()
         {
             //arrange
             CountryAddRequest? country = new CountryAddRequest() { CountryName = null};
 
             //act
-            Action act = () => _countriesService.AddCountry(country);
+            Func<Task> act =async () =>await _countriesService.AddCountry(country);
             //assert
-            act.Should().Throw<ArgumentException>();
+            await act.Should().ThrowAsync<ArgumentException>();
         }
         [Fact]
-        public void AddCountry_CountryNameIsDuplicate_ShouldThrowException()
+        public async Task AddCountry_CountryNameIsDuplicate_ShouldThrowException()
         {
             //arrange
             CountryAddRequest existingCountryRequest = new CountryAddRequest() { CountryName = "Egypt" };
-            _countriesService.AddCountry(existingCountryRequest); 
+            await _countriesService.AddCountry(existingCountryRequest); 
 
             CountryAddRequest duplicateRequest = new CountryAddRequest() { CountryName = "Egypt" };
 
             // Act
-            Action act = () => _countriesService.AddCountry(duplicateRequest);
+            Func<Task> act =async () =>await _countriesService.AddCountry(duplicateRequest);
 
             // Assert
-            act.Should().Throw<ArgumentException>()
+            await act.Should().ThrowAsync<ArgumentException>()
                .WithMessage("A country with this name already exists.");
         }
         [Fact]
-        public void AddCountry_AddCountry()
+        public async Task AddCountry_AddCountry()
         {
             //arrange
             CountryAddRequest country = new CountryAddRequest() { CountryName = "country" };
 
             //act
-            var response = _countriesService.AddCountry(country);
+            var response =await _countriesService.AddCountry(country);
             //assert
             response.Should().NotBeNull();
             response.Name.Should().Be("country");
@@ -74,17 +74,17 @@ namespace xUnitTests
         #endregion
         #region GetAllCountries 
         [Fact]
-        public void GetAllCountries_EmptyList()
+        public async Task GetAllCountries_EmptyList()
         {
             // arrange 
 
             // act 
-            var result = _countriesService.GetAllCountries();
+            var result =await _countriesService.GetAllCountries();
             // assert
             result.Should().BeEmpty();  
         }
         [Fact]
-        public void GetAllCountries_ListOfAllCountries()
+        public async Task GetAllCountries_ListOfAllCountries()
         {
             // arrange
             List<CountryAddRequest> CountryRequestList = new List<CountryAddRequest>()
@@ -97,9 +97,10 @@ namespace xUnitTests
             List<CountryResponse> countryResponses = new List<CountryResponse>();
             foreach (var country in CountryRequestList)
             {
-                countryResponses.Add(_countriesService.AddCountry(country));
+                var countryToAdd = await _countriesService.AddCountry(country);
+                countryResponses.Add(countryToAdd);
             }
-            var result = _countriesService.GetAllCountries();
+            var result =await _countriesService.GetAllCountries();
 
             // assert
             foreach (var country in countryResponses)
@@ -110,17 +111,17 @@ namespace xUnitTests
         #endregion
         #region GetCountryById
         [Fact]
-        public void GetCountryById_ReturnsNull()
+        public async Task GetCountryById_ReturnsNull()
         {
             // arrange 
             Guid? Id = null;
             // act 
-            var result = _countriesService.GetCountryById(Id);
+            var result =await _countriesService.GetCountryById(Id);
             // assert
             result.Should().BeNull();
         }
         [Fact]
-        public void GetCountryById_ResturnsCountry()
+        public async Task GetCountryById_ReturnsCountry()
         {
             // arrange
             Guid Id = Guid.NewGuid();
@@ -128,9 +129,9 @@ namespace xUnitTests
             {
                 CountryName = "test"
             };
-            var countryResponse = _countriesService.AddCountry(country);
+            var countryResponse =await _countriesService.AddCountry(country);
             // act 
-            var result = _countriesService.GetCountryById(countryResponse.Id);
+            var result =await _countriesService.GetCountryById(countryResponse.Id);
 
             // assert
             result.Should().Be(countryResponse);
