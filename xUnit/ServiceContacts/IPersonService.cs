@@ -17,6 +17,7 @@ namespace ServiceContacts
         public List<PersonResponse> GetSortedPersons(List<PersonResponse> persons,string SortBy,SortDirectionOptions sortDirection);
         public Task<PersonResponse?> UpdatePerson(PersonUpdateRequest? request);
         public Task<bool> DeletePerson(Guid? id);
+        public Task<MemoryStream> GetPersonsCSV();
         
     }
 }

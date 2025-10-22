@@ -118,5 +118,11 @@ namespace CRUDs.Controllers
                 CustomSwitches = "--footer-right \"Page [page] of [topage]\" --footer-font-size 10"
             };
         }
+        public async Task<IActionResult> PersonsCSV()
+        {
+            MemoryStream memoryStream =await _personService.GetPersonsCSV();
+
+            return File(memoryStream,"application/octet-stream","persons.csv");
+        }
     }
 }

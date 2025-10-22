@@ -1,4 +1,5 @@
 ﻿using Azure.Identity;
+using CsvHelper;
 using Entities;
 using Microsoft.EntityFrameworkCore;
 using ServiceContacts;
@@ -180,6 +181,46 @@ namespace Services
             await _db.SaveChangesAsync();
 
             return personFromDb.ToPersonResponse();
+        }
+        public async Task<MemoryStream> GetPersonsCSV()
+        {
+            MemoryStream memoryStream = new MemoryStream();
+
+            await using (StreamWriter streamWriter = new StreamWriter(memoryStream, Encoding.UTF8, -1, leaveOpen: true))
+            await using (CsvWriter csvWriter = new CsvWriter(streamWriter, CultureInfo.InvariantCulture))
+            {
+                csvWriter.WriteField("Id");
+                csvWriter.WriteField("Name");
+                csvWriter.WriteField("Email");
+                csvWriter.WriteField("DateOfBirth");
+                //csvWriter.WriteField("Gender");
+                csvWriter.WriteField("Country");
+                csvWriter.WriteField("Address");
+                csvWriter.WriteField("ReceiveNewsletter");
+                await csvWriter.NextRecordAsync();
+
+                List<PersonResponse> persons =await _db.Persons
+                    .Include(p => p.Country)
+                    .Select(temp => temp.ToPersonResponse())
+                    .ToListAsync();
+
+                foreach(PersonResponse person in persons)
+                {
+                    csvWriter.WriteField(person.Id);
+                    csvWriter.WriteField(person.Name);
+                    csvWriter.WriteField(person.Email);
+                    csvWriter.WriteField(person.DateOfBirth?.ToString("yyyy-MM-dd"));
+                    //csvWriter.WriteField(person.Gender);
+                    csvWriter.WriteField(person.Country);
+                    csvWriter.WriteField(person.Address);
+                    csvWriter.WriteField(person.ReceiveNewsletter == true ? "Yes" : "No");
+
+                    await csvWriter.NextRecordAsync();
+                }
+            }
+
+            memoryStream.Position = 0;
+            return memoryStream;
         }
     }
 }
