@@ -18,6 +18,6 @@ namespace ServiceContacts
         public Task<PersonResponse?> UpdatePerson(PersonUpdateRequest? request);
         public Task<bool> DeletePerson(Guid? id);
         public Task<MemoryStream> GetPersonsCSV();
-        
+        Task<MemoryStream> GetPersonsExcel();
     }
 }

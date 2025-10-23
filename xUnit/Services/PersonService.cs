@@ -2,6 +2,9 @@
 using CsvHelper;
 using Entities;
 using Microsoft.EntityFrameworkCore;
+using OfficeOpenXml;
+using OfficeOpenXml.Style;
+using System.Drawing;
 using ServiceContacts;
 using ServiceContacts.DTOs.CountryDto;
 using ServiceContacts.DTOs.PersonDto;
@@ -221,6 +224,60 @@ namespace Services
 
             memoryStream.Position = 0;
             return memoryStream;
+        }
+
+        public async Task<MemoryStream> GetPersonsExcel()
+        {
+            MemoryStream memoryStream = new MemoryStream();
+
+            using (ExcelPackage excel = new ExcelPackage(memoryStream))
+            {
+                // 1- add work sheet 
+                ExcelWorksheet worksheet = excel.Workbook.Worksheets.Add("Persons");
+
+                //2- add headers 
+                worksheet.Cells[1, 1].Value = "Name";
+                worksheet.Cells[1, 2].Value = "Email";
+                worksheet.Cells[1, 3].Value = "Date of Birth";
+                worksheet.Cells[1, 4].Value = "Age";
+                worksheet.Cells[1, 5].Value = "Gender";
+                worksheet.Cells[1, 6].Value = "Country";
+                worksheet.Cells[1, 7].Value = "Address";
+                worksheet.Cells[1, 8].Value = "Receives Newsletter";
+
+                // 3.(additional) Style the Header Row
+                using (var headerRange = worksheet.Cells["A1:I1"])
+                {
+                    headerRange.Style.Font.Bold = true;
+                    headerRange.Style.Fill.PatternType = ExcelFillStyle.Solid;
+                    headerRange.Style.Fill.BackgroundColor.SetColor(Color.LightGray);
+                }
+                List<PersonResponse> personResponses = await GetAllPersons();
+
+                // this should be 2 because 1 for headers 
+                int row = 2;
+                foreach (var person in personResponses)
+                {
+                    worksheet.Cells[row, 1].Value = person.Name;
+                    worksheet.Cells[row, 2].Value = person.Email;
+                    worksheet.Cells[row, 3].Value = person.DateOfBirth;
+                    worksheet.Cells[row, 3].Style.Numberformat.Format = "yyyy-mm-dd"; 
+                    worksheet.Cells[row, 4].Value = person.Age;
+                    worksheet.Cells[row, 5].Value = person.Gender;
+                    worksheet.Cells[row, 6].Value = person.Country;
+                    worksheet.Cells[row, 7].Value = person.Address;
+                    worksheet.Cells[row, 8].Value = person.ReceiveNewsletter == true ? "Yes" : "No";
+                    row++;
+                }
+                // 6. Auto-fit columns 
+                worksheet.Cells[worksheet.Dimension.Address].AutoFitColumns();
+
+                await excel.SaveAsync();
+            }
+            ;
+            memoryStream.Position = 0;
+            return memoryStream; 
+
         }
     }
 }

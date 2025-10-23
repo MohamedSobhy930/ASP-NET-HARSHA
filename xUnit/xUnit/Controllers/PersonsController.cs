@@ -122,7 +122,14 @@ namespace CRUDs.Controllers
         {
             MemoryStream memoryStream =await _personService.GetPersonsCSV();
 
-            return File(memoryStream,"application/octet-stream","persons.csv");
+            return File(memoryStream,"text/csv","persons.csv");
+        }
+        public async Task<IActionResult> PersonsExcel()
+        {
+            MemoryStream memoryStream = await _personService.GetPersonsExcel();
+
+            string mimeType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+            return File(memoryStream, mimeType, "Persons.xlsx");
         }
     }
 }

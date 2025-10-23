@@ -1,8 +1,9 @@
 using Entities;
 using Microsoft.EntityFrameworkCore;
+using OfficeOpenXml;
+using Rotativa.AspNetCore;
 using ServiceContacts;
 using Services;
-using Rotativa.AspNetCore;
 
 namespace xUnit
 {
@@ -14,14 +15,15 @@ namespace xUnit
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-            builder.Services.AddScoped<ICountriesService,CountriesService>();
-            builder.Services.AddScoped<IPersonService,PersonService>();
+            builder.Services.AddScoped<ICountriesService, CountriesService>();
+            builder.Services.AddScoped<IPersonService, PersonService>();
 
             builder.Services.AddDbContext<AppDbContext>(
                 options =>
                 {
                     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
                 });
+
             
             var app = builder.Build();
 

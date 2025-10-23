@@ -201,6 +201,10 @@
             "CsvHelper": {
               "target": "Package",
               "version": "[33.1.0, )"
+            },
+            "EPPlus": {
+              "target": "Package",
+              "version": "[8.2.1, )"
             }
           },
           "imports": [
