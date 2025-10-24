@@ -6,6 +6,8 @@ using StockAppWithConfigurationAssignment.Models;
 using System.Diagnostics;
 using System.Reflection.Metadata.Ecma335;
 using StockAppAssignment.Models;
+using Rotativa.AspNetCore.Options;
+using Rotativa.AspNetCore;
 
 namespace StockAppWithConfiguration.Controllers
 {
@@ -94,7 +96,37 @@ namespace StockAppWithConfiguration.Controllers
             return View(orders);
 
         }
+        public async Task<IActionResult> OrdersPDF()
+        {
+            List<BuyOrderResponse> buyOrders = await _stockService.GetBuyOrders();
+            List<SellOrderResponse> sellOrders = await _stockService.GetSellOrders();
+            Orders orders = new Orders()
+            {
+                BuyOrders = buyOrders,
+                SellOrders = sellOrders
+            };
+            return new ViewAsPdf("OrdersPDF",orders)
+            {
+                // Sets the name of the file the user will download
+                FileName = $"Stock_Orders_{DateTime.Now.ToString("yyyyMMdd_HHmm")}.pdf",
 
+                // Sets the page size (e.g., A4, Letter)
+                PageSize = Size.A4,
+
+                // Sets the orientation (Portrait or Landscape)
+                PageOrientation =Orientation.Landscape,
+
+                // Sets all margins in millimeters (top, right, bottom, left)
+                PageMargins = new Margins(10, 10, 10, 10),
+
+                // --- Advanced Properties ---
+
+                // This is used to pass any other command-line arguments to wkhtmltopdf
+                // For example, to add a footer with page numbers:
+                CustomSwitches = "--footer-right \"Page [page] of [topage]\" --footer-font-size 10"
+            };
+
+        }
         public IActionResult Privacy()
         {
             return View();

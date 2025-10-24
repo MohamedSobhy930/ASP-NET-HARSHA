@@ -1,4 +1,5 @@
-﻿using IServicesContracts;
+﻿using Entities;
+using IServicesContracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +10,10 @@ namespace Services
 {
     public class StockService : IStockService
     {
-        private readonly List<BuyOrder> _buyOrders;
-        private readonly List<SellOrder> _sellOrders;
-        public StockService() 
+        private AppDbContext _db;
+        public StockService(AppDbContext db) 
         {
-            _buyOrders = new List<BuyOrder>();
-            _sellOrders = new List<SellOrder>();
+            _db = db;
         }
         public Task<BuyOrderResponse> CreateBuyOrder(BuyOrderRequest? buyOrderRequest)
         {
@@ -23,7 +22,8 @@ namespace Services
             ValidationHelper.ModelValidation(buyOrderRequest);
             BuyOrder order = buyOrderRequest.ToBuyOrder();
             order.BuyOrderID = Guid.NewGuid();
-            _buyOrders.Add(order);
+            _db.BuyOrders.Add(order);
+            _db.SaveChanges();
             return Task.FromResult(order.ToBuyOrderResponse());
         }
 
@@ -34,13 +34,14 @@ namespace Services
             ValidationHelper.ModelValidation(sellOrderRequest);
             SellOrder order = sellOrderRequest.ToSellOrder();
             order.SellOrderID = Guid.NewGuid();
-            _sellOrders.Add(order);
+            _db.SellOrders.Add(order);
+            _db.SaveChanges();
             return Task.FromResult(order.ToSellOrderResponse());
         }
 
         public Task<List<BuyOrderResponse>> GetBuyOrders()
         {
-            List<BuyOrderResponse> orders = _buyOrders
+            List<BuyOrderResponse> orders = _db.BuyOrders
                 .Select(order => order.ToBuyOrderResponse())
                 .ToList();
             return Task.FromResult(orders);
@@ -49,7 +50,7 @@ namespace Services
 
         public Task<List<SellOrderResponse>> GetSellOrders()
         {
-            List<SellOrderResponse> orders = _sellOrders
+            List<SellOrderResponse> orders = _db.SellOrders
                 .Select(order => order.ToSellOrderResponse())
                 .ToList();
             return Task.FromResult(orders);

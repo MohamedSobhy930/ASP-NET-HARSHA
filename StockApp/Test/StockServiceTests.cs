@@ -1,5 +1,7 @@
-﻿using FluentAssertions;
+﻿using Entities;
+using FluentAssertions;
 using IServicesContracts;
+using Microsoft.EntityFrameworkCore;
 using Services;
 using System;
 using System.Collections;
@@ -17,7 +19,7 @@ namespace Test
         private readonly IStockService _stockService;
         public StockServiceTests() 
         {
-            _stockService = new StockService();
+            _stockService = new StockService(new AppDbContext(new DbContextOptionsBuilder<AppDbContext>().Options));
         }
         // this a helper method for a valid request to avoid repeating the code 
         private BuyOrderRequest CreateValidBuyOrderRequest()

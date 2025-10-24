@@ -2,7 +2,10 @@ using StockAppWithConfigurationAssignment.Models;
 using IServicesContracts;
 using StockAppWithConfigurationAssignment.Services;
 using Services;
-
+using Entities;
+using Microsoft.EntityFrameworkCore;
+using Rotativa;
+using Rotativa.AspNetCore;
 namespace StockAppWithConfiguration
 {
     public class Program
@@ -15,8 +18,14 @@ namespace StockAppWithConfiguration
             builder.Services.AddControllersWithViews();
             builder.Services.AddHttpClient();
             builder.Services.Configure<TradingOptions>(builder.Configuration.GetSection("TradingOptions"));
-            builder.Services.AddSingleton<IFinnhubService,FinnhubService>();
-            builder.Services.AddSingleton<IStockService,StockService>();
+
+            builder.Services.AddDbContext<AppDbContext>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+            });
+            
+            builder.Services.AddScoped<IFinnhubService,FinnhubService>();
+            builder.Services.AddScoped<IStockService,StockService>();
 
             var app = builder.Build();
 
@@ -27,7 +36,7 @@ namespace StockAppWithConfiguration
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
+            RotativaConfiguration.Setup("wwwroot", wkhtmltopdfRelativePath: "Rotativa");
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 

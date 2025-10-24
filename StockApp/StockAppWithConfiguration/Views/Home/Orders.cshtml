@@ -3,11 +3,15 @@
 @{
     ViewBag.Title = "Orders";
 }
-
+<div class="mb-3">
+    <a asp-action="OrdersPDF" class="btn btn-primary">
+        <i class="fa-solid fa-file-pdf"></i> Download as PDF
+    </a>
+</div>
 <h1>All Orders</h1>
 
 <div class="orders-container">
-
+    
     <div class="order-list">
         <h2>Buy Orders</h2>
         @if (Model.BuyOrders.Any())

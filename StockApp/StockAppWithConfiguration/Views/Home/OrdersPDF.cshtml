@@ -1,0 +1,120 @@
+﻿@using StockAppAssignment.Models
+@model Orders
+@{
+    Layout = null; /* This is important! No layout for the PDF. */
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Orders Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        h2 {
+            font-size: 18px;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 30px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Orders Report</h1>
+    <p>Generated on: @DateTime.Now.ToString("yyyy-MM-dd HH:mm")</p>
+
+    <h2>Buy Orders</h2>
+    @if (Model.BuyOrders.Any())
+    {
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Stock Symbol</th>
+                    <th>Stock Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Trade Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var order in Model.BuyOrders)
+                {
+                    <tr>
+                        <td>@order.DateAndTimeOfOrder.ToString("yyyy-MM-dd")</td>
+                        <td>@order.StockSymbol</td>
+                        <td>@order.StockName</td>
+                        <td>@order.Quantity</td>
+                        <td>$@order.Price.ToString("N2")</td>
+                        <td>$@order.TradeAmount.ToString("N2")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No buy orders placed yet.</p>
+    }
+
+    <h2>Sell Orders</h2>
+    @if (Model.SellOrders.Any())
+    {
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Stock Symbol</th>
+                    <th>Stock Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Trade Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var order in Model.SellOrders)
+                {
+                    <tr>
+                        <td>@order.DateAndTimeOfOrder.ToString("yyyy-MM-dd")</td>
+                        <td>@order.StockSymbol</td>
+                        <td>@order.StockName</td>
+                        <td>@order.Quantity</td>
+                        <td>$@order.Price.ToString("N2")</td>
+                        <td>$@order.TradeAmount.ToString("N2")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No sell orders placed yet.</p>
+    }
+
+</body>
+</html>
