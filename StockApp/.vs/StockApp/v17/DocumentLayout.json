@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B05A7378-3D65-4FBD-8AD6-561AD142A9C4}|StockAppWithConfiguration\\StockAppAssignment.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\stockapp\\stockappwithconfiguration\\views\\home\\orders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B05A7378-3D65-4FBD-8AD6-561AD142A9C4}|StockAppWithConfiguration\\StockAppAssignment.csproj|solutionrelative:stockappwithconfiguration\\views\\home\\orders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B05A7378-3D65-4FBD-8AD6-561AD142A9C4}|StockAppWithConfiguration\\StockAppAssignment.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\stockapp\\stockappwithconfiguration\\views\\home\\orderspdf.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B05A7378-3D65-4FBD-8AD6-561AD142A9C4}|StockAppWithConfiguration\\StockAppAssignment.csproj|solutionrelative:stockappwithconfiguration\\views\\home\\orderspdf.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B05A7378-3D65-4FBD-8AD6-561AD142A9C4}|StockAppWithConfiguration\\StockAppAssignment.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\stockapp\\stockappwithconfiguration\\views\\home\\orders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B05A7378-3D65-4FBD-8AD6-561AD142A9C4}|StockAppWithConfiguration\\StockAppAssignment.csproj|solutionrelative:stockappwithconfiguration\\views\\home\\orders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B05A7378-3D65-4FBD-8AD6-561AD142A9C4}|StockAppWithConfiguration\\StockAppAssignment.csproj|e:\\programing\\backend .net\\level_3\\udemy - asp.net core 9 (.net 9)   true ultimate guide 2025-2\\solutions\\stockapp\\stockappwithconfiguration\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,13 +50,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "OrdersPDF.cshtml",
               "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\StockAppWithConfiguration\\Views\\Home\\OrdersPDF.cshtml",
               "RelativeDocumentMoniker": "StockAppWithConfiguration\\Views\\Home\\OrdersPDF.cshtml",
-              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\StockAppWithConfiguration\\Views\\Home\\OrdersPDF.cshtml*",
-              "RelativeToolTip": "StockAppWithConfiguration\\Views\\Home\\OrdersPDF.cshtml*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHcAAAAHAAAAAAAAAA==",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\StockAppWithConfiguration\\Views\\Home\\OrdersPDF.cshtml",
+              "RelativeToolTip": "StockAppWithConfiguration\\Views\\Home\\OrdersPDF.cshtml",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAADkAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-10-24T17:01:50.296Z",
               "EditorCaption": ""
@@ -89,12 +89,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Orders.cshtml",
               "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\StockAppWithConfiguration\\Views\\Home\\Orders.cshtml",
               "RelativeDocumentMoniker": "StockAppWithConfiguration\\Views\\Home\\Orders.cshtml",
-              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\StockAppWithConfiguration\\Views\\Home\\Orders.cshtml*",
-              "RelativeToolTip": "StockAppWithConfiguration\\Views\\Home\\Orders.cshtml*",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\StockAppWithConfiguration\\Views\\Home\\Orders.cshtml",
+              "RelativeToolTip": "StockAppWithConfiguration\\Views\\Home\\Orders.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-10-24T16:46:33.752Z",
@@ -106,8 +106,8 @@
               "Title": "HomeController.cs",
               "DocumentMoniker": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\StockAppWithConfiguration\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "StockAppWithConfiguration\\Controllers\\HomeController.cs",
-              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\StockAppWithConfiguration\\Controllers\\HomeController.cs*",
-              "RelativeToolTip": "StockAppWithConfiguration\\Controllers\\HomeController.cs*",
+              "ToolTip": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\StockApp\\StockAppWithConfiguration\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "StockAppWithConfiguration\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAFUAAAAAAAAAAAAkwGsAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-24T16:19:19.735Z",

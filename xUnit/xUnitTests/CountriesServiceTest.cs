@@ -1,4 +1,5 @@
 ﻿using Entities;
+using EntityFrameworkCoreMock;
 using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
 using ServiceContacts;
@@ -15,9 +16,16 @@ namespace xUnitTests
     public class CountriesServiceTest
     {
         private readonly ICountriesService _countriesService;
+        private readonly AppDbContext dbContext;
         public CountriesServiceTest()
         {
-            _countriesService = new CountriesService(new AppDbContext(new DbContextOptionsBuilder<AppDbContext>().Options));
+            var options = new DbContextOptionsBuilder<AppDbContext>()
+                .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
+                .Options;
+
+            dbContext = new AppDbContext(options);
+            
+            _countriesService = new CountriesService(dbContext);
         }
         #region AddCountry
         [Fact]
@@ -69,7 +77,6 @@ namespace xUnitTests
             //assert
             response.Should().NotBeNull();
             response.Name.Should().Be("country");
-            response.Id.Should().Be(Guid.Empty);
         }
         #endregion
         #region GetAllCountries 

@@ -17,11 +17,18 @@ namespace xUnitTests
     public class PersonServiceTest
     {
         private IPersonService _personService;
-        private ICountriesService _countryService;
+        private readonly ICountriesService _countriesService;
+        private readonly AppDbContext dbContext;
         public PersonServiceTest() 
         {
-            _countryService = new CountriesService(new AppDbContext(new DbContextOptionsBuilder<AppDbContext>().Options));
-            _personService = new PersonService(_countryService , new AppDbContext(new DbContextOptionsBuilder<AppDbContext>().Options));
+            var options = new DbContextOptionsBuilder<AppDbContext>()
+                .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
+                .Options;
+
+            dbContext = new AppDbContext(options);
+
+            _countriesService = new CountriesService(dbContext);
+            _personService = new PersonService(_countriesService,dbContext);
         }
         #region AddPerson
         [Fact]
@@ -35,7 +42,7 @@ namespace xUnitTests
             await act.Should().ThrowAsync<ArgumentNullException>();
         }
         [Fact]
-        public void AddPerson_PersonRequiredProperties_throwArgumentException()
+        public async Task AddPerson_PersonRequiredProperties_throwArgumentException()
         {
             //arrange
             PersonAddRequest personAddRequest = new PersonAddRequest()
@@ -44,9 +51,9 @@ namespace xUnitTests
                 Email = null,
             };
             //act
-            Action act = async () =>await _personService.AddPerson(personAddRequest);
+            Func<Task> act = async () =>await _personService.AddPerson(personAddRequest);
             //assert
-            act.Should().Throw<ArgumentException>();
+            await act.Should().ThrowAsync<ArgumentException>();
         }
         [Fact]
         public async Task AddPerson_ProperPersonDetails()
@@ -78,7 +85,7 @@ namespace xUnitTests
             // Arrange
             var countryRequest = new CountryAddRequest()
             { CountryName = "Egypt"};
-            var countryResponse =await _countryService.AddCountry(countryRequest);
+            var countryResponse =await _countriesService.AddCountry(countryRequest);
 
             var personToAdd = new PersonAddRequest 
             { Name = "Ahmed",
@@ -135,8 +142,8 @@ namespace xUnitTests
             var Country1 = new CountryAddRequest() { CountryName = "Egypt" };
             var Country2 = new CountryAddRequest() { CountryName = "USA" };
 
-            var countryResponse1 =await _countryService.AddCountry(Country1);
-            var countryResponse2 =await _countryService.AddCountry(Country2);
+            var countryResponse1 =await _countriesService.AddCountry(Country1);
+            var countryResponse2 =await _countriesService.AddCountry(Country2);
 
             var person1 = new PersonAddRequest() {
                 Name = "Ahmed",
@@ -193,31 +200,31 @@ namespace xUnitTests
 
         #region UpdatePerson
         [Fact]
-        public void UpdatePerson_NullPersonObject()
+        public async Task UpdatePerson_NullPersonObject()
         {
             // arrange 
             PersonUpdateRequest? request = null;
             // act 
-            Action act = async () =>await _personService.UpdatePerson(request);
+            Func<Task> act = async () =>await _personService.UpdatePerson(request);
             // assert
-            act.Should().Throw<ArgumentNullException>();
+            await act.Should().ThrowAsync<ArgumentNullException>();
         }
         [Fact]
-        public void UpdatePerson_InvalidPersonId()
+        public async Task UpdatePerson_InvalidPersonId()
         {
             // arrange 
             PersonUpdateRequest? request = new PersonUpdateRequest() {Id = new Guid() };
             // act 
-            Action act = async () =>await _personService.UpdatePerson(request);
+            Func<Task> act = async () =>await _personService.UpdatePerson(request);
             // assert
-            act.Should().Throw<ArgumentException>();
+            await act.Should().ThrowAsync<ArgumentException>();
         }
         [Fact]
         public async Task UpdatePerson_NullPersonName()
         {
             // arrange 
             CountryAddRequest countryAddRequest = new CountryAddRequest() { CountryName = "Egypt" };
-            var countryResponse =await _countryService.AddCountry(countryAddRequest);
+            var countryResponse =await _countriesService.AddCountry(countryAddRequest);
 
             PersonAddRequest personAddRequest = new PersonAddRequest() { Name = "Ali", Email = "test@test.com", CountryId = countryResponse.Id };
             var personResponse =await _personService.AddPerson(personAddRequest);
@@ -225,9 +232,9 @@ namespace xUnitTests
             PersonUpdateRequest personUpdateRequest = personResponse.ToPersonUpdateRequest();
             personUpdateRequest.Name = null;
             // act 
-            Action act = async () => await _personService.UpdatePerson(personUpdateRequest);
+            Func<Task> act = async () => await _personService.UpdatePerson(personUpdateRequest);
             // assert
-            act.Should().Throw<ArgumentException>();
+            await act.Should().ThrowAsync<ArgumentException>();
         }
         [Fact]
         public async Task UpdatePerson_ProperPersonUpdated()
@@ -236,8 +243,8 @@ namespace xUnitTests
             CountryAddRequest countryAddRequest = new CountryAddRequest() { CountryName = "Egypt" };
             CountryAddRequest countryAddRequest1 = new CountryAddRequest() { CountryName = "USA" };
 
-            var countryResponse =await _countryService.AddCountry(countryAddRequest);
-            var countryResponse1 =await _countryService.AddCountry(countryAddRequest1);
+            var countryResponse =await _countriesService.AddCountry(countryAddRequest);
+            var countryResponse1 =await _countriesService.AddCountry(countryAddRequest1);
 
 
             PersonAddRequest personAddRequest = new PersonAddRequest() 
@@ -278,7 +285,7 @@ namespace xUnitTests
         {
             // arrange
             CountryAddRequest countryAddRequest = new CountryAddRequest() { CountryName = "Egypt" };
-            var countryResponse =await _countryService.AddCountry(countryAddRequest);
+            var countryResponse =await _countriesService.AddCountry(countryAddRequest);
 
             PersonAddRequest personAddRequest = new PersonAddRequest() { Name = "Ali", Email = "test@test.com", CountryId = countryResponse.Id };
             var personResponse =await _personService.AddPerson(personAddRequest);
