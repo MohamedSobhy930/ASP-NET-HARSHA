@@ -181,3 +181,5 @@ E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultima
 E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\xUnitTests\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll
 E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\xUnitTests\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\xUnitTests\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\xUnitTests\bin\Debug\net8.0\AutoFixture.dll
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\xUnitTests\bin\Debug\net8.0\Fare.dll

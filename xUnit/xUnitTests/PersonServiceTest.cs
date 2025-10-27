@@ -1,4 +1,5 @@
-﻿using Entities;
+﻿using AutoFixture;
+using Entities;
 using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
 using ServiceContacts;
@@ -16,11 +17,13 @@ namespace xUnitTests
 {
     public class PersonServiceTest
     {
-        private IPersonService _personService;
+        private readonly IPersonService _personService;
         private readonly ICountriesService _countriesService;
         private readonly AppDbContext dbContext;
+        private readonly IFixture fixture;
         public PersonServiceTest() 
         {
+            fixture = new Fixture();
             var options = new DbContextOptionsBuilder<AppDbContext>()
                 .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
                 .Options;
@@ -59,16 +62,9 @@ namespace xUnitTests
         public async Task AddPerson_ProperPersonDetails()
         {
             //arrange
-            PersonAddRequest personAddRequest = new PersonAddRequest()
-            {
-                Name = "test",
-                Email = "test@test.com",
-                Gender = GenderOptions.female,
-                DateOfBirth = DateTime.Parse("2010-03-02"),
-                CountryId = new Guid(),
-                Address = "cairo",
-                ReceiveNewsletter = true
-            };
+            PersonAddRequest personAddRequest = fixture.Build<PersonAddRequest>()
+                .With(temp => temp.Email, "test@test.com")
+                .Create();
             //act
             var result =await _personService.AddPerson(personAddRequest);
             var resultList =await _personService.GetAllPersons();
@@ -83,19 +79,14 @@ namespace xUnitTests
         public async Task GetPersonById_PersonExists()
         {
             // Arrange
-            var countryRequest = new CountryAddRequest()
-            { CountryName = "Egypt"};
+            var countryRequest = fixture.Create<CountryAddRequest>();
             var countryResponse =await _countriesService.AddCountry(countryRequest);
 
-            var personToAdd = new PersonAddRequest 
-            { Name = "Ahmed",
-                Email ="test@test.com",
-                Gender = GenderOptions.female,
-                DateOfBirth = DateTime.Parse("1990-02-03"),
-                CountryId = countryResponse.Id,
-                Address = "blabla",
-                ReceiveNewsletter = true
-            };
+            PersonAddRequest personToAdd = fixture.Build<PersonAddRequest>()
+                .With(temp => temp.Name , "Ahmed")
+                .With(temp => temp.Email , "test@test.com")
+                .With(temp => temp.CountryId , countryResponse.Id)
+                .Create();
             var personResponse =await _personService.AddPerson(personToAdd); 
             
             // Act
@@ -139,27 +130,23 @@ namespace xUnitTests
         public async Task GetAllPersons_WhenPersonsExist_ShouldReturnListOfPersonResponses()
         {
             // Arrange
-            var Country1 = new CountryAddRequest() { CountryName = "Egypt" };
-            var Country2 = new CountryAddRequest() { CountryName = "USA" };
+            var Country1 = fixture.Create<CountryAddRequest>();
+            var Country2 = fixture.Create<CountryAddRequest>();
 
             var countryResponse1 =await _countriesService.AddCountry(Country1);
             var countryResponse2 =await _countriesService.AddCountry(Country2);
 
-            var person1 = new PersonAddRequest() {
-                Name = "Ahmed",
-                Email = "ahmed@example.com",
-                Address = "address1",
-                CountryId = countryResponse1.Id,
-                ReceiveNewsletter = true
-            };
-            var person2 = new PersonAddRequest()
-            {
-                Name = "Fatima",
-                Email = "fatima@example.com",
-                Address = "address2",
-                CountryId = countryResponse2.Id,
-                ReceiveNewsletter = false,
-            };
+            var person1 = fixture.Build<PersonAddRequest>()
+                .With(temp => temp.Name, "Ahmed")
+                .With(temp => temp.Email, "test@test.com")
+                .With(temp => temp.CountryId, countryResponse1.Id)
+                .Create();
+
+            var person2 = fixture.Build<PersonAddRequest>()
+                .With(temp => temp.Name, "fatima")
+                .With(temp => temp.Email, "test1@test.com")
+                .With(temp => temp.CountryId, countryResponse2.Id)
+                .Create();
             var PersonResponse1 =await _personService.AddPerson(person1);
             var PersonResponse2 =await _personService.AddPerson(person2);
             // Act
@@ -223,10 +210,14 @@ namespace xUnitTests
         public async Task UpdatePerson_NullPersonName()
         {
             // arrange 
-            CountryAddRequest countryAddRequest = new CountryAddRequest() { CountryName = "Egypt" };
+            CountryAddRequest countryAddRequest = fixture.Create<CountryAddRequest>();
             var countryResponse =await _countriesService.AddCountry(countryAddRequest);
 
-            PersonAddRequest personAddRequest = new PersonAddRequest() { Name = "Ali", Email = "test@test.com", CountryId = countryResponse.Id };
+            PersonAddRequest personAddRequest = fixture.Build<PersonAddRequest>()
+                .With(temp => temp.Name, "Ahmed")
+                .With(temp => temp.Email, "test@test.com")
+                .With(temp => temp.CountryId, countryResponse.Id)
+                .Create();
             var personResponse =await _personService.AddPerson(personAddRequest);
 
             PersonUpdateRequest personUpdateRequest = personResponse.ToPersonUpdateRequest();
@@ -240,8 +231,8 @@ namespace xUnitTests
         public async Task UpdatePerson_ProperPersonUpdated()
         {
             // arrange 
-            CountryAddRequest countryAddRequest = new CountryAddRequest() { CountryName = "Egypt" };
-            CountryAddRequest countryAddRequest1 = new CountryAddRequest() { CountryName = "USA" };
+            CountryAddRequest countryAddRequest = fixture.Create<CountryAddRequest>();
+            CountryAddRequest countryAddRequest1 = fixture.Create<CountryAddRequest>();
 
             var countryResponse =await _countriesService.AddCountry(countryAddRequest);
             var countryResponse1 =await _countriesService.AddCountry(countryAddRequest1);
@@ -284,10 +275,14 @@ namespace xUnitTests
         public async Task DeletePerson_validId()
         {
             // arrange
-            CountryAddRequest countryAddRequest = new CountryAddRequest() { CountryName = "Egypt" };
+            CountryAddRequest countryAddRequest = fixture.Create<CountryAddRequest>();
             var countryResponse =await _countriesService.AddCountry(countryAddRequest);
 
-            PersonAddRequest personAddRequest = new PersonAddRequest() { Name = "Ali", Email = "test@test.com", CountryId = countryResponse.Id };
+            PersonAddRequest personAddRequest = fixture.Build<PersonAddRequest>()
+                .With(temp => temp.Name, "Ahmed")
+                .With(temp => temp.Email, "test@test.com")
+                .With(temp => temp.CountryId, countryResponse.Id)
+                .Create();
             var personResponse =await _personService.AddPerson(personAddRequest);
             // act 
             bool isDeleted =await _personService.DeletePerson(personResponse.Id);
