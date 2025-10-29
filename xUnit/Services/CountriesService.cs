@@ -1,5 +1,6 @@
 ﻿using Entities;
 using Microsoft.EntityFrameworkCore;
+using RepoContracts;
 using ServiceContacts;
 using ServiceContacts.DTOs.CountryDto;
 
@@ -7,10 +8,10 @@ namespace Services
 {
     public class CountriesService : ICountriesService
     {
-        private readonly AppDbContext _db ;
-        public CountriesService(AppDbContext countries)
+        private readonly ICountriesRepo _countriesRepo;
+        public CountriesService(ICountriesRepo countriesRepo)
         {
-            _db = countries;
+            _countriesRepo = countriesRepo;
             
         }
         public async Task<CountryResponse> AddCountry(CountryAddRequest? countryAddRequest)
@@ -23,25 +24,26 @@ namespace Services
                 throw new ArgumentException("CountryName cannot be null or empty.");
             }
 
-            if (_db.Countries.Count(temp => temp.Name == countryAddRequest.CountryName) > 0)
+            if (_countriesRepo.GetCountryByName(country.Name)!= null)
             {
                 throw new ArgumentException("A country with this name already exists.");
             }
             country.Id = new Guid();
-            await _db.Countries.AddAsync(country);
-            await _db.SaveChangesAsync();
+            await _countriesRepo.AddCountry(country);
 
             return country.ToCountryResponse();
         }
         public async  Task<List<CountryResponse>> GetAllCountries()
         {
-            return await _db.Countries.Select(c => c.ToCountryResponse()).ToListAsync();
+            return (await _countriesRepo.GetAllCountries())
+                .Select(temp => temp.ToCountryResponse())
+                .ToList();
         }
         public async Task<CountryResponse?> GetCountryById(Guid? id)
         {
             if (id == null)
                 return null;
-            var country =await _db.Countries.FirstOrDefaultAsync(c => c.Id  == id);
+            Country? country =await _countriesRepo.GetCountryById(id.Value);
             if (country == null)
                 return null;
             return country.ToCountryResponse();

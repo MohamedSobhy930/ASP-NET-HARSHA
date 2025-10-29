@@ -1,6 +1,8 @@
 using Entities;
 using Microsoft.EntityFrameworkCore;
 using OfficeOpenXml;
+using RepoContracts;
+using Repos;
 using Rotativa.AspNetCore;
 using ServiceContacts;
 using Services;
@@ -17,6 +19,8 @@ namespace xUnit
             builder.Services.AddControllersWithViews();
             builder.Services.AddScoped<ICountriesService, CountriesService>();
             builder.Services.AddScoped<IPersonService, PersonService>();
+            builder.Services.AddScoped<IPersonsRepo, PersonRepo>();
+            builder.Services.AddScoped<ICountriesRepo,CountriesRepo>();
 
             builder.Services.AddDbContext<AppDbContext>(
                 options =>

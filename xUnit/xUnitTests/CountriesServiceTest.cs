@@ -25,7 +25,7 @@ namespace xUnitTests
 
             dbContext = new AppDbContext(options);
             
-            _countriesService = new CountriesService(dbContext);
+            _countriesService = new CountriesService(null);
         }
         #region AddCountry
         [Fact]

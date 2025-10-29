@@ -21,7 +21,7 @@ namespace ServiceContacts.DTOs.PersonDto
         [Required]
         public Guid? CountryId { get; set; }
 
-        public Person ToPersonResponse()
+        public Person ToPerson()
         {
             return new Person
             {

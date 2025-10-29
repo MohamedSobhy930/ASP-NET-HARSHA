@@ -30,8 +30,8 @@ namespace xUnitTests
 
             dbContext = new AppDbContext(options);
 
-            _countriesService = new CountriesService(dbContext);
-            _personService = new PersonService(_countriesService,dbContext);
+            _countriesService = new CountriesService(null);
+            _personService = new PersonService(null);
         }
         #region AddPerson
         [Fact]
@@ -53,8 +53,10 @@ namespace xUnitTests
                 Name = null,
                 Email = null,
             };
+
             //act
             Func<Task> act = async () =>await _personService.AddPerson(personAddRequest);
+
             //assert
             await act.Should().ThrowAsync<ArgumentException>();
         }

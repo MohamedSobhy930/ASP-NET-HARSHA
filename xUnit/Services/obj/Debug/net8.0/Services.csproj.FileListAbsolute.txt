@@ -16,3 +16,5 @@ E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultima
 E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\Services\obj\Debug\net8.0\refint\Services.dll
 E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\Services\obj\Debug\net8.0\Services.pdb
 E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\Services\obj\Debug\net8.0\ref\Services.dll
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\Services\bin\Debug\net8.0\RepoContracts.dll
+E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\Services\bin\Debug\net8.0\RepoContracts.pdb

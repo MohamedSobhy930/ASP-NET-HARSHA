@@ -11,6 +11,7 @@
           "Entities": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.10",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.10",
+          "Repos": "1.0.0",
           "Rotativa.AspNetCore": "1.4.0",
           "ServiceContacts": "1.0.0",
           "Services": "1.0.0"
@@ -494,6 +495,19 @@
         },
         "runtime": {
           "lib/net8.0/Microsoft.EntityFrameworkCore.Design.dll": {
+            "assemblyVersion": "9.0.10.0",
+            "fileVersion": "9.0.1025.47514"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.InMemory/9.0.10": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "9.0.10",
+          "Microsoft.Extensions.Caching.Memory": "9.0.10",
+          "Microsoft.Extensions.Logging": "9.0.10"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
             "assemblyVersion": "9.0.10.0",
             "fileVersion": "9.0.1025.47514"
           }
@@ -1165,10 +1179,34 @@
       "Entities/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "9.0.10",
+          "Microsoft.EntityFrameworkCore.InMemory": "9.0.10",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.10"
         },
         "runtime": {
           "Entities.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "RepoContracts/1.0.0": {
+        "dependencies": {
+          "Entities": "1.0.0"
+        },
+        "runtime": {
+          "RepoContracts.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Repos/1.0.0": {
+        "dependencies": {
+          "Entities": "1.0.0",
+          "RepoContracts": "1.0.0"
+        },
+        "runtime": {
+          "Repos.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1189,6 +1227,7 @@
         "dependencies": {
           "CsvHelper": "33.1.0",
           "EPPlus": "8.2.1",
+          "RepoContracts": "1.0.0",
           "ServiceContacts": "1.0.0"
         },
         "runtime": {
@@ -1359,6 +1398,13 @@
       "sha512": "sha512-8rdqmG0cV8uHPkX26rSQbGljzGJC7+sfWDXyV0f6TuR0YkUR46ztzH//xNTnB9zgEs6NUyOemAcspmkucH0pcw==",
       "path": "microsoft.entityframeworkcore.design/9.0.10",
       "hashPath": "microsoft.entityframeworkcore.design.9.0.10.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.InMemory/9.0.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fRnQ7qcHNINRoErantws9k3CdjcYwvbx+fLB3ZDN/EDC7kt93J3fPB15aEbnum2JiFPbw3fgr9iOGWyxaRXD9Q==",
+      "path": "microsoft.entityframeworkcore.inmemory/9.0.10",
+      "hashPath": "microsoft.entityframeworkcore.inmemory.9.0.10.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Relational/9.0.10": {
       "type": "package",
@@ -1858,6 +1904,16 @@
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RepoContracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Repos/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
