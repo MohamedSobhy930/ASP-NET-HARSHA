@@ -24,11 +24,11 @@ namespace Services
                 throw new ArgumentException("CountryName cannot be null or empty.");
             }
 
-            if (_countriesRepo.GetCountryByName(country.Name)!= null)
+            if (await _countriesRepo.GetCountryByName(country.Name)!= null)
             {
                 throw new ArgumentException("A country with this name already exists.");
             }
-            country.Id = new Guid();
+            country.Id = Guid.NewGuid();
             await _countriesRepo.AddCountry(country);
 
             return country.ToCountryResponse();

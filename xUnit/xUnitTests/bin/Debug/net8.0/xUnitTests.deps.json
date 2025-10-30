@@ -1845,6 +1845,17 @@
           }
         }
       },
+      "RepoContracts/1.0.0": {
+        "dependencies": {
+          "Entities": "1.0.0"
+        },
+        "runtime": {
+          "RepoContracts.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "ServiceContacts/1.0.0": {
         "dependencies": {
           "Entities": "1.0.0"
@@ -1860,6 +1871,7 @@
         "dependencies": {
           "CsvHelper": "33.1.0",
           "EPPlus": "8.2.1",
+          "RepoContracts": "1.0.0",
           "ServiceContacts": "1.0.0"
         },
         "runtime": {
@@ -2991,6 +3003,11 @@
       "hashPath": "xunit.runner.visualstudio.2.5.3.nupkg.sha512"
     },
     "Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RepoContracts/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

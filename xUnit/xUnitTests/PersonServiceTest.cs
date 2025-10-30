@@ -2,6 +2,8 @@
 using Entities;
 using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
+using Moq;
+using RepoContracts;
 using ServiceContacts;
 using ServiceContacts.DTOs.CountryDto;
 using ServiceContacts.DTOs.PersonDto;
@@ -18,20 +20,18 @@ namespace xUnitTests
     public class PersonServiceTest
     {
         private readonly IPersonService _personService;
-        private readonly ICountriesService _countriesService;
-        private readonly AppDbContext dbContext;
+
+        // mock repo
+        private readonly IPersonsRepo _personsRepo;
+        private readonly Mock<IPersonsRepo> _personRepoMock;
         private readonly IFixture fixture;
         public PersonServiceTest() 
         {
             fixture = new Fixture();
-            var options = new DbContextOptionsBuilder<AppDbContext>()
-                .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
-                .Options;
-
-            dbContext = new AppDbContext(options);
-
-            _countriesService = new CountriesService(null);
-            _personService = new PersonService(null);
+            
+            _personRepoMock = new Mock<IPersonsRepo>();
+            _personsRepo = _personRepoMock.Object;
+            _personService = new PersonService(_personsRepo);
         }
         #region AddPerson
         [Fact]
@@ -48,12 +48,12 @@ namespace xUnitTests
         public async Task AddPerson_PersonRequiredProperties_throwArgumentException()
         {
             //arrange
-            PersonAddRequest personAddRequest = new PersonAddRequest()
-            {
-                Name = null,
-                Email = null,
-            };
+            PersonAddRequest? personAddRequest = fixture.Build<PersonAddRequest>()
+                .With(temp => temp.Name, null as string)
+                .Create();
 
+            Person person = personAddRequest.ToPerson();
+            _personRepoMock.Setup(temp => temp.AddPerson(It.IsAny<Person>())).ReturnsAsync(person);
             //act
             Func<Task> act = async () =>await _personService.AddPerson(personAddRequest);
 
@@ -61,18 +61,23 @@ namespace xUnitTests
             await act.Should().ThrowAsync<ArgumentException>();
         }
         [Fact]
-        public async Task AddPerson_ProperPersonDetails()
+        public async Task AddPerson_FullPersonDetails_Successful()
         {
             //arrange
             PersonAddRequest personAddRequest = fixture.Build<PersonAddRequest>()
                 .With(temp => temp.Email, "test@test.com")
                 .Create();
+            Person person = personAddRequest.ToPerson();
+            PersonResponse expectedResponse = person.ToPersonResponse();
+            _personRepoMock.Setup(temp => temp.AddPerson(It.IsAny<Person>())).ReturnsAsync(person);
+
             //act
-            var result =await _personService.AddPerson(personAddRequest);
-            var resultList =await _personService.GetAllPersons();
+            var responseFromAdd =await _personService.AddPerson(personAddRequest);
+            expectedResponse.Id = responseFromAdd.Id;
             //assert
-            result.Should().NotBeNull();
-            resultList.Should().Contain(result);
+            responseFromAdd.Should().NotBeNull();
+            responseFromAdd.Should().Be(expectedResponse);
+
         }
         #endregion
 
@@ -81,24 +86,21 @@ namespace xUnitTests
         public async Task GetPersonById_PersonExists()
         {
             // Arrange
-            var countryRequest = fixture.Create<CountryAddRequest>();
-            var countryResponse =await _countriesService.AddCountry(countryRequest);
 
-            PersonAddRequest personToAdd = fixture.Build<PersonAddRequest>()
+            Person person = fixture.Build<Person>()
                 .With(temp => temp.Name , "Ahmed")
                 .With(temp => temp.Email , "test@test.com")
-                .With(temp => temp.CountryId , countryResponse.Id)
                 .Create();
-            var personResponse =await _personService.AddPerson(personToAdd); 
+            var personResponse = person.ToPersonResponse();
+            _personRepoMock.Setup(temp => temp.GetPersonById(It.IsAny<Guid>())).ReturnsAsync(person); 
+
             
             // Act
             var result =await _personService.GetPersonById(personResponse.Id);
 
+            personResponse.Id = result.Id;
             // Assert
-            result.Should().NotBeNull();
-            result.Id.Should().Be(personResponse.Id);
-            result.CountryId.Should().Be(countryResponse.Id);
-            result.Name.Should().Be("Ahmed");
+            result.Should().Be(personResponse);
         }
         [Fact]
         public async Task GetPersonByName_NonExistedId()
@@ -121,6 +123,7 @@ namespace xUnitTests
         {
             // Arrange
             var emptyPersonList = new List<Person>();
+            _personRepoMock.Setup(temp => temp.GetAllPersons()).ReturnsAsync(emptyPersonList);
 
             // Act
             var result =await _personService.GetAllPersons();
@@ -132,38 +135,32 @@ namespace xUnitTests
         public async Task GetAllPersons_WhenPersonsExist_ShouldReturnListOfPersonResponses()
         {
             // Arrange
-            var Country1 = fixture.Create<CountryAddRequest>();
-            var Country2 = fixture.Create<CountryAddRequest>();
-
-            var countryResponse1 =await _countriesService.AddCountry(Country1);
-            var countryResponse2 =await _countriesService.AddCountry(Country2);
-
-            var person1 = fixture.Build<PersonAddRequest>()
+            List<Person> persons = new List<Person>()
+            {
+                fixture.Build<Person>()
                 .With(temp => temp.Name, "Ahmed")
                 .With(temp => temp.Email, "test@test.com")
-                .With(temp => temp.CountryId, countryResponse1.Id)
-                .Create();
-
-            var person2 = fixture.Build<PersonAddRequest>()
+                .With(temp => temp.Country, null as Country)
+                .Create(),
+                fixture.Build<Person>()
                 .With(temp => temp.Name, "fatima")
                 .With(temp => temp.Email, "test1@test.com")
-                .With(temp => temp.CountryId, countryResponse2.Id)
-                .Create();
-            var PersonResponse1 =await _personService.AddPerson(person1);
-            var PersonResponse2 =await _personService.AddPerson(person2);
+                .With(temp => temp.Country, null as Country)
+                .Create()
+            };
+            List<PersonResponse> response = new List<PersonResponse>()
+            {
+                persons[0].ToPersonResponse(),
+                persons[1].ToPersonResponse(),
+            };
+
+            _personRepoMock.Setup(temp =>temp.GetAllPersons()).ReturnsAsync(persons);
             // Act
             var result =await _personService.GetAllPersons();
 
             // Assert
-            result.Should().NotBeNull();
-            result.Should().HaveCount(2);
+            result.Should().BeEquivalentTo(response);
 
-            // Verify the mapping is correct for one of the items
-            var firstPersonResponse = result[0];
-            firstPersonResponse.Id.Should().Be(PersonResponse1.Id);
-            firstPersonResponse.Name.Should().Be(PersonResponse1.Name);
-            firstPersonResponse.Email.Should().Be(PersonResponse1.Email);
-            firstPersonResponse.CountryId.Should().Be(PersonResponse1.CountryId);
         }
         #endregion
 
@@ -202,7 +199,8 @@ namespace xUnitTests
         public async Task UpdatePerson_InvalidPersonId()
         {
             // arrange 
-            PersonUpdateRequest? request = new PersonUpdateRequest() {Id = new Guid() };
+            PersonUpdateRequest request = new PersonUpdateRequest() { Id =  Guid.NewGuid() };
+            
             // act 
             Func<Task> act = async () =>await _personService.UpdatePerson(request);
             // assert
@@ -212,20 +210,18 @@ namespace xUnitTests
         public async Task UpdatePerson_NullPersonName()
         {
             // arrange 
-            CountryAddRequest countryAddRequest = fixture.Create<CountryAddRequest>();
-            var countryResponse =await _countriesService.AddCountry(countryAddRequest);
 
-            PersonAddRequest personAddRequest = fixture.Build<PersonAddRequest>()
-                .With(temp => temp.Name, "Ahmed")
+            Person person = fixture.Build<Person>()
+                .With(temp => temp.Name, null as string)
                 .With(temp => temp.Email, "test@test.com")
-                .With(temp => temp.CountryId, countryResponse.Id)
+                .With(temp => temp.Country, null as Country)
                 .Create();
-            var personResponse =await _personService.AddPerson(personAddRequest);
-
+            PersonResponse personResponse = person.ToPersonResponse();
             PersonUpdateRequest personUpdateRequest = personResponse.ToPersonUpdateRequest();
-            personUpdateRequest.Name = null;
+
             // act 
             Func<Task> act = async () => await _personService.UpdatePerson(personUpdateRequest);
+
             // assert
             await act.Should().ThrowAsync<ArgumentException>();
         }
@@ -233,32 +229,23 @@ namespace xUnitTests
         public async Task UpdatePerson_ProperPersonUpdated()
         {
             // arrange 
-            CountryAddRequest countryAddRequest = fixture.Create<CountryAddRequest>();
-            CountryAddRequest countryAddRequest1 = fixture.Create<CountryAddRequest>();
+            Person person = fixture.Build<Person>()
+                .With(temp => temp.Name, "Ali")
+                .With(temp => temp.Email, "test@test.com")
+                .With(temp => temp.Country, null as Country)
+                .Create();
 
-            var countryResponse =await _countriesService.AddCountry(countryAddRequest);
-            var countryResponse1 =await _countriesService.AddCountry(countryAddRequest1);
-
-
-            PersonAddRequest personAddRequest = new PersonAddRequest() 
-            { 
-               Name = "Ali", Email = "test@test.com", CountryId = countryResponse.Id
-            };
-            var personResponse =await _personService.AddPerson(personAddRequest);
-
+            PersonResponse personResponse = person.ToPersonResponse();
             PersonUpdateRequest personUpdateRequest = personResponse.ToPersonUpdateRequest();
-            personUpdateRequest.Name = "Mahmoud";
-            personUpdateRequest.Email = "test1@test.com";
-            personUpdateRequest.CountryId = countryResponse1.Id;
-
+   
+            _personRepoMock.Setup(temp => temp.UpdatePerson(It.IsAny<Person>())).ReturnsAsync(person);
+            _personRepoMock.Setup(temp => temp.GetPersonById(It.IsAny<Guid>())).ReturnsAsync(person);
 
             // act 
             var result =await _personService.UpdatePerson(personUpdateRequest);
-            var resultFromGetById =await _personService.GetPersonById(result.Id);
 
             // assert
-            resultFromGetById.Should().NotBeNull();
-            resultFromGetById.Should().BeEquivalentTo(result);
+            result.Should().Be(personResponse);
         }
         #endregion
 
@@ -277,15 +264,17 @@ namespace xUnitTests
         public async Task DeletePerson_validId()
         {
             // arrange
-            CountryAddRequest countryAddRequest = fixture.Create<CountryAddRequest>();
-            var countryResponse =await _countriesService.AddCountry(countryAddRequest);
 
-            PersonAddRequest personAddRequest = fixture.Build<PersonAddRequest>()
+            Person person = fixture.Build<Person>()
+                .With(temp => temp.PersonId , Guid.NewGuid())
                 .With(temp => temp.Name, "Ahmed")
                 .With(temp => temp.Email, "test@test.com")
-                .With(temp => temp.CountryId, countryResponse.Id)
+                .With(temp => temp.Country, null as Country)
                 .Create();
-            var personResponse =await _personService.AddPerson(personAddRequest);
+            PersonResponse personResponse = person.ToPersonResponse();
+            _personRepoMock.Setup(temp => temp.GetPersonById(It.IsAny<Guid>())).ReturnsAsync(person);
+            _personRepoMock.Setup(temp => temp.DeletePerson(It.IsAny<Guid>())).ReturnsAsync(true);
+
             // act 
             bool isDeleted =await _personService.DeletePerson(personResponse.Id);
             // assert
