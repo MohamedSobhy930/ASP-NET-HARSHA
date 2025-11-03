@@ -9,7 +9,7 @@ using Services;
 
 namespace xUnit
 {
-    public class Program
+    public partial class Program
     {
         public static void Main(string[] args)
         {
@@ -22,12 +22,14 @@ namespace xUnit
             builder.Services.AddScoped<IPersonsRepo, PersonRepo>();
             builder.Services.AddScoped<ICountriesRepo,CountriesRepo>();
 
-            builder.Services.AddDbContext<AppDbContext>(
-                options =>
-                {
-                    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-                });
-
+            if(!builder.Environment.IsEnvironment("Test"))
+            {
+                builder.Services.AddDbContext<AppDbContext>(
+                                options =>
+                                {
+                                    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+                                });
+            }
             
             var app = builder.Build();
 
@@ -38,6 +40,7 @@ namespace xUnit
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            if(!app.Environment.IsEnvironment("Test"))
             RotativaConfiguration.Setup("wwwroot", wkhtmltopdfRelativePath: "Rotativa");
             app.UseHttpsRedirection();
             app.UseStaticFiles();

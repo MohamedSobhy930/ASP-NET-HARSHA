@@ -51,7 +51,9 @@ namespace CRUDs.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return View();
+                var countries = await _countriesService.GetAllCountries();
+                ViewBag.Countries = new SelectList(countries, nameof(CountryResponse.Id), nameof(CountryResponse.Name));
+                return View(personAddRequest);
             }
             PersonResponse person =await _personService.AddPerson(personAddRequest);
             return RedirectToAction("Index", person);
