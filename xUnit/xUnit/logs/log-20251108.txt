@@ -1,0 +1,1371 @@
+2025-11-08 03:22:27.294 +02:00 [INF] User profile is available. Using 'C:\Users\KF9\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-08 03:22:27.657 +02:00 [INF] Now listening on: https://localhost:7139
+2025-11-08 03:22:27.659 +02:00 [INF] Now listening on: http://localhost:5258
+2025-11-08 03:22:27.842 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-08 03:22:27.845 +02:00 [INF] Hosting environment: Development
+2025-11-08 03:22:27.847 +02:00 [INF] Content root path: E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\xUnit
+2025-11-08 03:22:32.996 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7139/ - null null
+2025-11-08 03:22:33.185 +02:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Host: localhost:7139
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+2025-11-08 03:22:33.214 +02:00 [INF] Executing endpoint 'xUnit.Controllers.HomeController.Index (CRUDs)'
+2025-11-08 03:22:33.269 +02:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller xUnit.Controllers.HomeController (CRUDs).
+2025-11-08 03:22:33.294 +02:00 [INF] Executing ViewResult, running view Index.
+2025-11-08 03:22:33.420 +02:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+2025-11-08 03:22:33.448 +02:00 [INF] Executed ViewResult - view Index executed in 163.7384ms.
+2025-11-08 03:22:33.454 +02:00 [INF] Executed action xUnit.Controllers.HomeController.Index (CRUDs) in 181.4756ms
+2025-11-08 03:22:33.459 +02:00 [INF] Executed endpoint 'xUnit.Controllers.HomeController.Index (CRUDs)'
+2025-11-08 03:22:33.467 +02:00 [INF] ResponseBody: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page - xUnit</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css?v=CW3TafZaJrEoT07oSZ-X4dgwepADFJUJ8AdYBRA5x0I" />
+    <link rel="stylesheet" href="/xUnit.styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/fontawesome.min.css" integrity="sha512-M5Kq4YVQrjg5c2wsZSn27Dkfm/2ALfxmun0vUE3mPiJyK53hQBHYCVAtvMYEC7ZXmYLg8DVG4tF8gD27WmDbsg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div b-qu9r9eyb32 class="container">
+        <div b-qu9r9eyb32 class="navbar">
+            <div b-qu9r9eyb32 class="navbar-brand">CRUD Demo</div>
+            <ul b-qu9r9eyb32>
+                <li b-qu9r9eyb32>
+                    <a href="/Persons/Index">Persons</a>
+                </li>
+            </ul>
+        </div>
+
+        <div b-qu9r9eyb32 class="page-content">
+            
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+        </div>
+    </div>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo"></script>
+    
+</body>
+</html>
+
+2025-11-08 03:22:33.473 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7139/xUnit.styles.css - null null
+2025-11-08 03:22:33.473 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-08 03:22:33.485 +02:00 [INF] Duration: 299.0316ms
+2025-11-08 03:22:33.485 +02:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /xUnit.styles.css
+Accept: text/css,*/*;q=0.1
+Host: localhost:7139
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Referer: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+2025-11-08 03:22:33.498 +02:00 [INF] Response:
+StatusCode: 404
+2025-11-08 03:22:33.498 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7139/ - 200 null text/html; charset=utf-8 525.4546ms
+2025-11-08 03:22:33.511 +02:00 [INF] Duration: 25.0828ms
+2025-11-08 03:22:33.515 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - 200 13745 application/javascript; charset=utf-8 42.5401ms
+2025-11-08 03:22:33.520 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7139/xUnit.styles.css - 404 0 null 47.2294ms
+2025-11-08 03:22:33.529 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7139/xUnit.styles.css, Response status code: 404
+2025-11-08 03:22:34.507 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7139/_vs/browserLink - null null
+2025-11-08 03:22:34.637 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7139/_vs/browserLink - 200 null text/javascript; charset=UTF-8 130.482ms
+2025-11-08 03:22:34.773 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7139/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - null null
+2025-11-08 03:22:34.779 +02:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: https
+PathBase: 
+Path: /lib/bootstrap/dist/js/bootstrap.bundle.min.js.map
+Connection: keep-alive
+Host: localhost:7139
+User-Agent: got (https://github.com/sindresorhus/got)
+Accept-Encoding: gzip, deflate, br
+2025-11-08 03:22:34.790 +02:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/plain
+Accept-Ranges: bytes
+ETag: [Redacted]
+Last-Modified: Sun, 05 Oct 2025 01:46:25 GMT
+Content-Length: 327261
+2025-11-08 03:22:34.820 +02:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\xUnit\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2025-11-08 03:22:34.829 +02:00 [INF] ResponseBody: 
+2025-11-08 03:22:34.833 +02:00 [INF] Duration: 53.4131ms
+2025-11-08 03:22:34.837 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7139/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - 200 327261 text/plain 64.7334ms
+2025-11-08 03:22:36.101 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7139/Persons/Index - null null
+2025-11-08 03:22:36.115 +02:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /Persons/Index
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Host: localhost:7139
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+2025-11-08 03:22:36.121 +02:00 [INF] Executing endpoint 'CRUDs.Controllers.PersonsController.Index (CRUDs)'
+2025-11-08 03:22:36.147 +02:00 [INF] Route matched with {action = "Index", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, ServiceContacts.Enums.SortDirectionOptions) on controller CRUDs.Controllers.PersonsController (CRUDs).
+2025-11-08 03:22:36.667 +02:00 [INF] This is index action method inside PersonsController
+2025-11-08 03:22:36.733 +02:00 [INF] Get Filtered Persons in the PersonService
+2025-11-08 03:22:40.793 +02:00 [INF] Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PersonId], [p].[Address], [p].[CountryId], [p].[DateOfBirth], [p].[Email], [p].[Gender], [p].[Name], [p].[ReceiveNewsletter], [c].[Id], [c].[Name]
+FROM [Persons] AS [p]
+LEFT JOIN [Countries] AS [c] ON [p].[CountryId] = [c].[Id]
+2025-11-08 03:22:40.961 +02:00 [INF] Get Sorted Persons in the PersonService
+2025-11-08 03:22:40.987 +02:00 [INF] Executing ViewResult, running view Index.
+2025-11-08 03:22:41.099 +02:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+2025-11-08 03:22:41.159 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7139/xUnit.styles.css - null null
+2025-11-08 03:22:41.166 +02:00 [INF] Executed ViewResult - view Index executed in 180.9448ms.
+2025-11-08 03:22:41.170 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-08 03:22:41.171 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7139/_vs/browserLink - null null
+2025-11-08 03:22:41.177 +02:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /xUnit.styles.css
+Accept: text/css,*/*;q=0.1
+Host: localhost:7139
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Referer: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+2025-11-08 03:22:41.186 +02:00 [INF] Executed action CRUDs.Controllers.PersonsController.Index (CRUDs) in 5034.8585ms
+2025-11-08 03:22:41.187 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - 200 13745 application/javascript; charset=utf-8 16.437ms
+2025-11-08 03:22:41.206 +02:00 [INF] Executed endpoint 'CRUDs.Controllers.PersonsController.Index (CRUDs)'
+2025-11-08 03:22:41.199 +02:00 [INF] Response:
+StatusCode: 404
+2025-11-08 03:22:41.216 +02:00 [INF] ResponseBody: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Persons List - xUnit</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css?v=CW3TafZaJrEoT07oSZ-X4dgwepADFJUJ8AdYBRA5x0I" />
+    <link rel="stylesheet" href="/xUnit.styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/fontawesome.min.css" integrity="sha512-M5Kq4YVQrjg5c2wsZSn27Dkfm/2ALfxmun0vUE3mPiJyK53hQBHYCVAtvMYEC7ZXmYLg8DVG4tF8gD27WmDbsg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div b-qu9r9eyb32 class="container">
+        <div b-qu9r9eyb32 class="navbar">
+            <div b-qu9r9eyb32 class="navbar-brand">CRUD Demo</div>
+            <ul b-qu9r9eyb32>
+                <li b-qu9r9eyb32>
+                    <a href="/Persons/Index">Persons</a>
+                </li>
+            </ul>
+        </div>
+
+        <div b-qu9r9eyb32 class="page-content">
+            
+
+<div class="container my-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0">Persons</h2>
+
+        <div class="d-flex gap-2">
+            <a class="btn btn-primary" href="/Persons/Create">
+                <i class="bi bi-plus-circle me-1"></i> Create Person
+            </a>
+            <a class="btn btn-outline-secondary" href="/Persons/PersonsPDF">
+                <i class="bi bi-file-earmark-pdf me-1"></i> PDF
+            </a>
+            <a class="btn btn-outline-secondary" href="/Persons/PersonsCSV">
+                <i class="bi bi-filetype-csv me-1"></i> CSV
+            </a>
+            <a class="btn btn-outline-secondary" href="/Persons/PersonsExcel">
+                <i class="bi bi-file-earmark-excel me-1"></i> Excel
+            </a>
+        </div>
+    </div>
+
+    <!-- Search and Filter -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <form method="get" class="row g-3 align-items-end" action="/Persons/Index">
+                <div class="col-md-4">
+                    <label class="form-label fw-semibold">Search By</label>
+                    <select name="searchBy" class="form-select">
+                                <option value="Name">Person Name</option>
+                                <option value="DateOfBirth">Date of Birth</option>
+                                <option value="Country">Country</option>
+                                <option value="Address">Address</option>
+                    </select>
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label fw-semibold">Search Phrase</label>
+                    <input type="search" name="searchPhrase"
+                           placeholder="Enter keyword..." class="form-control" />
+                </div>
+
+                <div class="col-md-4 d-flex gap-2">
+                    <button type="submit" class="btn btn-primary w-50">
+                        <i class="bi bi-search"></i> Search
+                    </button>
+                    <a class="btn btn-outline-secondary w-50" href="/Persons/Index">
+                        <i class="bi bi-x-circle"></i> Clear
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Persons Table -->
+    <div class="card shadow-sm">
+        <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover table-striped align-middle mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>
+                                    <a href="/Persons/Index?sortBy=Name&amp;sortDirection=ASC">Name</a>
+                                </th>
+                                <th>Email</th>
+                                <th>
+                                    <a href="/Persons/Index?sortBy=DateOfBirth&amp;sortDirection=ASC">Date of Birth</a>
+                                </th>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>Country</th>
+                                <th>Newsletter</th>
+                                <th class="text-center">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                    <td>ali123</td>
+                                    <td>ali@example.com</td>
+                                    <td>24 Jun 1999</td>
+                                    <td>26</td>
+                                    <td>male</td>
+                                    <td>United Kingdom</td>
+                                    <td>
+                                            <span class="badge bg-secondary">No</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="btn btn-sm btn-outline-primary me-1" href="/Persons/Update?id=3f3dbd2b-6d29-492c-b5ec-ae1caec6076e">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </a>
+                                        <a class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure you want to delete this person?');" href="/Persons/Delete?id=3f3dbd2b-6d29-492c-b5ec-ae1caec6076e">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Fatima Al-Sayed</td>
+                                    <td>fatima.alsayed@example.com</td>
+                                    <td>20 Aug 1992</td>
+                                    <td>33</td>
+                                    <td>Female</td>
+                                    <td>Egypt</td>
+                                    <td>
+                                            <span class="badge bg-secondary">No</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="btn btn-sm btn-outline-primary me-1" href="/Persons/Update?id=a1b2c3d4-e5f6-a7b8-c9d0-e1f2a3b4c5d6">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </a>
+                                        <a class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure you want to delete this person?');" href="/Persons/Delete?id=a1b2c3d4-e5f6-a7b8-c9d0-e1f2a3b4c5d6">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>James Bond</td>
+                                    <td>test@example.com</td>
+                                    <td>08 Feb 2004</td>
+                                    <td>22</td>
+                                    <td>male</td>
+                                    <td>United Kingdom</td>
+                                    <td>
+                                            <span class="badge bg-success">Yes</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="btn btn-sm btn-outline-primary me-1" href="/Persons/Update?id=c3474107-03d3-4fc3-a0e1-1291e1aa8cb5">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </a>
+                                        <a class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure you want to delete this person?');" href="/Persons/Delete?id=c3474107-03d3-4fc3-a0e1-1291e1aa8cb5">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>James Bond</td>
+                                    <td>james.bond@mi6.gov.uk</td>
+                                    <td>13 Nov 1970</td>
+                                    <td>55</td>
+                                    <td>Male</td>
+                                    <td>USA</td>
+                                    <td>
+                                            <span class="badge bg-secondary">No</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="btn btn-sm btn-outline-primary me-1" href="/Persons/Update?id=e8b1b2a9-1d9c-4c6b-9f1e-3a7d5c9f2b8a">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </a>
+                                        <a class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure you want to delete this person?');" href="/Persons/Delete?id=e8b1b2a9-1d9c-4c6b-9f1e-3a7d5c9f2b8a">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>John Smith</td>
+                                    <td>john.smith@example.com</td>
+                                    <td>12 Apr 1985</td>
+                                    <td>41</td>
+                                    <td>Male</td>
+                                    <td>USA</td>
+                                    <td>
+                                            <span class="badge bg-success">Yes</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="btn btn-sm btn-outline-primary me-1" href="/Persons/Update?id=f1a2b3c4-5d6e-7f8a-9b0c-1d2e3f4a5b6c">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </a>
+                                        <a class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure you want to delete this person?');" href="/Persons/Delete?id=f1a2b3c4-5d6e-7f8a-9b0c-1d2e3f4a5b6c">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>mohamed</td>
+                                    <td>test@example.com</td>
+                                    <td>05 Jan 2009</td>
+                                    <td>17</td>
+                                    <td>male</td>
+                                    <td>Egypt</td>
+                                    <td>
+                                            <span class="badge bg-success">Yes</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="btn btn-sm btn-outline-primary me-1" href="/Persons/Update?id=e400e544-1eb1-4965-90af-c838365d1a47">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </a>
+                                        <a class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure you want to delete this person?');" href="/Persons/Delete?id=e400e544-1eb1-4965-90af-c838365d1a47">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo"></script>
+    
+</body>
+</html>
+
+2025-11-08 03:22:41.218 +02:00 [INF] Duration: 41.0027ms
+2025-11-08 03:22:41.221 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7139/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.6304ms
+2025-11-08 03:22:41.257 +02:00 [INF] Duration: 5141.7541ms
+2025-11-08 03:22:41.260 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7139/xUnit.styles.css - 404 0 null 101.7161ms
+2025-11-08 03:22:41.285 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7139/xUnit.styles.css, Response status code: 404
+2025-11-08 03:22:41.292 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7139/Persons/Index - 200 null text/html; charset=utf-8 5191.8311ms
+2025-11-08 03:22:45.819 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7139/Persons/Update?id=3f3dbd2b-6d29-492c-b5ec-ae1caec6076e - null null
+2025-11-08 03:22:45.829 +02:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /Persons/Update
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Host: localhost:7139
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+2025-11-08 03:22:45.834 +02:00 [INF] Executing endpoint 'CRUDs.Controllers.PersonsController.Update (CRUDs)'
+2025-11-08 03:22:45.840 +02:00 [INF] Route matched with {action = "Update", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(System.Nullable`1[System.Guid]) on controller CRUDs.Controllers.PersonsController (CRUDs).
+2025-11-08 03:22:46.040 +02:00 [INF] Executed DbCommand (103ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PersonId], [p].[Address], [p].[CountryId], [p].[DateOfBirth], [p].[Email], [p].[Gender], [p].[Name], [p].[ReceiveNewsletter], [c].[Id], [c].[Name]
+FROM [Persons] AS [p]
+LEFT JOIN [Countries] AS [c] ON [p].[CountryId] = [c].[Id]
+WHERE [p].[PersonId] = @__id_0
+2025-11-08 03:22:46.063 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Countries] AS [c]
+2025-11-08 03:22:46.071 +02:00 [INF] Executing ViewResult, running view Update.
+2025-11-08 03:22:46.160 +02:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+Cache-Control: [Redacted]
+Pragma: [Redacted]
+Set-Cookie: [Redacted]
+X-Frame-Options: [Redacted]
+2025-11-08 03:22:46.164 +02:00 [INF] Executed ViewResult - view Update executed in 92.937ms.
+2025-11-08 03:22:46.166 +02:00 [INF] Executed action CRUDs.Controllers.PersonsController.Update (CRUDs) in 320.927ms
+2025-11-08 03:22:46.169 +02:00 [INF] Executed endpoint 'CRUDs.Controllers.PersonsController.Update (CRUDs)'
+2025-11-08 03:22:46.173 +02:00 [INF] ResponseBody: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Person - xUnit</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css?v=CW3TafZaJrEoT07oSZ-X4dgwepADFJUJ8AdYBRA5x0I" />
+    <link rel="stylesheet" href="/xUnit.styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/fontawesome.min.css" integrity="sha512-M5Kq4YVQrjg5c2wsZSn27Dkfm/2ALfxmun0vUE3mPiJyK53hQBHYCVAtvMYEC7ZXmYLg8DVG4tF8gD27WmDbsg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div b-qu9r9eyb32 class="container">
+        <div b-qu9r9eyb32 class="navbar">
+            <div b-qu9r9eyb32 class="navbar-brand">CRUD Demo</div>
+            <ul b-qu9r9eyb32>
+                <li b-qu9r9eyb32>
+                    <a href="/Persons/Update">Persons</a>
+                </li>
+            </ul>
+        </div>
+
+        <div b-qu9r9eyb32 class="page-content">
+            
+
+<h2 class="mb-4">Update Person</h2>
+
+<form method="post" action="/Persons/Update">
+    
+
+    <input type="hidden" data-val="true" data-val-required="Id can&#x27;t be blank" id="Id" name="Id" value="3f3dbd2b-6d29-492c-b5ec-ae1caec6076e" />
+
+    
+
+    <div class="mb-3">
+        <label class="form-label" for="Name">Name</label>
+        <input class="form-control" type="text" data-val="true" data-val-required="Person Name can&#x27;t be blank" id="Name" name="Name" value="ali123" />
+        <span class="text-danger field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" for="Email">Email</label>
+        <input class="form-control" type="email" data-val="true" data-val-email="please Enter a Valid Email" data-val-required="Email can&#x27;t be blank" id="Email" name="Email" value="ali@example.com" />
+        <span class="text-danger field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" for="CountryId">CountryId</label>
+        <select class="form-select" data-val="true" data-val-required="The CountryId field is required." id="CountryId" name="CountryId">
+            <option value="">-- Select Country --</option>
+        <option value="8b5f3a0c-4d7e-4b9e-8b4f-0a8c1e6d7b2a">Egypt</option>
+<option selected="selected" value="c4a0b6e8-2d7c-4a0b-8d6f-1a9c2e7d8b3a">United Kingdom</option>
+<option value="1a6b0c2a-9b4f-4a09-8b8e-8a2b0c6d7e0f">USA</option>
+</select>
+        <span class="text-danger field-validation-valid" data-valmsg-for="CountryId" data-valmsg-replace="true"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+    <a class="btn btn-secondary ms-2" href="/Persons/Index">Back to List</a>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8E9v3lxs_qdJjLxvDMMWyWjJKEXyRNVx4Ud6txVaiZ2oKtClWILIleTn0J0AsZM7le9VqQZ7U3c3cfV5U88gwo6Q3fPk_ZB8U-T0WqnkwpZJBladi0H2Gfw6n9p9QyZMAEMEkWQrNdZm2IGIdHpGj5I" /></form>
+
+
+        </div>
+    </div>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo"></script>
+    
+<script src="/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+</body>
+</html>
+
+2025-11-08 03:22:46.185 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7139/xUnit.styles.css - null null
+2025-11-08 03:22:46.185 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-08 03:22:46.193 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7139/_vs/browserLink - null null
+2025-11-08 03:22:46.211 +02:00 [INF] Duration: 381.4058ms
+2025-11-08 03:22:46.216 +02:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /xUnit.styles.css
+Accept: text/css,*/*;q=0.1
+Host: localhost:7139
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+2025-11-08 03:22:46.230 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7139/Persons/Update?id=3f3dbd2b-6d29-492c-b5ec-ae1caec6076e - 200 null text/html; charset=utf-8 411.0905ms
+2025-11-08 03:22:46.236 +02:00 [INF] Response:
+StatusCode: 404
+2025-11-08 03:22:46.221 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - 200 13745 application/javascript; charset=utf-8 36.2161ms
+2025-11-08 03:22:46.246 +02:00 [INF] Duration: 30.898ms
+2025-11-08 03:22:46.261 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7139/xUnit.styles.css - 404 0 null 75.7029ms
+2025-11-08 03:22:46.266 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7139/_vs/browserLink - 200 null text/javascript; charset=UTF-8 73.5161ms
+2025-11-08 03:22:46.268 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7139/xUnit.styles.css, Response status code: 404
+2025-11-08 03:22:49.934 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7139/Persons/Update - application/x-www-form-urlencoded 305
+2025-11-08 03:22:49.944 +02:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /Persons/Update
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Host: localhost:7139
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Cache-Control: max-age=0
+Content-Type: application/x-www-form-urlencoded
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+Content-Length: 305
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+2025-11-08 03:22:49.948 +02:00 [INF] Executing endpoint 'CRUDs.Controllers.PersonsController.Update (CRUDs)'
+2025-11-08 03:22:49.954 +02:00 [INF] Route matched with {action = "Update", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(ServiceContacts.DTOs.PersonDto.PersonUpdateRequest) on controller CRUDs.Controllers.PersonsController (CRUDs).
+2025-11-08 03:22:50.030 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PersonId], [p].[Address], [p].[CountryId], [p].[DateOfBirth], [p].[Email], [p].[Gender], [p].[Name], [p].[ReceiveNewsletter], [c].[Id], [c].[Name]
+FROM [Persons] AS [p]
+LEFT JOIN [Countries] AS [c] ON [p].[CountryId] = [c].[Id]
+WHERE [p].[PersonId] = @__id_0
+2025-11-08 03:22:50.059 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@__person_PersonId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PersonId], [p].[Address], [p].[CountryId], [p].[DateOfBirth], [p].[Email], [p].[Gender], [p].[Name], [p].[ReceiveNewsletter], [c].[Id], [c].[Name]
+FROM [Persons] AS [p]
+LEFT JOIN [Countries] AS [c] ON [p].[CountryId] = [c].[Id]
+WHERE [p].[PersonId] = @__person_PersonId_0
+2025-11-08 03:22:50.308 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Persons] SET [CountryId] = @p0
+OUTPUT 1
+WHERE [PersonId] = @p1;
+2025-11-08 03:22:50.332 +02:00 [INF] Executing RedirectResult, redirecting to /Persons/Index.
+2025-11-08 03:22:50.335 +02:00 [INF] Executed action CRUDs.Controllers.PersonsController.Update (CRUDs) in 373.6425ms
+2025-11-08 03:22:50.336 +02:00 [INF] Executed endpoint 'CRUDs.Controllers.PersonsController.Update (CRUDs)'
+2025-11-08 03:22:50.338 +02:00 [INF] Response:
+StatusCode: 302
+Location: /Persons/Index
+2025-11-08 03:22:50.339 +02:00 [INF] Duration: 395.5891ms
+2025-11-08 03:22:50.342 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7139/Persons/Update - 302 0 null 408.2503ms
+2025-11-08 03:22:50.346 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7139/Persons/Index - null null
+2025-11-08 03:22:50.351 +02:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /Persons/Index
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Host: localhost:7139
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Cache-Control: max-age=0
+Cookie: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+priority: [Redacted]
+2025-11-08 03:22:50.354 +02:00 [INF] Executing endpoint 'CRUDs.Controllers.PersonsController.Index (CRUDs)'
+2025-11-08 03:22:50.356 +02:00 [INF] Route matched with {action = "Index", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, ServiceContacts.Enums.SortDirectionOptions) on controller CRUDs.Controllers.PersonsController (CRUDs).
+2025-11-08 03:22:50.363 +02:00 [INF] This is index action method inside PersonsController
+2025-11-08 03:22:50.364 +02:00 [INF] Get Filtered Persons in the PersonService
+2025-11-08 03:22:50.370 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PersonId], [p].[Address], [p].[CountryId], [p].[DateOfBirth], [p].[Email], [p].[Gender], [p].[Name], [p].[ReceiveNewsletter], [c].[Id], [c].[Name]
+FROM [Persons] AS [p]
+LEFT JOIN [Countries] AS [c] ON [p].[CountryId] = [c].[Id]
+2025-11-08 03:22:50.374 +02:00 [INF] Get Sorted Persons in the PersonService
+2025-11-08 03:22:50.376 +02:00 [INF] Executing ViewResult, running view Index.
+2025-11-08 03:22:50.379 +02:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+2025-11-08 03:22:50.383 +02:00 [INF] Executed ViewResult - view Index executed in 6.9349ms.
+2025-11-08 03:22:50.385 +02:00 [INF] Executed action CRUDs.Controllers.PersonsController.Index (CRUDs) in 23.3965ms
+2025-11-08 03:22:50.387 +02:00 [INF] Executed endpoint 'CRUDs.Controllers.PersonsController.Index (CRUDs)'
+2025-11-08 03:22:50.390 +02:00 [INF] ResponseBody: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Persons List - xUnit</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css?v=CW3TafZaJrEoT07oSZ-X4dgwepADFJUJ8AdYBRA5x0I" />
+    <link rel="stylesheet" href="/xUnit.styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/fontawesome.min.css" integrity="sha512-M5Kq4YVQrjg5c2wsZSn27Dkfm/2ALfxmun0vUE3mPiJyK53hQBHYCVAtvMYEC7ZXmYLg8DVG4tF8gD27WmDbsg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div b-qu9r9eyb32 class="container">
+        <div b-qu9r9eyb32 class="navbar">
+            <div b-qu9r9eyb32 class="navbar-brand">CRUD Demo</div>
+            <ul b-qu9r9eyb32>
+                <li b-qu9r9eyb32>
+                    <a href="/Persons/Index">Persons</a>
+                </li>
+            </ul>
+        </div>
+
+        <div b-qu9r9eyb32 class="page-content">
+            
+
+<div class="container my-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0">Persons</h2>
+
+        <div class="d-flex gap-2">
+            <a class="btn btn-primary" href="/Persons/Create">
+                <i class="bi bi-plus-circle me-1"></i> Create Person
+            </a>
+            <a class="btn btn-outline-secondary" href="/Persons/PersonsPDF">
+                <i class="bi bi-file-earmark-pdf me-1"></i> PDF
+            </a>
+            <a class="btn btn-outline-secondary" href="/Persons/PersonsCSV">
+                <i class="bi bi-filetype-csv me-1"></i> CSV
+            </a>
+            <a class="btn btn-outline-secondary" href="/Persons/PersonsExcel">
+                <i class="bi bi-file-earmark-excel me-1"></i> Excel
+            </a>
+        </div>
+    </div>
+
+    <!-- Search and Filter -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <form method="get" class="row g-3 align-items-end" action="/Persons/Index">
+                <div class="col-md-4">
+                    <label class="form-label fw-semibold">Search By</label>
+                    <select name="searchBy" class="form-select">
+                                <option value="Name">Person Name</option>
+                                <option value="DateOfBirth">Date of Birth</option>
+                                <option value="Country">Country</option>
+                                <option value="Address">Address</option>
+                    </select>
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label fw-semibold">Search Phrase</label>
+                    <input type="search" name="searchPhrase"
+                           placeholder="Enter keyword..." class="form-control" />
+                </div>
+
+                <div class="col-md-4 d-flex gap-2">
+                    <button type="submit" class="btn btn-primary w-50">
+                        <i class="bi bi-search"></i> Search
+                    </button>
+                    <a class="btn btn-outline-secondary w-50" href="/Persons/Index">
+                        <i class="bi bi-x-circle"></i> Clear
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Persons Table -->
+    <div class="card shadow-sm">
+        <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover table-striped align-middle mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>
+                                    <a href="/Persons/Index?sortBy=Name&amp;sortDirection=ASC">Name</a>
+                                </th>
+                                <th>Email</th>
+                                <th>
+                                    <a href="/Persons/Index?sortBy=DateOfBirth&amp;sortDirection=ASC">Date of Birth</a>
+                                </th>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>Country</th>
+                                <th>Newsletter</th>
+                                <th class="text-center">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                    <td>ali123</td>
+                                    <td>ali@example.com</td>
+                                    <td>24 Jun 1999</td>
+                                    <td>26</td>
+                                    <td>male</td>
+                                    <td>Egypt</td>
+                                    <td>
+                                            <span class="badge bg-secondary">No</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="btn btn-sm btn-outline-primary me-1" href="/Persons/Update?id=3f3dbd2b-6d29-492c-b5ec-ae1caec6076e">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </a>
+                                        <a class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure you want to delete this person?');" href="/Persons/Delete?id=3f3dbd2b-6d29-492c-b5ec-ae1caec6076e">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Fatima Al-Sayed</td>
+                                    <td>fatima.alsayed@example.com</td>
+                                    <td>20 Aug 1992</td>
+                                    <td>33</td>
+                                    <td>Female</td>
+                                    <td>Egypt</td>
+                                    <td>
+                                            <span class="badge bg-secondary">No</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="btn btn-sm btn-outline-primary me-1" href="/Persons/Update?id=a1b2c3d4-e5f6-a7b8-c9d0-e1f2a3b4c5d6">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </a>
+                                        <a class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure you want to delete this person?');" href="/Persons/Delete?id=a1b2c3d4-e5f6-a7b8-c9d0-e1f2a3b4c5d6">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>James Bond</td>
+                                    <td>test@example.com</td>
+                                    <td>08 Feb 2004</td>
+                                    <td>22</td>
+                                    <td>male</td>
+                                    <td>United Kingdom</td>
+                                    <td>
+                                            <span class="badge bg-success">Yes</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="btn btn-sm btn-outline-primary me-1" href="/Persons/Update?id=c3474107-03d3-4fc3-a0e1-1291e1aa8cb5">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </a>
+                                        <a class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure you want to delete this person?');" href="/Persons/Delete?id=c3474107-03d3-4fc3-a0e1-1291e1aa8cb5">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>James Bond</td>
+                                    <td>james.bond@mi6.gov.uk</td>
+                                    <td>13 Nov 1970</td>
+                                    <td>55</td>
+                                    <td>Male</td>
+                                    <td>USA</td>
+                                    <td>
+                                            <span class="badge bg-secondary">No</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="btn btn-sm btn-outline-primary me-1" href="/Persons/Update?id=e8b1b2a9-1d9c-4c6b-9f1e-3a7d5c9f2b8a">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </a>
+                                        <a class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure you want to delete this person?');" href="/Persons/Delete?id=e8b1b2a9-1d9c-4c6b-9f1e-3a7d5c9f2b8a">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>John Smith</td>
+                                    <td>john.smith@example.com</td>
+                                    <td>12 Apr 1985</td>
+                                    <td>41</td>
+                                    <td>Male</td>
+                                    <td>USA</td>
+                                    <td>
+                                            <span class="badge bg-success">Yes</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="btn btn-sm btn-outline-primary me-1" href="/Persons/Update?id=f1a2b3c4-5d6e-7f8a-9b0c-1d2e3f4a5b6c">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </a>
+                                        <a class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure you want to delete this person?');" href="/Persons/Delete?id=f1a2b3c4-5d6e-7f8a-9b0c-1d2e3f4a5b6c">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>mohamed</td>
+                                    <td>test@example.com</td>
+                                    <td>05 Jan 2009</td>
+                                    <td>17</td>
+                                    <td>male</td>
+                                    <td>Egypt</td>
+                                    <td>
+                                            <span class="badge bg-success">Yes</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="btn btn-sm btn-outline-primary me-1" href="/Persons/Update?id=e400e544-1eb1-4965-90af-c838365d1a47">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </a>
+                                        <a class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure you want to delete this person?');" href="/Persons/Delete?id=e400e544-1eb1-4965-90af-c838365d1a47">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo"></script>
+    
+</body>
+</html>
+
+2025-11-08 03:22:50.412 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7139/xUnit.styles.css - null null
+2025-11-08 03:22:50.412 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-08 03:22:50.412 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7139/_vs/browserLink - null null
+2025-11-08 03:22:50.453 +02:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /xUnit.styles.css
+Accept: text/css,*/*;q=0.1
+Host: localhost:7139
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+2025-11-08 03:22:50.458 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - 200 13745 application/javascript; charset=utf-8 45.7777ms
+2025-11-08 03:22:50.472 +02:00 [INF] Response:
+StatusCode: 404
+2025-11-08 03:22:50.448 +02:00 [INF] Duration: 96.7531ms
+2025-11-08 03:22:50.485 +02:00 [INF] Duration: 32.046ms
+2025-11-08 03:22:50.487 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7139/_vs/browserLink - 200 null text/javascript; charset=UTF-8 74.5706ms
+2025-11-08 03:22:50.489 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7139/Persons/Index - 200 null text/html; charset=utf-8 142.9823ms
+2025-11-08 03:22:50.494 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7139/xUnit.styles.css - 404 0 null 81.9215ms
+2025-11-08 03:22:50.510 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7139/xUnit.styles.css, Response status code: 404
+2025-11-08 03:37:21.781 +02:00 [INF] User profile is available. Using 'C:\Users\KF9\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-08 03:37:22.579 +02:00 [INF] Now listening on: https://localhost:7139
+2025-11-08 03:37:22.584 +02:00 [INF] Now listening on: http://localhost:5258
+2025-11-08 03:37:22.808 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-08 03:37:22.811 +02:00 [INF] Hosting environment: Development
+2025-11-08 03:37:22.812 +02:00 [INF] Content root path: E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\xUnit
+2025-11-08 03:37:25.107 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7139/ - null null
+2025-11-08 03:37:25.324 +02:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Host: localhost:7139
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+2025-11-08 03:37:25.361 +02:00 [INF] Executing endpoint 'xUnit.Controllers.HomeController.Index (CRUDs)'
+2025-11-08 03:37:25.423 +02:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller xUnit.Controllers.HomeController (CRUDs).
+2025-11-08 03:37:25.453 +02:00 [INF] Executing ViewResult, running view Index.
+2025-11-08 03:37:25.606 +02:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+2025-11-08 03:37:25.654 +02:00 [INF] Executed ViewResult - view Index executed in 207.0796ms.
+2025-11-08 03:37:25.725 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-08 03:37:25.725 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7139/xUnit.styles.css - null null
+2025-11-08 03:37:25.739 +02:00 [INF] Executed action xUnit.Controllers.HomeController.Index (CRUDs) in 309.0179ms
+2025-11-08 03:37:25.966 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - 200 13745 application/javascript; charset=utf-8 238.948ms
+2025-11-08 03:37:25.969 +02:00 [INF] Executed endpoint 'xUnit.Controllers.HomeController.Index (CRUDs)'
+2025-11-08 03:37:25.969 +02:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /xUnit.styles.css
+Accept: text/css,*/*;q=0.1
+Host: localhost:7139
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Referer: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+2025-11-08 03:37:25.987 +02:00 [INF] ResponseBody: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page - xUnit</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css?v=CW3TafZaJrEoT07oSZ-X4dgwepADFJUJ8AdYBRA5x0I" />
+    <link rel="stylesheet" href="/xUnit.styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/fontawesome.min.css" integrity="sha512-M5Kq4YVQrjg5c2wsZSn27Dkfm/2ALfxmun0vUE3mPiJyK53hQBHYCVAtvMYEC7ZXmYLg8DVG4tF8gD27WmDbsg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div b-qu9r9eyb32 class="container">
+        <div b-qu9r9eyb32 class="navbar">
+            <div b-qu9r9eyb32 class="navbar-brand">CRUD Demo</div>
+            <ul b-qu9r9eyb32>
+                <li b-qu9r9eyb32>
+                    <a href="/Persons/Index">Persons</a>
+                </li>
+            </ul>
+        </div>
+
+        <div b-qu9r9eyb32 class="page-content">
+            
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+        </div>
+    </div>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo"></script>
+    
+</body>
+</html>
+
+2025-11-08 03:37:25.993 +02:00 [INF] Response:
+StatusCode: 404
+2025-11-08 03:37:26.010 +02:00 [INF] Duration: 37.6701ms
+2025-11-08 03:37:26.010 +02:00 [INF] Duration: 686.1321ms
+2025-11-08 03:37:26.018 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7139/xUnit.styles.css - 404 0 null 292.4938ms
+2025-11-08 03:37:26.029 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7139/ - 200 null text/html; charset=utf-8 944.4264ms
+2025-11-08 03:37:26.031 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7139/xUnit.styles.css, Response status code: 404
+2025-11-08 03:37:27.152 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7139/_vs/browserLink - null null
+2025-11-08 03:37:27.501 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7139/_vs/browserLink - 200 null text/javascript; charset=UTF-8 348.817ms
+2025-11-08 03:37:27.602 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7139/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - null null
+2025-11-08 03:37:27.610 +02:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: https
+PathBase: 
+Path: /lib/bootstrap/dist/js/bootstrap.bundle.min.js.map
+Connection: keep-alive
+Host: localhost:7139
+User-Agent: got (https://github.com/sindresorhus/got)
+Accept-Encoding: gzip, deflate, br
+2025-11-08 03:37:27.624 +02:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/plain
+Accept-Ranges: bytes
+ETag: [Redacted]
+Last-Modified: Sun, 05 Oct 2025 01:46:25 GMT
+Content-Length: 327261
+2025-11-08 03:37:27.698 +02:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'E:\Programing\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\xUnit\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2025-11-08 03:37:27.702 +02:00 [INF] ResponseBody: 
+2025-11-08 03:37:27.707 +02:00 [INF] Duration: 97.1844ms
+2025-11-08 03:37:27.717 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7139/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - 200 327261 text/plain 114.9683ms
+2025-11-08 03:37:37.250 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7139/Persons/Index - null null
+2025-11-08 03:37:37.264 +02:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /Persons/Index
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Host: localhost:7139
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+2025-11-08 03:37:37.269 +02:00 [INF] Executing endpoint 'CRUDs.Controllers.PersonsController.Index (CRUDs)'
+2025-11-08 03:37:37.290 +02:00 [INF] Route matched with {action = "Index", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, ServiceContacts.Enums.SortDirectionOptions) on controller CRUDs.Controllers.PersonsController (CRUDs).
+2025-11-08 03:37:37.529 +02:00 [INF] This is index action method inside PersonsController
+2025-11-08 03:37:37.601 +02:00 [INF] Get Filtered Persons in the PersonService
+2025-11-08 03:37:39.381 +02:00 [INF] Executed DbCommand (67ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PersonId], [p].[Address], [p].[CountryId], [p].[DateOfBirth], [p].[Email], [p].[Gender], [p].[Name], [p].[ReceiveNewsletter], [c].[Id], [c].[Name]
+FROM [Persons] AS [p]
+LEFT JOIN [Countries] AS [c] ON [p].[CountryId] = [c].[Id]
+2025-11-08 03:37:39.535 +02:00 [INF] Get Sorted Persons in the PersonService
+2025-11-08 03:37:39.561 +02:00 [INF] Executing ViewResult, running view Index.
+2025-11-08 03:37:39.667 +02:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+2025-11-08 03:37:39.687 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7139/xUnit.styles.css - null null
+2025-11-08 03:37:39.696 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-08 03:37:39.701 +02:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /xUnit.styles.css
+Accept: text/css,*/*;q=0.1
+Host: localhost:7139
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Referer: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+2025-11-08 03:37:39.726 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - 200 13745 application/javascript; charset=utf-8 29.3164ms
+2025-11-08 03:37:39.697 +02:00 [INF] Executed ViewResult - view Index executed in 137.992ms.
+2025-11-08 03:37:39.732 +02:00 [INF] Response:
+StatusCode: 404
+2025-11-08 03:37:39.703 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7139/_vs/browserLink - null null
+2025-11-08 03:37:39.742 +02:00 [INF] Duration: 40.9664ms
+2025-11-08 03:37:39.744 +02:00 [INF] Executed action CRUDs.Controllers.PersonsController.Index (CRUDs) in 2450.3447ms
+2025-11-08 03:37:39.749 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7139/xUnit.styles.css - 404 0 null 61.9272ms
+2025-11-08 03:37:39.755 +02:00 [INF] Executed endpoint 'CRUDs.Controllers.PersonsController.Index (CRUDs)'
+2025-11-08 03:37:39.761 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7139/xUnit.styles.css, Response status code: 404
+2025-11-08 03:37:39.766 +02:00 [INF] ResponseBody: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Persons List - xUnit</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css?v=CW3TafZaJrEoT07oSZ-X4dgwepADFJUJ8AdYBRA5x0I" />
+    <link rel="stylesheet" href="/xUnit.styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/fontawesome.min.css" integrity="sha512-M5Kq4YVQrjg5c2wsZSn27Dkfm/2ALfxmun0vUE3mPiJyK53hQBHYCVAtvMYEC7ZXmYLg8DVG4tF8gD27WmDbsg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div b-qu9r9eyb32 class="container">
+        <div b-qu9r9eyb32 class="navbar">
+            <div b-qu9r9eyb32 class="navbar-brand">CRUD Demo</div>
+            <ul b-qu9r9eyb32>
+                <li b-qu9r9eyb32>
+                    <a href="/Persons/Index">Persons</a>
+                </li>
+            </ul>
+        </div>
+
+        <div b-qu9r9eyb32 class="page-content">
+            
+
+<div class="container my-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0">Persons</h2>
+
+        <div class="d-flex gap-2">
+            <a class="btn btn-primary" href="/Persons/Create">
+                <i class="bi bi-plus-circle me-1"></i> Create Person
+            </a>
+            <a class="btn btn-outline-secondary" href="/Persons/PersonsPDF">
+                <i class="bi bi-file-earmark-pdf me-1"></i> PDF
+            </a>
+            <a class="btn btn-outline-secondary" href="/Persons/PersonsCSV">
+                <i class="bi bi-filetype-csv me-1"></i> CSV
+            </a>
+            <a class="btn btn-outline-secondary" href="/Persons/PersonsExcel">
+                <i class="bi bi-file-earmark-excel me-1"></i> Excel
+            </a>
+        </div>
+    </div>
+
+    <!-- Search and Filter -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <form method="get" class="row g-3 align-items-end" action="/Persons/Index">
+                <div class="col-md-4">
+                    <label class="form-label fw-semibold">Search By</label>
+                    <select name="searchBy" class="form-select">
+                                <option value="Name">Person Name</option>
+                                <option value="DateOfBirth">Date of Birth</option>
+                                <option value="Country">Country</option>
+                                <option value="Address">Address</option>
+                    </select>
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label fw-semibold">Search Phrase</label>
+                    <input type="search" name="searchPhrase"
+                           placeholder="Enter keyword..." class="form-control" />
+                </div>
+
+                <div class="col-md-4 d-flex gap-2">
+                    <button type="submit" class="btn btn-primary w-50">
+                        <i class="bi bi-search"></i> Search
+                    </button>
+                    <a class="btn btn-outline-secondary w-50" href="/Persons/Index">
+                        <i class="bi bi-x-circle"></i> Clear
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Persons Table -->
+    <div class="card shadow-sm">
+        <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover table-striped align-middle mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>
+                                    <a href="/Persons/Index?sortBy=Name&amp;sortDirection=ASC">Name</a>
+                                </th>
+                                <th>Email</th>
+                                <th>
+                                    <a href="/Persons/Index?sortBy=DateOfBirth&amp;sortDirection=ASC">Date of Birth</a>
+                                </th>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>Country</th>
+                                <th>Newsletter</th>
+                                <th class="text-center">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                    <td>ali123</td>
+                                    <td>ali@example.com</td>
+                                    <td>24 Jun 1999</td>
+                                    <td>26</td>
+                                    <td>male</td>
+                                    <td>Egypt</td>
+                                    <td>
+                                            <span class="badge bg-secondary">No</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="btn btn-sm btn-outline-primary me-1" href="/Persons/Update?id=3f3dbd2b-6d29-492c-b5ec-ae1caec6076e">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </a>
+                                        <a class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure you want to delete this person?');" href="/Persons/Delete?id=3f3dbd2b-6d29-492c-b5ec-ae1caec6076e">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Fatima Al-Sayed</td>
+                                    <td>fatima.alsayed@example.com</td>
+                                    <td>20 Aug 1992</td>
+                                    <td>33</td>
+                                    <td>Female</td>
+                                    <td>Egypt</td>
+                                    <td>
+                                            <span class="badge bg-secondary">No</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="btn btn-sm btn-outline-primary me-1" href="/Persons/Update?id=a1b2c3d4-e5f6-a7b8-c9d0-e1f2a3b4c5d6">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </a>
+                                        <a class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure you want to delete this person?');" href="/Persons/Delete?id=a1b2c3d4-e5f6-a7b8-c9d0-e1f2a3b4c5d6">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>James Bond</td>
+                                    <td>test@example.com</td>
+                                    <td>08 Feb 2004</td>
+                                    <td>22</td>
+                                    <td>male</td>
+                                    <td>United Kingdom</td>
+                                    <td>
+                                            <span class="badge bg-success">Yes</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="btn btn-sm btn-outline-primary me-1" href="/Persons/Update?id=c3474107-03d3-4fc3-a0e1-1291e1aa8cb5">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </a>
+                                        <a class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure you want to delete this person?');" href="/Persons/Delete?id=c3474107-03d3-4fc3-a0e1-1291e1aa8cb5">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>James Bond</td>
+                                    <td>james.bond@mi6.gov.uk</td>
+                                    <td>13 Nov 1970</td>
+                                    <td>55</td>
+                                    <td>Male</td>
+                                    <td>USA</td>
+                                    <td>
+                                            <span class="badge bg-secondary">No</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="btn btn-sm btn-outline-primary me-1" href="/Persons/Update?id=e8b1b2a9-1d9c-4c6b-9f1e-3a7d5c9f2b8a">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </a>
+                                        <a class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure you want to delete this person?');" href="/Persons/Delete?id=e8b1b2a9-1d9c-4c6b-9f1e-3a7d5c9f2b8a">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>John Smith</td>
+                                    <td>john.smith@example.com</td>
+                                    <td>12 Apr 1985</td>
+                                    <td>41</td>
+                                    <td>Male</td>
+                                    <td>USA</td>
+                                    <td>
+                                            <span class="badge bg-success">Yes</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="btn btn-sm btn-outline-primary me-1" href="/Persons/Update?id=f1a2b3c4-5d6e-7f8a-9b0c-1d2e3f4a5b6c">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </a>
+                                        <a class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure you want to delete this person?');" href="/Persons/Delete?id=f1a2b3c4-5d6e-7f8a-9b0c-1d2e3f4a5b6c">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>mohamed</td>
+                                    <td>test@example.com</td>
+                                    <td>05 Jan 2009</td>
+                                    <td>17</td>
+                                    <td>male</td>
+                                    <td>Egypt</td>
+                                    <td>
+                                            <span class="badge bg-success">Yes</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="btn btn-sm btn-outline-primary me-1" href="/Persons/Update?id=e400e544-1eb1-4965-90af-c838365d1a47">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </a>
+                                        <a class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure you want to delete this person?');" href="/Persons/Delete?id=e400e544-1eb1-4965-90af-c838365d1a47">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo"></script>
+    
+</body>
+</html>
+
+2025-11-08 03:37:39.792 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7139/_vs/browserLink - 200 null text/javascript; charset=UTF-8 88.8121ms
+2025-11-08 03:37:39.808 +02:00 [INF] Duration: 2544.2767ms
+2025-11-08 03:37:39.830 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7139/Persons/Index - 200 null text/html; charset=utf-8 2580.5418ms

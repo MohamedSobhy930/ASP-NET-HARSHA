@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\xUnit\\CRUDs.csproj": {}
+    "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\xUnit\\CRUDs.csproj": {}
   },
   "projects": {
-    "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Entities\\Entities.csproj": {
+    "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Entities\\Entities.csproj",
+        "projectUniqueName": "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Entities\\Entities.csproj",
+        "projectPath": "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\KF9\\.nuget\\packages\\",
-        "outputPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Entities\\obj\\",
+        "outputPath": "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -79,18 +79,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\RepoContracts\\RepoContracts.csproj": {
+    "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\RepoContracts\\RepoContracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\RepoContracts\\RepoContracts.csproj",
+        "projectUniqueName": "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\RepoContracts\\RepoContracts.csproj",
         "projectName": "RepoContracts",
-        "projectPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\RepoContracts\\RepoContracts.csproj",
+        "projectPath": "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\RepoContracts\\RepoContracts.csproj",
         "packagesPath": "C:\\Users\\KF9\\.nuget\\packages\\",
-        "outputPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\RepoContracts\\obj\\",
+        "outputPath": "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\RepoContracts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -111,8 +111,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Entities\\Entities.csproj": {
-                "projectPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Entities\\Entities.csproj"
+              "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Entities\\Entities.csproj": {
+                "projectPath": "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Entities\\Entities.csproj"
               }
             }
           }
@@ -127,7 +127,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -148,18 +148,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Repos\\Repos.csproj": {
+    "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Repos\\Repos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Repos\\Repos.csproj",
+        "projectUniqueName": "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Repos\\Repos.csproj",
         "projectName": "Repos",
-        "projectPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Repos\\Repos.csproj",
+        "projectPath": "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Repos\\Repos.csproj",
         "packagesPath": "C:\\Users\\KF9\\.nuget\\packages\\",
-        "outputPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Repos\\obj\\",
+        "outputPath": "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Repos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -180,11 +180,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Entities\\Entities.csproj": {
-                "projectPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Entities\\Entities.csproj"
+              "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Entities\\Entities.csproj": {
+                "projectPath": "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Entities\\Entities.csproj"
               },
-              "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\RepoContracts\\RepoContracts.csproj": {
-                "projectPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\RepoContracts\\RepoContracts.csproj"
+              "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\RepoContracts\\RepoContracts.csproj": {
+                "projectPath": "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\RepoContracts\\RepoContracts.csproj"
               }
             }
           }
@@ -199,7 +199,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -220,18 +220,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\ServiceContacts\\ServiceContacts.csproj": {
+    "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\ServiceContacts\\ServiceContacts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\ServiceContacts\\ServiceContacts.csproj",
+        "projectUniqueName": "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\ServiceContacts\\ServiceContacts.csproj",
         "projectName": "ServiceContacts",
-        "projectPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\ServiceContacts\\ServiceContacts.csproj",
+        "projectPath": "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\ServiceContacts\\ServiceContacts.csproj",
         "packagesPath": "C:\\Users\\KF9\\.nuget\\packages\\",
-        "outputPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\ServiceContacts\\obj\\",
+        "outputPath": "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\ServiceContacts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -252,8 +252,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Entities\\Entities.csproj": {
-                "projectPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Entities\\Entities.csproj"
+              "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Entities\\Entities.csproj": {
+                "projectPath": "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Entities\\Entities.csproj"
               }
             }
           }
@@ -268,7 +268,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -289,18 +289,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Services\\Services.csproj": {
+    "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Services\\Services.csproj",
+        "projectUniqueName": "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Services\\Services.csproj",
+        "projectPath": "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Services\\Services.csproj",
         "packagesPath": "C:\\Users\\KF9\\.nuget\\packages\\",
-        "outputPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Services\\obj\\",
+        "outputPath": "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -321,11 +321,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\RepoContracts\\RepoContracts.csproj": {
-                "projectPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\RepoContracts\\RepoContracts.csproj"
+              "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\RepoContracts\\RepoContracts.csproj": {
+                "projectPath": "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\RepoContracts\\RepoContracts.csproj"
               },
-              "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\ServiceContacts\\ServiceContacts.csproj": {
-                "projectPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\ServiceContacts\\ServiceContacts.csproj"
+              "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\ServiceContacts\\ServiceContacts.csproj": {
+                "projectPath": "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\ServiceContacts\\ServiceContacts.csproj"
               }
             }
           }
@@ -340,7 +340,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -371,18 +371,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\xUnit\\CRUDs.csproj": {
+    "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\xUnit\\CRUDs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\xUnit\\CRUDs.csproj",
+        "projectUniqueName": "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\xUnit\\CRUDs.csproj",
         "projectName": "CRUDs",
-        "projectPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\xUnit\\CRUDs.csproj",
+        "projectPath": "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\xUnit\\CRUDs.csproj",
         "packagesPath": "C:\\Users\\KF9\\.nuget\\packages\\",
-        "outputPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\xUnit\\obj\\",
+        "outputPath": "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\xUnit\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -403,17 +403,17 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Entities\\Entities.csproj": {
-                "projectPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Entities\\Entities.csproj"
+              "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Entities\\Entities.csproj": {
+                "projectPath": "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Entities\\Entities.csproj"
               },
-              "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Repos\\Repos.csproj": {
-                "projectPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Repos\\Repos.csproj"
+              "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Repos\\Repos.csproj": {
+                "projectPath": "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Repos\\Repos.csproj"
               },
-              "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\ServiceContacts\\ServiceContacts.csproj": {
-                "projectPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\ServiceContacts\\ServiceContacts.csproj"
+              "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\ServiceContacts\\ServiceContacts.csproj": {
+                "projectPath": "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\ServiceContacts\\ServiceContacts.csproj"
               },
-              "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Services\\Services.csproj": {
-                "projectPath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Services\\Services.csproj"
+              "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Services\\Services.csproj": {
+                "projectPath": "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\xUnit\\Services\\Services.csproj"
               }
             }
           }
@@ -428,7 +428,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -447,6 +447,18 @@
             "Rotativa.AspNetCore": {
               "target": "Package",
               "version": "[1.4.0, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Serilog.Sinks.MSSqlServer": {
+              "target": "Package",
+              "version": "[9.0.2, )"
             }
           },
           "imports": [
@@ -468,7 +480,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

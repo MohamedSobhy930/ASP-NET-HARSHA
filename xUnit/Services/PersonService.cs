@@ -18,12 +18,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RepoContracts;
+using Microsoft.Extensions.Logging;
 
 namespace Services
 {
-    public class PersonService(IPersonsRepo personsRepo) : IPersonService
+    public class PersonService(IPersonsRepo personsRepo, ILogger<PersonService> logger) : IPersonService
     {
         private readonly IPersonsRepo _personRepo = personsRepo;
+        private readonly ILogger<PersonService> _logger = logger;
 
         public async Task<PersonResponse> AddPerson(PersonAddRequest? request)
         {
@@ -39,7 +41,6 @@ namespace Services
             //_db.sp_InsertPerson(person);
             return person.ToPersonResponse();
         }
-
         public async Task<bool> DeletePerson(Guid? id)
         {
             if(id == null) 
@@ -49,9 +50,9 @@ namespace Services
                 return false;
             return await _personRepo.DeletePerson(person.PersonId);
         }
-
         public async Task<List<PersonResponse>> GetAllPersons()
         {
+            _logger.LogInformation("Get All Persons in the PersonService");
             var persons = await _personRepo.GetAllPersons();
             
             return persons
@@ -67,9 +68,10 @@ namespace Services
             //    .SqlQuery<PersonResponse>($"EXEC sp_GetAllPersons")
             //    .ToList();
         }
-
         public async Task<List<PersonResponse>> GetFilteredPersons(string searchBy, string? searchPhrase)
         {
+            _logger.LogInformation("Get Filtered Persons in the PersonService");
+
             if (string.IsNullOrEmpty(searchBy) || string.IsNullOrEmpty(searchPhrase))
             {
                 var allPersons = await _personRepo.GetAllPersons();
@@ -103,7 +105,6 @@ namespace Services
             };
             return persons.Select(temp => temp.ToPersonResponse()).ToList();
         }
-
         public async Task<PersonResponse?> GetPersonById(Guid? id)
         {
             if (id == null)
@@ -114,9 +115,10 @@ namespace Services
             return person.ToPersonResponse();
 
         }
-
         public List<PersonResponse> GetSortedPersons(List<PersonResponse> persons, string sortBy, SortDirectionOptions sortDirection)
         {
+            _logger.LogInformation("Get Sorted Persons in the PersonService");
+
             if (string.IsNullOrEmpty(sortBy))
                 return persons;
             var sortedPersons = persons;
@@ -151,7 +153,6 @@ namespace Services
             }
             return sortedPersons;
         }
-
         public async Task<PersonResponse?> UpdatePerson(PersonUpdateRequest? request)
         {
             if (request == null)
@@ -204,7 +205,6 @@ namespace Services
             memoryStream.Position = 0;
             return memoryStream;
         }
-
         public async Task<MemoryStream> GetPersonsExcel()
         {
             MemoryStream memoryStream = new MemoryStream();

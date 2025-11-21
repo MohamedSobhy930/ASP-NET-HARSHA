@@ -10,10 +10,11 @@ using ServiceContacts.Enums;
 namespace CRUDs.Controllers
 {
     [Route("/[controller]/[action]")]
-    public class PersonsController(IPersonService personService, ICountriesService countriesService) : Controller
+    public class PersonsController(IPersonService personService, ICountriesService countriesService, ILogger<PersonsController> logger) : Controller
     {
         private readonly IPersonService _personService = personService;
         private readonly ICountriesService _countriesService = countriesService;
+        private readonly ILogger<PersonsController> _logger = logger;
 
         public async Task<IActionResult> Index
             (string searchBy ,
@@ -21,6 +22,9 @@ namespace CRUDs.Controllers
             string sortBy = "name",
             SortDirectionOptions sortDirection = SortDirectionOptions.ASC)
         {
+            _logger.LogInformation("This is index action method inside PersonsController");
+            _logger.LogDebug
+                ($"searchBy : {searchBy}, searchPhrase : {searchPhrase}, sortBy {sortBy}, sortDirection {sortDirection}");
             ViewBag.SearchFields = new Dictionary<string, string>()
             {
                 { "Name", "Person Name" },

@@ -1,5 +1,6 @@
 ﻿using Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using RepoContracts;
 using System;
 using System.Collections.Generic;
@@ -10,9 +11,10 @@ using System.Threading.Tasks;
 
 namespace Repos
 {
-    public class PersonRepo(AppDbContext db) : IPersonsRepo
+    public class PersonRepo(AppDbContext db, ILogger<PersonRepo> logger) : IPersonsRepo
     {
         private readonly AppDbContext _db = db;
+        private readonly ILogger<PersonRepo> _logger = logger;
         public async Task<Person> AddPerson(Person person)
         {
             _db.Persons.Add(person);
@@ -36,6 +38,8 @@ namespace Repos
 
         public async Task<List<Person>> GetFilteredPersons(Expression<Func<Person, bool>> predicate)
         {
+            _logger.LogInformation("Get Filtered Persons in the PersonRepo");
+
             return await _db.Persons
                 .Include("Country")
                 .Where(predicate)
