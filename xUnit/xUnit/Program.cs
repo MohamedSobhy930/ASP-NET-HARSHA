@@ -1,3 +1,4 @@
+using CRUDs.Filters.ActionFilters;
 using Entities;
 using Microsoft.EntityFrameworkCore;
 using OfficeOpenXml;
@@ -28,13 +29,13 @@ namespace xUnit
                 // read out current app services and provide them to serilog 
                 .ReadFrom.Services(services);
             });
-            builder.Services.AddHttpLogging(options =>
-            {
-                options.LoggingFields = Microsoft.AspNetCore.HttpLogging.HttpLoggingFields.All;
-            });
 
             // Add services to the container.
-            builder.Services.AddControllersWithViews();
+            builder.Services.AddControllersWithViews(options =>
+            {
+                var logger = builder.Services.BuildServiceProvider().GetRequiredService<ILogger<ResponseHeaderActionFilter>>();
+                options.Filters.Add(new ResponseHeaderActionFilter(logger , "custom_Key_Global","custom_Value_Global"));
+            });
             builder.Services.AddScoped<ICountriesService, CountriesService>();
             builder.Services.AddScoped<IPersonService, PersonService>();
             builder.Services.AddScoped<IPersonsRepo, PersonRepo>();
@@ -58,7 +59,7 @@ namespace xUnit
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            app.UseHttpLogging();
+            //app.UseHttpLogging();
             //app.Logger.LogDebug("Debug-message");
             //app.Logger.LogInformation("Infor-message");
             //app.Logger.LogCritical("Critical-message");

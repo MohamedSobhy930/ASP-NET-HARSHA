@@ -79,7 +79,7 @@
                                         searchBy = ViewBag.CurrentSearchBy,
                                         searchPhrase = ViewBag.CurrentSearchPhrase,
                                         sortBy = "Name",
-                                        sortDirection = (ViewBag.CurrentSortBy == "Name" && ViewBag.CurrentSortDirection == SortDirectionOptions.ASC ? SortDirectionOptions.DESC : SortDirectionOptions.ASC)
+                                                                sortDirection = (ViewBag.CurrentSortBy == "Name" && ViewBag.CurrentSortDirection == SortDirectionOptions.ASC ? SortDirectionOptions.DESC : SortDirectionOptions.ASC) //"ASC" ? "DESC" : "ASC")
                                     })
                                     @if (ViewBag.CurrentSortBy == "Name")
                                     {
@@ -92,7 +92,7 @@
                                         searchBy = ViewBag.CurrentSearchBy,
                                         searchPhrase = ViewBag.CurrentSearchPhrase,
                                         sortBy = "DateOfBirth",
-                                        sortDirection = (ViewBag.CurrentSortBy == "DateOfBirth" && ViewBag.CurrentSortDirection == SortDirectionOptions.ASC ? SortDirectionOptions.DESC : SortDirectionOptions.ASC)
+                                                                sortDirection = (ViewBag.CurrentSortBy == "DateOfBirth" && ViewBag.CurrentSortDirection == SortDirectionOptions.ASC ? SortDirectionOptions.DESC : SortDirectionOptions.ASC) //"ASC" ? "DESC" : "ASC")
                                     })
                                     @if (ViewBag.CurrentSortBy == "DateOfBirth")
                                     {

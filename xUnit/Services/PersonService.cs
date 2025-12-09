@@ -240,7 +240,7 @@ namespace Services
                     worksheet.Cells[row, 1].Value = person.Name;
                     worksheet.Cells[row, 2].Value = person.Email;
                     worksheet.Cells[row, 3].Value = person.DateOfBirth;
-                    worksheet.Cells[row, 3].Style.Numberformat.Format = "yyyy-mm-dd"; 
+                    worksheet.Cells[row, 3].Style.Numberformat.Format = "yyyy-mm-dd";
                     worksheet.Cells[row, 4].Value = person.Age;
                     worksheet.Cells[row, 5].Value = person.Gender;
                     worksheet.Cells[row, 6].Value = person.Country;
@@ -255,8 +255,7 @@ namespace Services
             }
             ;
             memoryStream.Position = 0;
-            return memoryStream; 
-
+            return memoryStream;
         }
     }
 }

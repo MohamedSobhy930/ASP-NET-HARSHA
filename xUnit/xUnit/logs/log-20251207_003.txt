@@ -1,0 +1,53 @@
+[20:02:43 INF] Application started. Press Ctrl+C to shut down.
+[20:02:43 INF] Hosting environment: Development
+[20:02:43 INF] Content root path: E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\xUnit
+[20:05:30 INF] User profile is available. Using 'C:\Users\KF9\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[20:05:31 INF] Now listening on: https://localhost:7139
+[20:05:31 INF] Now listening on: http://localhost:5258
+[20:05:31 INF] Request starting HTTP/2 GET https://localhost:7139/ - null null
+[20:05:32 INF] Executing endpoint 'xUnit.Controllers.HomeController.Index (CRUDs)'
+[20:05:32 INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller xUnit.Controllers.HomeController (CRUDs).
+[20:05:32 INF] ResponseHeaderActionFilter.OnActionExecuting executed before action.
+[20:05:32 INF] ResponseHeaderActionFilter.OnActionExecuted executed after action.
+[20:05:32 INF] Executing ViewResult, running view Index.
+[20:05:32 INF] Executed ViewResult - view Index executed in 298.3637ms.
+[20:05:32 INF] Executed action xUnit.Controllers.HomeController.Index (CRUDs) in 360.9418ms
+[20:05:32 INF] Executed endpoint 'xUnit.Controllers.HomeController.Index (CRUDs)'
+[20:05:32 INF] Request finished HTTP/2 GET https://localhost:7139/ - 200 null text/html; charset=utf-8 1005.526ms
+[20:05:32 INF] Request starting HTTP/2 GET https://localhost:7139/xUnit.styles.css - null null
+[20:05:32 INF] Request starting HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - null null
+[20:05:32 INF] Request starting HTTP/2 GET https://localhost:7139/_vs/browserLink - null null
+[20:05:32 INF] Request finished HTTP/2 GET https://localhost:7139/xUnit.styles.css - 404 0 null 15.3359ms
+[20:05:32 INF] Request finished HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - 200 16494 application/javascript; charset=utf-8 85.57ms
+[20:05:32 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7139/xUnit.styles.css, Response status code: 404
+[20:05:33 INF] Request finished HTTP/2 GET https://localhost:7139/_vs/browserLink - 200 null text/javascript; charset=UTF-8 196.9765ms
+[20:05:34 INF] Request starting HTTP/2 GET https://localhost:7139/Persons/Index - null null
+[20:05:35 INF] Executing endpoint 'CRUDs.Controllers.PersonsController.Index (CRUDs)'
+[20:05:35 INF] Route matched with {action = "Index", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, ServiceContacts.Enums.SortDirectionOptions) on controller CRUDs.Controllers.PersonsController (CRUDs).
+[20:05:35 INF] ResponseHeaderActionFilter.OnActionExecuting executed before action.
+[20:05:35 INF] PersonsListActoinFilter.OnActionExecuting executed before action.
+[20:05:35 INF] ResponseHeaderActionFilter.OnActionExecuting executed before action.
+[20:05:35 INF] ResponseHeaderActionFilter.OnActionExecuting executed before action.
+[20:05:35 INF] This is index action method inside PersonsController
+[20:05:35 INF] Get Filtered Persons in the PersonService
+[20:05:39 INF] Executed DbCommand (76ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PersonId], [p].[Address], [p].[CountryId], [p].[DateOfBirth], [p].[Email], [p].[Gender], [p].[Name], [p].[ReceiveNewsletter], [c].[Id], [c].[Name]
+FROM [Persons] AS [p]
+LEFT JOIN [Countries] AS [c] ON [p].[CountryId] = [c].[Id]
+[20:05:40 INF] Get Sorted Persons in the PersonService
+[20:05:40 INF] ResponseHeaderActionFilter.OnActionExecuted executed after action.
+[20:05:40 INF] ResponseHeaderActionFilter.OnActionExecuted executed after action.
+[20:05:40 INF] PersonsListActoinFilter.OnActionExecuted executed after action.
+[20:05:40 INF] ResponseHeaderActionFilter.OnActionExecuted executed after action.
+[20:05:40 INF] Executing ViewResult, running view Index.
+[20:05:40 INF] Executed ViewResult - view Index executed in 346.9427ms.
+[20:05:40 INF] Executed action CRUDs.Controllers.PersonsController.Index (CRUDs) in 5643.0427ms
+[20:05:40 INF] Executed endpoint 'CRUDs.Controllers.PersonsController.Index (CRUDs)'
+[20:05:40 INF] Request finished HTTP/2 GET https://localhost:7139/Persons/Index - 200 null text/html; charset=utf-8 5833.617ms
+[20:05:40 INF] Request starting HTTP/2 GET https://localhost:7139/xUnit.styles.css - null null
+[20:05:40 INF] Request finished HTTP/2 GET https://localhost:7139/xUnit.styles.css - 404 0 null 9.2892ms
+[20:05:40 INF] Request starting HTTP/2 GET https://localhost:7139/_vs/browserLink - null null
+[20:05:40 INF] Request starting HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - null null
+[20:05:40 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7139/xUnit.styles.css, Response status code: 404
+[20:05:40 INF] Request finished HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - 200 16494 application/javascript; charset=utf-8 28.55ms
+[20:05:40 INF] Request finished HTTP/2 GET https://localhost:7139/_vs/browserLink - 200 null text/javascript; charset=UTF-8 76.3979ms

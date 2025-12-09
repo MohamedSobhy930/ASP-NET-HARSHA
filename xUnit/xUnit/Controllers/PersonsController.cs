@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CRUDs.Filters.ActionFilters;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Rotativa.AspNetCore;
 using Rotativa.AspNetCore.Options;
@@ -10,12 +11,16 @@ using ServiceContacts.Enums;
 namespace CRUDs.Controllers
 {
     [Route("/[controller]/[action]")]
+    [TypeFilter(typeof(ResponseHeaderActionFilter) , Arguments = new object[] {"x-Custom_Controller" , "controller_value"}, Order = 1)]
     public class PersonsController(IPersonService personService, ICountriesService countriesService, ILogger<PersonsController> logger) : Controller
     {
         private readonly IPersonService _personService = personService;
         private readonly ICountriesService _countriesService = countriesService;
         private readonly ILogger<PersonsController> _logger = logger;
 
+        [TypeFilter(typeof(PersonsListActoinFilter))]
+        [TypeFilter(typeof(ResponseHeaderActionFilter),
+            Arguments = new object[] { "X-Custom_Action" , "action_value" }, Order = 2)]
         public async Task<IActionResult> Index
             (string searchBy ,
             string? searchPhrase,
@@ -25,22 +30,11 @@ namespace CRUDs.Controllers
             _logger.LogInformation("This is index action method inside PersonsController");
             _logger.LogDebug
                 ($"searchBy : {searchBy}, searchPhrase : {searchPhrase}, sortBy {sortBy}, sortDirection {sortDirection}");
-            ViewBag.SearchFields = new Dictionary<string, string>()
-            {
-                { "Name", "Person Name" },
-                { "DateOfBirth", "Date of Birth" },
-                { "Country", "Country" },
-                { "Address", "Address" }
-            };
+            
             var filteredPersons =await _personService.GetFilteredPersons(searchBy,searchPhrase);
 
             var sortedPersons = _personService.GetSortedPersons(filteredPersons, sortBy, sortDirection);
 
-            ViewBag.CurrentSearchBy = searchBy;
-            ViewBag.CurrentSearchPhrase = searchPhrase;
-
-            ViewBag.CurrentSortBy = sortBy;
-            ViewBag.CurrentSortDirection = sortDirection;
             return View(sortedPersons);
         }
         [HttpGet]
