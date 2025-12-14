@@ -1,0 +1,211 @@
+﻿@using StockAppAssignment.Models
+@model Orders
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Orders Report</title>
+    <style>
+        body {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            margin: 40px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #007bff; /* Corporate Blue */
+            padding-bottom: 20px;
+        }
+
+            .header h1 {
+                margin: 0;
+                color: #2c3e50;
+                font-size: 28px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+            .header p {
+                margin: 5px 0 0;
+                color: #7f8c8d;
+                font-size: 14px;
+            }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #2c3e50;
+            border-left: 5px solid #007bff;
+            padding-left: 10px;
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+        }
+
+        thead {
+            background-color: #f8f9fa;
+        }
+
+        th {
+            padding: 12px 8px;
+            text-align: left;
+            border-bottom: 2px solid #dee2e6;
+            color: #495057;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        td {
+            padding: 10px 8px;
+            border-bottom: 1px solid #dee2e6;
+            color: #212529;
+        }
+
+        /* Zebra striping for readability */
+        tr:nth-child(even) {
+            background-color: #fdfdfd;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .total-row {
+            font-weight: bold;
+            background-color: #e9ecef !important;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .badge-buy {
+            background-color: #28a745;
+        }
+
+        .badge-sell {
+            background-color: #dc3545;
+        }
+
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 10px;
+            color: #aaa;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Trade History Report</h1>
+        <p>Generated on: @DateTime.Now.ToString("MMMM dd, yyyy 'at' HH:mm tt")</p>
+    </div>
+
+    <div class="section">
+        <h2>Buy Orders</h2>
+        @if (Model.BuyOrders.Any())
+        {
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 15%">Date</th>
+                        <th style="width: 10%">Symbol</th>
+                        <th style="width: 35%">Company Name</th>
+                        <th class="text-right" style="width: 10%">Qty</th>
+                        <th class="text-right" style="width: 15%">Price</th>
+                        <th class="text-right" style="width: 15%">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var order in Model.BuyOrders)
+                    {
+                        <tr>
+                            <td>@order.DateAndTimeOfOrder.ToString("yyyy-MM-dd")</td>
+                            <td><span class="badge badge-buy">@order.StockSymbol</span></td>
+                            <td>@order.StockName</td>
+                            <td class="text-right">@order.Quantity</td>
+                            <td class="text-right">$@order.Price.ToString("N2")</td>
+                            <td class="text-right">$@order.TradeAmount.ToString("N2")</td>
+                        </tr>
+                    }
+                    <tr class="total-row">
+                        <td colspan="5" class="text-right">Total Buy Volume:</td>
+                        <td class="text-right">$@Model.BuyOrders.Sum(o => o.TradeAmount).ToString("N2")</td>
+                    </tr>
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p style="color: #777; font-style: italic;">No buy orders found for this period.</p>
+        }
+    </div>
+
+    <div class="section">
+        <h2>Sell Orders</h2>
+        @if (Model.SellOrders.Any())
+        {
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 15%">Date</th>
+                        <th style="width: 10%">Symbol</th>
+                        <th style="width: 35%">Company Name</th>
+                        <th class="text-right" style="width: 10%">Qty</th>
+                        <th class="text-right" style="width: 15%">Price</th>
+                        <th class="text-right" style="width: 15%">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var order in Model.SellOrders)
+                    {
+                        <tr>
+                            <td>@order.DateAndTimeOfOrder.ToString("yyyy-MM-dd")</td>
+                            <td><span class="badge badge-sell">@order.StockSymbol</span></td>
+                            <td>@order.StockName</td>
+                            <td class="text-right">@order.Quantity</td>
+                            <td class="text-right">$@order.Price.ToString("N2")</td>
+                            <td class="text-right">$@order.TradeAmount.ToString("N2")</td>
+                        </tr>
+                    }
+                    <tr class="total-row">
+                        <td colspan="5" class="text-right">Total Sell Volume:</td>
+                        <td class="text-right">$@Model.SellOrders.Sum(o => o.TradeAmount).ToString("N2")</td>
+                    </tr>
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p style="color: #777; font-style: italic;">No sell orders found for this period.</p>
+        }
+    </div>
+
+    <div class="footer">
+        <p>&copy; @DateTime.Now.Year StockApp Trading Platform. All rights reserved.</p>
+        <p>This document is for informational purposes only.</p>
+    </div>
+
+</body>
+</html>

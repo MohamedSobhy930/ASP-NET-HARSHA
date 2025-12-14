@@ -1,0 +1,101 @@
+﻿@using StockAppWithConfigurationAssignment.Models
+@model StockTrade
+
+@if (ViewData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">@ViewData["ErrorMessage"]</div>
+}
+else if (Model != null)
+{
+    <div class="selected-stock-panel">
+        <div class="logo-container">
+            @if (!string.IsNullOrEmpty(Model.Logo))
+            {
+                <img src="@Model.Logo" alt="@Model.StockName logo" />
+            }
+        </div>
+
+        <h3>@Model.StockName (@Model.StockSymbol)</h3>
+
+        @if (!string.IsNullOrEmpty(Model.Industry))
+        {
+            <span class="badge industry-badge">@Model.Industry</span>
+        }
+
+        @if (!string.IsNullOrEmpty(Model.Exchange))
+        {
+            <div class="exchange-info">
+                Exchange: <span>@Model.Exchange</span>
+            </div>
+        }
+
+        <div class="price">
+            $ @Model.Price.ToString("N2")
+        </div>
+
+        <a asp-controller="Trade" asp-action="Index"
+           asp-route-stockSymbol="@Model.StockSymbol"
+           class="btn btn-trade-now">
+            Trade Now
+        </a>
+    </div>
+}
+
+<style>
+    .selected-stock-panel {
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 24px;
+        text-align: center;
+    }
+
+    .logo-container {
+        margin-bottom: 20px;
+    }
+
+        .logo-container img {
+            max-width: 80px;
+            max-height: 80px;
+            border-radius: 50%;
+            background-color: #f8f9fa;
+            border: 1px solid #eee;
+        }
+
+    .selected-stock-panel h3 {
+        font-weight: 600;
+        margin-top: 0;
+    }
+
+    .industry-badge {
+        background-color: #e9ecef;
+        color: #495057;
+        font-weight: 500;
+        font-size: 0.9rem;
+    }
+
+    .exchange-info {
+        margin-top: 15px;
+        font-size: 0.9rem;
+        color: #6c757d;
+    }
+
+        .exchange-info span {
+            font-weight: 600;
+            color: #343a40;
+        }
+
+    .price {
+        font-size: 3.5rem;
+        font-weight: 700;
+        color: #333;
+        margin: 15px 0;
+    }
+
+    .btn-trade-now {
+        background-color: #007bff;
+        color: white;
+        font-weight: 600;
+        font-size: 1.1rem;
+        padding: 10px 30px;
+    }
+</style>

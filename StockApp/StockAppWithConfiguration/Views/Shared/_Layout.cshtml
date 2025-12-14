@@ -3,151 +3,194 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Stocks</title>
+    <title>@ViewData["Title"] - StockApp</title>
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/StockAppWithConfiguration.styles.css" asp-append-version="true" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-
     <style>
-        /* New Header Styles */
+        /* --- Header Styles --- */
         .app-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 20px;
             background-color: #ffffff;
-            border-bottom: 1px solid #dee2e6;
+            border-bottom: 1px solid #e5e9f2;
+            padding: 0.75rem 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 20px; /* Space between items */
-        }
-
+        /* Title / Brand */
         .app-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #333;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #1e293b;
+            text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 8px; /* Space between icon and text */
-            text-decoration: none;
+            gap: 10px;
+            margin-right: 2rem;
         }
 
+            .app-title i {
+                color: #0d6efd; /* Bootstrap Primary Color */
+            }
+
+        /* Navigation Links */
         .header-nav-links {
             display: flex;
-            gap: 15px;
-            margin-bottom: 0;
-            padding-left: 0;
+            align-items: center;
             list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 20px;
         }
 
             .header-nav-links a {
                 text-decoration: none;
-                color: #555;
-                font-size: 1rem;
-                font-weight: 500;
-                padding-bottom: 5px;
+                color: #64748b; /* Slate gray */
+                font-weight: 600;
+                font-size: 0.95rem;
+                padding: 0.5rem 0;
+                border-bottom: 2px solid transparent;
+                transition: all 0.2s;
             }
 
-                /* You can add a class here to show the active page */
-                .header-nav-links a.active {
-                    color: #007bff;
-                    border-bottom: 2px solid #007bff;
+                .header-nav-links a:hover {
+                    color: #0d6efd;
                 }
 
-        .header-right {
-            display: flex;
-            align-items: center;
-            gap: 15px; /* Space between items */
-        }
+                /* Active State logic */
+                .header-nav-links a.active {
+                    color: #0d6efd;
+                    border-bottom-color: #0d6efd;
+                }
 
+        /* Search Bar */
         .search-form {
-            display: flex;
-            align-items: center;
+            position: relative;
         }
 
         .search-input {
-            padding: 6px 10px;
-            border: 1px solid #ccc;
-            border-radius: 20px 0 0 20px; /* Rounded search bar */
+            padding: 0.5rem 1rem 0.5rem 2.5rem; /* Space for icon */
+            border: 1px solid #e2e8f0;
+            border-radius: 50px;
             font-size: 0.9rem;
-            outline: none;
+            width: 240px;
+            background-color: #f8fafc;
+            transition: all 0.2s;
         }
 
-        .search-button {
-            padding: 6px 10px;
-            border: 1px solid #ccc;
-            border-left: none;
-            background-color: #f8f8f8;
-            cursor: pointer;
-            border-radius: 0 20px 20px 0; /* Rounded search bar */
-            color: #555;
+            .search-input:focus {
+                outline: none;
+                border-color: #0d6efd;
+                background-color: #fff;
+                box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
+            }
+
+        .search-icon-btn {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            background: none;
+            color: #94a3b8;
         }
 
+        /* Right Side Actions */
         .settings-icon {
-            font-size: 1.2rem;
-            color: #555;
+            font-size: 1.25rem;
+            color: #64748b;
             cursor: pointer;
+            transition: transform 0.2s;
         }
+
+            .settings-icon:hover {
+                color: #1e293b;
+                transform: rotate(90deg);
+            }
 
         .btn-login {
-            background-color: #007bff;
+            background-color: #0d6efd;
             color: white;
             border: none;
-            padding: 6px 12px;
-            border-radius: 4px;
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
             font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.2s;
         }
+
+            .btn-login:hover {
+                background-color: #0b5ed7;
+            }
     </style>
 </head>
-<body>
-    <header>
-        <nav class="app-header box-shadow">
+<body class="bg-light">
 
-            <div class="header-left">
-                <a class="app-title" asp-controller="Stocks" asp-action="Index">
+    @{
+        // Simple logic to check active page
+        string currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+        string currentAction = ViewContext.RouteData.Values["action"]?.ToString();
+    }
+
+    <header>
+        <nav class="app-header shadow-sm d-flex justify-content-between align-items-center">
+
+            <div class="d-flex align-items-center">
+                <a class="app-title" asp-controller="Stocks" asp-action="Explore">
                     <i class="fa-solid fa-chart-line"></i>
                     Stocks
                 </a>
-                <ul class="header-nav-links">
+                <ul class="header-nav-links d-none d-md-flex">
                     <li>
-                        <a asp-controller="Home" asp-action="Index">Trade</a>
+                        <a asp-controller="Stocks" asp-action="Explore"
+                           class="@(currentController == "Stocks" && currentAction == "Explore" ? "active" : "")">
+                            Explore
+                        </a>
                     </li>
                     <li>
-                        <a asp-controller="Home" asp-action="Orders">Orders</a>
+                        <a asp-controller="Trade" asp-action="Index"
+                           class="@(currentController == "Trade" && (currentAction == "Index" || currentAction == "BuyOrder" || currentAction == "SellOrder") ? "active" : "")">
+                            Trade
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="Trade" asp-action="Orders"
+                           class="@(currentController == "Trade" && currentAction == "Orders" ? "active" : "")">
+                            Orders
+                        </a>
                     </li>
                 </ul>
             </div>
 
-            <div class="header-right">
+            <div class="d-flex align-items-center gap-3">
 
-                <form asp-controller="Home" asp-action="Index" method="get" class="search-form">
-                    <input type="search" name="stockSymbol" class="search-input"
-                           placeholder="Search Stocks" />
-                    <button type="submit" class="search-button">
+                <form asp-controller="Trade" asp-action="Index" method="get" class="search-form d-none d-sm-block">
+                    <button type="submit" class="search-icon-btn">
                         <i class="fa-solid fa-search"></i>
                     </button>
+                    <input type="search" name="stockSymbol" class="search-input" placeholder="Search Stocks..." />
                 </form>
 
-                <i class="fa-solid fa-cog settings-icon"></i>
-                <button class="btn-login">Login</button>
+                <i class="fa-solid fa-gear settings-icon" title="Settings"></i>
+                <button class="btn-login shadow-sm">Login</button>
             </div>
         </nav>
     </header>
 
-    <div class="container">
-        <main role="main" class="pb-3">
+    <div class="container-fluid">
+        <main role="main">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - StockApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="border-top footer text-muted bg-white mt-5 py-4">
+        <div class="container text-center">
+            &copy; 2025 - StockApp - <a asp-area="" asp-controller="Home" asp-action="Privacy" class="text-decoration-none">Privacy</a>
         </div>
     </footer>
 

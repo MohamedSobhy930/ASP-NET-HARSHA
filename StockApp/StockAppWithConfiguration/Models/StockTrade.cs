@@ -7,5 +7,9 @@
         public double Price { get; set; }
         public uint Quantity { get; set; }
         public string? FinnhubToken { get; set; }
+
+        public string? Logo { get; set; }
+        public string? Industry { get; set; }
+        public string? Exchange { get; set; }
     }
 }

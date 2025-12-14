@@ -1,0 +1,101 @@
+﻿@using StockAppAssignment.Models
+@model List<Stock>
+@{
+    ViewBag.Title = "Explore Stocks";
+
+    var selectedSymbol = ViewBag.Stock as string;
+
+    if (string.IsNullOrEmpty(selectedSymbol) && Model.Any())
+    {
+        selectedSymbol = Model.First().StockSymbol;
+    }
+}
+
+<div class="explore-container">
+
+    <div class="stock-list-column">
+        <div class="stock-list">
+            @foreach (var stock in Model)
+            {
+                <a asp-action="Explore" asp-route-stockSymbol="@stock.StockSymbol"
+                   class="stock-list-item @(stock.StockSymbol == selectedSymbol ? "active" : "")">
+
+                    <strong>@stock.StockSymbol</strong>
+                    <span>@stock.StockName</span>
+                </a>
+            }
+        </div>
+    </div>
+
+    <div class="stock-details-column">
+
+        @await Component.InvokeAsync("SelectedStock",
+        new { stockSymbol = selectedSymbol })
+
+    </div>
+</div>
+
+<style>
+    .explore-container {
+        display: flex;
+        gap: 30px;
+    }
+
+    .stock-list-column {
+        flex: 1;
+    }
+
+    .stock-details-column {
+        flex: 1;
+        max-width: 400px;
+    }
+
+    .stock-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border-top: 1px solid #dee2e6;
+        border-left: 1px solid #dee2e6;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .stock-list-item {
+        padding: 15px;
+        text-decoration: none;
+        color: #212529;
+        border-bottom: 1px solid #dee2e6;
+        border-right: 1px solid #dee2e6;
+        transition: background-color 0.15s ease-in-out;
+    }
+
+        .stock-list-item strong {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #007bff;
+            text-transform: uppercase;
+        }
+
+        .stock-list-item span {
+            font-size: 0.9rem;
+            color: #6c757d;
+            text-transform: uppercase;
+        }
+
+        .stock-list-item.active {
+            background-color: #007bff;
+            color: white;
+        }
+
+            .stock-list-item.active strong {
+                color: white;
+            }
+
+            .stock-list-item.active span {
+                color: #f8f9fa;
+            }
+
+        .stock-list-item:hover:not(.active) {
+            background-color: #f8f9fa;
+        }
+</style>

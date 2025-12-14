@@ -1,0 +1,202 @@
+﻿@using StockAppAssignment.Models
+@model Orders
+@{
+    ViewBag.Title = "Orders";
+}
+
+<div class="container-fluid px-0">
+    <div class="d-flex justify-content-between align-items-center mb-4 mt-3">
+        <div>
+            <h1 class="fw-bold text-dark mb-1">Trade History</h1>
+            <p class="text-muted mb-0">Review your recent buy and sell transactions.</p>
+        </div>
+        <a asp-controller="Trade" asp-action="OrdersPDF" class="btn btn-danger btn-lg shadow-sm rounded-pill px-4">
+            <i class="fa-solid fa-file-pdf me-2"></i> Download PDF
+        </a>
+    </div>
+
+    <div class="row g-4">
+
+        <div class="col-lg-6">
+            <div class="card border-0 shadow-sm h-100 order-card buy-card">
+                <div class="card-header bg-white border-bottom-0 py-3 d-flex align-items-center">
+                    <div class="icon-shape icon-shape-success rounded-circle me-3">
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                    </div>
+                    <h4 class="card-title text-success fw-bold mb-0">Buy Orders</h4>
+                </div>
+
+                <div class="card-body p-0">
+                    @if (Model.BuyOrders.Any())
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="bg-light">
+                                    <tr>
+                                        <th class="ps-4">Date</th>
+                                        <th>Symbol</th>
+                                        <th class="text-end">Qty</th>
+                                        <th class="text-end">Price</th>
+                                        <th class="text-end pe-4">Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var order in Model.BuyOrders)
+                                    {
+                                        <tr>
+                                            <td class="ps-4 text-muted">
+                                                <div class="fw-bold text-dark">@order.DateAndTimeOfOrder.ToString("MMM dd, yyyy")</div>
+                                                <small>@order.DateAndTimeOfOrder.ToString("HH:mm")</small>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex flex-column">
+                                                    <span class="fw-bold">@order.StockSymbol</span>
+                                                    <small class="text-muted text-truncate" style="max-width: 150px;">@order.StockName</small>
+                                                </div>
+                                            </td>
+                                            <td class="text-end">
+                                                <span class="badge bg-success bg-opacity-10 text-success">@order.Quantity</span>
+                                            </td>
+                                            <td class="text-end fw-bold">$@order.Price.ToString("N2")</td>
+                                            <td class="text-end pe-4 fw-bold text-success">$@order.TradeAmount.ToString("N2")</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="empty-state text-center py-5">
+                            <i class="fa-solid fa-cart-shopping fa-3x text-muted opacity-25 mb-3"></i>
+                            <p class="text-muted fw-medium">No buy orders placed yet.</p>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card border-0 shadow-sm h-100 order-card sell-card">
+                <div class="card-header bg-white border-bottom-0 py-3 d-flex align-items-center">
+                    <div class="icon-shape icon-shape-danger rounded-circle me-3">
+                        <i class="fa-solid fa-arrow-trend-down"></i>
+                    </div>
+                    <h4 class="card-title text-danger fw-bold mb-0">Sell Orders</h4>
+                </div>
+
+                <div class="card-body p-0">
+                    @if (Model.SellOrders.Any())
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="bg-light">
+                                    <tr>
+                                        <th class="ps-4">Date</th>
+                                        <th>Symbol</th>
+                                        <th class="text-end">Qty</th>
+                                        <th class="text-end">Price</th>
+                                        <th class="text-end pe-4">Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var order in Model.SellOrders)
+                                    {
+                                        <tr>
+                                            <td class="ps-4 text-muted">
+                                                <div class="fw-bold text-dark">@order.DateAndTimeOfOrder.ToString("MMM dd, yyyy")</div>
+                                                <small>@order.DateAndTimeOfOrder.ToString("HH:mm")</small>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex flex-column">
+                                                    <span class="fw-bold">@order.StockSymbol</span>
+                                                    <small class="text-muted text-truncate" style="max-width: 150px;">@order.StockName</small>
+                                                </div>
+                                            </td>
+                                            <td class="text-end">
+                                                <span class="badge bg-danger bg-opacity-10 text-danger">@order.Quantity</span>
+                                            </td>
+                                            <td class="text-end fw-bold">$@order.Price.ToString("N2")</td>
+                                            <td class="text-end pe-4 fw-bold text-danger">$@order.TradeAmount.ToString("N2")</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="empty-state text-center py-5">
+                            <i class="fa-solid fa-money-bill-transfer fa-3x text-muted opacity-25 mb-3"></i>
+                            <p class="text-muted fw-medium">No sell orders placed yet.</p>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Card Styling */
+    .order-card {
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.2s;
+    }
+
+    .buy-card {
+        border-top: 4px solid #198754; /* Green top border */
+    }
+
+    .sell-card {
+        border-top: 4px solid #dc3545; /* Red top border */
+    }
+
+    /* Icon Shapes in Header */
+    .icon-shape {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+    }
+
+    .icon-shape-success {
+        background-color: rgba(25, 135, 84, 0.1);
+        color: #198754;
+    }
+
+    .icon-shape-danger {
+        background-color: rgba(220, 53, 69, 0.1);
+        color: #dc3545;
+    }
+
+    /* Table Improvements */
+    .table thead th {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: #6c757d;
+        border-bottom: 2px solid #edf2f9;
+        font-weight: 600;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .table tbody td {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #f2f2f2;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: #fafbfc;
+    }
+
+    /* Empty State */
+    .empty-state {
+        background-color: #fff;
+    }
+</style>

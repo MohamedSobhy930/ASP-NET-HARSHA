@@ -6,6 +6,8 @@ using Entities;
 using Microsoft.EntityFrameworkCore;
 using Rotativa;
 using Rotativa.AspNetCore;
+using Repos;
+using ReposContracts;
 namespace StockAppWithConfiguration
 {
     public class Program
@@ -26,7 +28,8 @@ namespace StockAppWithConfiguration
             
             builder.Services.AddScoped<IFinnhubService,FinnhubService>();
             builder.Services.AddScoped<IStockService,StockService>();
-
+            builder.Services.AddScoped<IFinnhubRepo, FinnhubRepo>();
+            builder.Services.AddScoped<IStocksRepo, StocksRepo>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -36,7 +39,8 @@ namespace StockAppWithConfiguration
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            RotativaConfiguration.Setup("wwwroot", wkhtmltopdfRelativePath: "Rotativa");
+            if(!app.Environment.IsEnvironment("Test"))
+                RotativaConfiguration.Setup("wwwroot", wkhtmltopdfRelativePath: "Rotativa");
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
