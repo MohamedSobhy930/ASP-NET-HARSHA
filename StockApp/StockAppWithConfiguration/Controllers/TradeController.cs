@@ -26,6 +26,9 @@ namespace StockAppAssignment.Controllers
         [Route("[action]")]
         public async Task<IActionResult> Index(string? stockSymbol)
         {
+            _logger.LogInformation("{ControllerName}.{ActionMethod} called with stockSymbol: {stockSymbol}",nameof(TradeController),
+                nameof(Index),
+                stockSymbol);
             if (stockSymbol == null)
                 stockSymbol = _options.DefaultStockSymbol;
             var companyProfile = await _finnhubService.GetCompanyProfile(stockSymbol);
@@ -98,6 +101,8 @@ namespace StockAppAssignment.Controllers
         [Route("[action]")]
         public async Task<IActionResult> OrdersPDF()
         {
+            _logger.LogInformation("{ControllerName}.{ActionMethod} create a PDF of Orders", nameof(TradeController),
+                nameof(OrdersPDF));
             List<BuyOrderResponse> buyOrders = await _stockService.GetBuyOrders();
             List<SellOrderResponse> sellOrders = await _stockService.GetSellOrders();
             Orders orders = new Orders()
@@ -120,9 +125,7 @@ namespace StockAppAssignment.Controllers
                 PageMargins = new Margins(10, 10, 10, 10),
 
                 // --- Advanced Properties ---
-
                 // This is used to pass any other command-line arguments to wkhtmltopdf
-                // For example, to add a footer with page numbers:
                 CustomSwitches = "--footer-right \"Page [page] of [topage]\" --footer-font-size 10"
             };
 

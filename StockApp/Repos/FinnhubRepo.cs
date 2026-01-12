@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Microsoft.Identity.Client;
 using Newtonsoft.Json.Linq;
 using ReposContracts;
@@ -12,18 +13,15 @@ using System.Threading.Tasks;
 
 namespace Repos
 {
-    public class FinnhubRepo : IFinnhubRepo
+    public class FinnhubRepo(ILogger<FinnhubRepo> logger, IConfiguration config, IHttpClientFactory httpClientFactory) : IFinnhubRepo
     {
-        private readonly IConfiguration _config;
-        private IHttpClientFactory _httpClientFactory;
-        public FinnhubRepo(IConfiguration config , IHttpClientFactory httpClientFactory)
-        {
-            _config = config;
-            _httpClientFactory = httpClientFactory;
-        }
+        private readonly IConfiguration _config = config;
+        private IHttpClientFactory _httpClientFactory = httpClientFactory;
+        private readonly ILogger<FinnhubRepo> _logger = logger;
 
         public async Task<Dictionary<string, object>?> GetCompanyProfile(string stockSymbol)
         {
+            _logger.LogInformation("Getting company profile for {stockSymbol}", stockSymbol);
             using (HttpClient httpClient = _httpClientFactory.CreateClient())
             {
                 HttpRequestMessage httpRequestMessage = new HttpRequestMessage()
@@ -48,6 +46,7 @@ namespace Repos
 
         public async Task<Dictionary<string, object>?> GetStockPriceQuote(string stockSymbol)
         {
+            _logger.LogInformation("Getting stock price quote for {stockSymbol}", stockSymbol);
             using (HttpClient httpClient = _httpClientFactory.CreateClient())
             {
                 HttpRequestMessage httpRequestMessage = new HttpRequestMessage()
@@ -72,6 +71,7 @@ namespace Repos
 
         public async Task<List<Dictionary<string, string>>?> GetStocks()
         {
+            _logger.LogInformation("Getting list of stocks");
             using (HttpClient httpClient = _httpClientFactory.CreateClient())
             {
                 HttpRequestMessage httpRequestMessage = new HttpRequestMessage()

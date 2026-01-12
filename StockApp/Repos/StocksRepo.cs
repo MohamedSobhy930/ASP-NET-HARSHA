@@ -9,13 +9,10 @@ using System.Threading.Tasks;
 
 namespace Repos
 {
-    public class StocksRepo : IStocksRepo
+    public class StocksRepo(AppDbContext db) : IStocksRepo
     {
-        private AppDbContext _db;
-        public StocksRepo(AppDbContext db)
-        {
-            _db = db;
-        }
+        private AppDbContext _db = db;
+
         public async Task<BuyOrder> CreateBuyOrder(BuyOrder buyOrder)
         {
             _db.BuyOrders.Add(buyOrder);

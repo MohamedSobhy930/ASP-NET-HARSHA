@@ -4,10 +4,10 @@ using StockAppWithConfigurationAssignment.Services;
 using Services;
 using Entities;
 using Microsoft.EntityFrameworkCore;
-using Rotativa;
 using Rotativa.AspNetCore;
 using Repos;
 using ReposContracts;
+using Serilog;
 namespace StockAppWithConfiguration
 {
     public class Program
@@ -25,11 +25,21 @@ namespace StockAppWithConfiguration
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
-            
+
+            builder.Host.UseSerilog((HostBuilderContext context, IServiceProvider services, LoggerConfiguration loggerConfiguration) =>
+            {
+                loggerConfiguration
+                // read configuration settings from built-in Iconfiguration
+                .ReadFrom.Configuration(context.Configuration)
+                // read out current app services and provide them to serilog 
+                .ReadFrom.Services(services);
+            });
+
             builder.Services.AddScoped<IFinnhubService,FinnhubService>();
             builder.Services.AddScoped<IStockService,StockService>();
             builder.Services.AddScoped<IFinnhubRepo, FinnhubRepo>();
             builder.Services.AddScoped<IStocksRepo, StocksRepo>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

@@ -1,5 +1,6 @@
 ﻿using Entities;
 using IServicesContracts;
+using Microsoft.Extensions.Logging;
 using ReposContracts;
 using System;
 using System.Collections.Generic;
@@ -9,16 +10,15 @@ using System.Threading.Tasks;
 
 namespace Services
 {
-    public class StockService : IStockService
+    public class StockService(ILogger<StockService> logger, IStocksRepo stocksRepo) : IStockService
     {
-        private readonly IStocksRepo _stocksRepo;
-        public StockService(IStocksRepo stocksRepo) 
-        {
-            _stocksRepo = stocksRepo;
-        }
+        private readonly IStocksRepo _stocksRepo = stocksRepo;
+        private readonly ILogger<StockService> _logger = logger;
+
         public async Task<BuyOrderResponse> CreateBuyOrder(BuyOrderRequest? buyOrderRequest)
         {
-            if(buyOrderRequest == null)
+            _logger.LogInformation("Creating a new buy order.");
+            if (buyOrderRequest == null)
                 throw new ArgumentNullException(nameof(buyOrderRequest));
             ValidationHelper.ModelValidation(buyOrderRequest);
             BuyOrder order = buyOrderRequest.ToBuyOrder();
@@ -28,7 +28,8 @@ namespace Services
 
         public async Task<SellOrderResponse> CreateSellOrder(SellOrderRequest? sellOrderRequest)
         {
-            if(sellOrderRequest == null)
+            _logger.LogInformation("Creating a new sell order.");
+            if (sellOrderRequest == null)
                 throw new ArgumentNullException(nameof(sellOrderRequest));  
             ValidationHelper.ModelValidation(sellOrderRequest);
             SellOrder order = sellOrderRequest.ToSellOrder();
@@ -38,6 +39,7 @@ namespace Services
 
         public async Task<List<BuyOrderResponse>> GetBuyOrders()
         {
+            _logger.LogInformation("Retrieving all buy orders.");
             var orders = await _stocksRepo.GetBuyOrders();
             List<BuyOrderResponse> orderResponses = orders
                 .Select(order => order.ToBuyOrderResponse())
@@ -47,6 +49,7 @@ namespace Services
 
         public async Task<List<SellOrderResponse>> GetSellOrders()
         {
+            _logger.LogInformation("Retrieving all sell orders.");
             var orders = await _stocksRepo.GetSellOrders();
             List<SellOrderResponse> orderResponses = orders
                 .Select(order => order.ToSellOrderResponse())
