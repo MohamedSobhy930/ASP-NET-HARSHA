@@ -23,7 +23,6 @@ namespace xUnitTests
             builder.UseEnvironment("Test");
             builder.ConfigureTestServices(services =>
             {
-                
                 services.AddDbContext<AppDbContext>(options =>
                 {
                     options.UseInMemoryDatabase("TestingDatabase");

@@ -1,7 +1,9 @@
 ﻿using AutoFixture;
+using Castle.Core.Logging;
 using Entities;
 using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging.Abstractions;
 using Moq;
 using RepoContracts;
 using ServiceContacts;
@@ -22,7 +24,6 @@ namespace xUnitTests
         private readonly IPersonService _personService;
 
         // mock repo
-        private readonly IPersonsRepo _personsRepo;
         private readonly Mock<IPersonsRepo> _personRepoMock;
         private readonly IFixture fixture;
         public PersonServiceTest() 
@@ -30,8 +31,8 @@ namespace xUnitTests
             fixture = new Fixture();
             
             _personRepoMock = new Mock<IPersonsRepo>();
-            _personsRepo = _personRepoMock.Object;
-            _personService = new PersonService(_personsRepo);
+            var logger = NullLogger<PersonService>.Instance;
+            _personService = new PersonService(_personRepoMock.Object, logger);
         }
         #region AddPerson
         [Fact]

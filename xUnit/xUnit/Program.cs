@@ -1,3 +1,4 @@
+using CRUDs.Extensions;
 using CRUDs.Filters.ActionFilters;
 using Entities;
 using Microsoft.EntityFrameworkCore;
@@ -17,39 +18,12 @@ namespace xUnit
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // choose logging providers
-            //builder.Logging.ClearProviders().AddConsole().AddDebug();
-
             // serilog
-            builder.Host.UseSerilog((HostBuilderContext context, IServiceProvider services, LoggerConfiguration loggerConfiguration) =>
-            {
-                loggerConfiguration
-                // read configuration settings from built-in Iconfiguration
-                .ReadFrom.Configuration(context.Configuration)
-                // read out current app services and provide them to serilog 
-                .ReadFrom.Services(services);
-            });
+            builder.Host.ConfigureLogging();
 
-            // Add services to the container.
-            builder.Services.AddControllersWithViews(options =>
-            {
-                var logger = builder.Services.BuildServiceProvider().GetRequiredService<ILogger<ResponseHeaderActionFilter>>();
-                options.Filters.Add(new ResponseHeaderActionFilter(logger , "custom_Key_Global","custom_Value_Global"));
-            });
-            builder.Services.AddScoped<ICountriesService, CountriesService>();
-            builder.Services.AddScoped<IPersonService, PersonService>();
-            builder.Services.AddScoped<IPersonsRepo, PersonRepo>();
-            builder.Services.AddScoped<ICountriesRepo,CountriesRepo>();
+            builder.Services.ConfigureServices(builder.Configuration , builder.Environment);
 
-            if(!builder.Environment.IsEnvironment("Test"))
-            {
-                builder.Services.AddDbContext<AppDbContext>(
-                options =>
-                    {
-                        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-                    });
-            }
-            
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -59,14 +33,8 @@ namespace xUnit
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            //app.UseHttpLogging();
-            //app.Logger.LogDebug("Debug-message");
-            //app.Logger.LogInformation("Infor-message");
-            //app.Logger.LogCritical("Critical-message");
-            //app.Logger.LogError("Error-message");
-
             if (!app.Environment.IsEnvironment("Test"))
-            RotativaConfiguration.Setup("wwwroot", wkhtmltopdfRelativePath: "Rotativa");
+                RotativaConfiguration.Setup("wwwroot", wkhtmltopdfRelativePath: "Rotativa");
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             

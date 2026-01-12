@@ -2,6 +2,7 @@
 using CRUDs.Controllers;
 using FluentAssertions;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging.Abstractions;
 using Moq;
 using ServiceContacts;
 using ServiceContacts.DTOs.CountryDto;
@@ -23,12 +24,15 @@ namespace xUnitTests
         private readonly Mock<IPersonService> _personServiceMock;
         private readonly Mock<ICountriesService> _countryServiceMock;
         private readonly IFixture _fixture;
+        private readonly NullLogger<PersonsController> logger = NullLogger<PersonsController>.Instance;
 
         public PersonsControllerTest() 
         { 
             _fixture = new Fixture();
+
             _personServiceMock = new Mock<IPersonService>();
             _personService = _personServiceMock.Object;
+
             _countryServiceMock = new Mock<ICountriesService>();
             _countryService = _countryServiceMock.Object;
         }
@@ -38,7 +42,7 @@ namespace xUnitTests
         {
             // arrange 
             List<PersonResponse> personResponses = _fixture.Create<List<PersonResponse>>();
-            PersonsController personsController = new PersonsController(_personService, _countryService);
+            PersonsController personsController = new PersonsController(_personService, _countryService, logger);
 
             _personServiceMock
                 .Setup(temp => temp.GetFilteredPersons(It.IsAny<string>() , It.IsAny<string>()))
@@ -59,34 +63,6 @@ namespace xUnitTests
         #endregion
         #region Create
         [Fact]
-        public async Task Create_ModelErrors_ReturnCreateView()
-        {
-            // arrange 
-
-            PersonAddRequest personAdd = _fixture.Create<PersonAddRequest>();
-            PersonResponse personResponse = _fixture.Create<PersonResponse>();
-            List<CountryResponse> countryResponses = _fixture.Create<List<CountryResponse>>();
-
-            _countryServiceMock
-                .Setup(temp => temp.GetAllCountries())
-                .ReturnsAsync(countryResponses);
-
-            _personServiceMock
-                .Setup(temp => temp.AddPerson(It.IsAny<PersonAddRequest>()))
-                .ReturnsAsync(personResponse);
-
-            PersonsController personsController = new PersonsController(_personService, _countryService);
-
-            // act 
-            personsController.ModelState.AddModelError("PersonName", "Name can't be blank");
-            var result = await personsController.Create(personAdd);
-
-            // assert
-            ViewResult viewResult = Assert.IsType<ViewResult>(result);
-            viewResult.ViewData.Model.Should().BeAssignableTo<PersonAddRequest>();
-            viewResult.ViewData.Model.Should().Be(personAdd);
-        }
-        [Fact]
         public async Task Create_NoModelErrors_ReturnIndexView()
         {
             // arrange 
@@ -102,7 +78,7 @@ namespace xUnitTests
                 .Setup(temp => temp.AddPerson(It.IsAny<PersonAddRequest>()))
                 .ReturnsAsync(personResponse);
 
-            PersonsController personsController = new PersonsController(_personService, _countryService);
+            PersonsController personsController = new PersonsController(_personService, _countryService, logger);
 
             // act 
             var result = await personsController.Create(personAdd);

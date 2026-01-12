@@ -1,76 +1,133 @@
-﻿@model ServiceContacts.DTOs.PersonDto.PersonAddRequest
+﻿@using ServiceContacts.DTOs.PersonDto
+@using ServiceContacts.Enums
+@model PersonAddRequest
 
 @{
-    ViewData["Title"] = "Create Person";
+    ViewBag.Title = "Create Person";
 }
 
-<h2 class="mb-4">Create Person</h2>
+<div class="container my-5">
 
-<form asp-action="Create" asp-controller="Persons" method="post">
-    @Html.AntiForgeryToken()
-
-    @* <div asp-validation-summary="All" class="text-danger mb-3"></div> *@
-
-    <!-- Name -->
-    <div class="mb-3">
-        <label asp-for="Name" class="form-label"></label>
-        <input asp-for="Name" class="form-control" />
-        <span asp-validation-for="Name" class="text-danger"></span>
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="fw-bold text-primary mb-1">Create Person</h2>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a asp-controller="Persons" asp-action="Index" class="text-decoration-none">Persons</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Create</li>
+                </ol>
+            </nav>
+        </div>
+        <a asp-controller="Persons" asp-action="Index" class="btn btn-outline-secondary">
+            <i class="bi bi-arrow-left me-1"></i> Back to List
+        </a>
     </div>
 
-    <!-- Email -->
-    <div class="mb-3">
-        <label asp-for="Email" class="form-label"></label>
-        <input asp-for="Email" class="form-control" />
-        <span asp-validation-for="Email" class="text-danger"></span>
-    </div>
+    <div class="card border-0 shadow-sm">
+        <div class="card-body p-5">
+            <form asp-controller="Persons" asp-action="Create" method="post">
 
-    <!-- Date of Birth -->
-    <div class="mb-3">
-        <label asp-for="DateOfBirth" class="form-label"></label>
-        <input asp-for="DateOfBirth" type="date" class="form-control" />
-        <span asp-validation-for="DateOfBirth" class="text-danger"></span>
-    </div>
+                <div class="row g-4 mb-3">
+                    <div class="col-md-6">
+                        <label asp-for="Name" class="form-label fw-semibold">Person Name</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light text-muted"><i class="bi bi-person"></i></span>
+                            <input asp-for="Name" class="form-control" placeholder="e.g. John Doe" />
+                        </div>
+                        <span asp-validation-for="Name" class="text-danger small mt-1 d-block"></span>
+                    </div>
 
-    <!-- Gender -->
-    <div class="mb-3">
-        <label asp-for="Gender" class="form-label"></label>
-        <select asp-for="Gender" class="form-select"
-                asp-items="Html.GetEnumSelectList<ServiceContacts.Enums.GenderOptions>()">
-            <option value="">-- Select Gender --</option>
-        </select>
-        <span asp-validation-for="Gender" class="text-danger"></span>
-    </div>
+                    <div class="col-md-6">
+                        <label asp-for="Email" class="form-label fw-semibold">Email Address</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light text-muted"><i class="bi bi-envelope"></i></span>
+                            <input asp-for="Email" class="form-control" placeholder="name@example.com" />
+                        </div>
+                        <span asp-validation-for="Email" class="text-danger small mt-1 d-block"></span>
+                    </div>
+                </div>
 
-    <!-- Country -->
-    <div class="mb-3">
-        <label asp-for="CountryId" class="form-label"></label>
-        <select asp-for="CountryId" class="form-select" asp-items="ViewBag.Countries">
-            <option value="">-- Select Country --</option>
-        </select>
-        <span asp-validation-for="CountryId" class="text-danger"></span>
-    </div>
+                <div class="row g-4 mb-3">
+                    <div class="col-md-6">
+                        <label asp-for="DateOfBirth" class="form-label fw-semibold">Date of Birth</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light text-muted"><i class="bi bi-calendar-event"></i></span>
+                            <input asp-for="DateOfBirth" type="date" class="form-control" />
+                        </div>
+                        <span asp-validation-for="DateOfBirth" class="text-danger small mt-1 d-block"></span>
+                    </div>
 
-    <!-- Address -->
-    <div class="mb-3">
-        <label asp-for="Address" class="form-label"></label>
-        <textarea asp-for="Address" class="form-control" rows="3"></textarea>
-        <span asp-validation-for="Address" class="text-danger"></span>
-    </div>
+                    <div class="col-md-6">
+                        <label class="form-label fw-semibold d-block">Gender</label>
+                        <div class="d-flex gap-4 mt-2">
+                            <div class="form-check">
+                                <input asp-for="Gender" type="radio" value="Male" class="form-check-input" id="genderMale" />
+                                <label class="form-check-label" for="genderMale">Male</label>
+                            </div>
+                            <div class="form-check">
+                                <input asp-for="Gender" type="radio" value="Female" class="form-check-input" id="genderFemale" />
+                                <label class="form-check-label" for="genderFemale">Female</label>
+                            </div>
+                            <div class="form-check">
+                                <input asp-for="Gender" type="radio" value="Other" class="form-check-input" id="genderOther" />
+                                <label class="form-check-label" for="genderOther">Other</label>
+                            </div>
+                        </div>
+                        <span asp-validation-for="Gender" class="text-danger small mt-1 d-block"></span>
+                    </div>
+                </div>
 
-    <!-- Newsletter -->
-    <div class="form-check mb-3">
-        <input asp-for="ReceiveNewsletter" class="form-check-input" />
-        <label asp-for="ReceiveNewsletter" class="form-check-label"></label>
-    </div>
+                <div class="row g-4 mb-3">
+                    <div class="col-md-6">
+                        <label asp-for="CountryId" class="form-label fw-semibold">Country</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light text-muted"><i class="bi bi-globe"></i></span>
+                            <select asp-for="CountryId" asp-items="@ViewBag.Countries" class="form-select">
+                                <option value="">-- Select Country --</option>
+                            </select>
+                        </div>
+                        <span asp-validation-for="CountryId" class="text-danger small mt-1 d-block"></span>
+                    </div>
 
-    <!-- Submit -->
-    <button type="submit" class="btn btn-primary">Create</button>
-    <a asp-action="Index" class="btn btn-secondary ms-2">Back to List</a>
-</form>
+                    <div class="col-md-6">
+                        <label asp-for="Address" class="form-label fw-semibold">Address</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light text-muted"><i class="bi bi-geo-alt"></i></span>
+                            <textarea asp-for="Address" class="form-control" rows="1" placeholder="Street, City, Zip"></textarea>
+                        </div>
+                        <span asp-validation-for="Address" class="text-danger small mt-1 d-block"></span>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <div class="form-check form-switch">
+                        <input asp-for="ReceiveNewsletter" class="form-check-input" type="checkbox" id="newsletterCheck">
+                        <label class="form-check-label" for="newsletterCheck">
+                            Subscribe to Newsletter
+                        </label>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-end pt-3 border-top">
+                    <button type="submit" class="btn btn-primary px-5 btn-lg shadow-sm">
+                        <i class="bi bi-check-circle me-1"></i> Create
+                    </button>
+                </div>
+
+                @if (!ViewData.ModelState.IsValid && ViewData.ModelState.ErrorCount > 0)
+                {
+                    <div class="alert alert-danger mt-3 mb-0" role="alert">
+                        <ul class="mb-0 ps-3">
+                            <div asp-validation-summary="All"></div>
+                        </ul>
+                    </div>
+                }
+            </form>
+        </div>
+    </div>
+</div>
 
 @section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js" integrity="sha512-xq+Vm8jC94ynOikewaQXMEkJIOBp7i7u7CpUzYXJG8ZNvoqBPMmnrxQVhPOqJ4JuejUL4PfI6r6QZiGTl476Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 }

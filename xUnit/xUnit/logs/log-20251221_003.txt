@@ -1,0 +1,275 @@
+[09:09:54 INF] Application started. Press Ctrl+C to shut down.
+[09:09:54 INF] Hosting environment: Development
+[09:09:54 INF] Content root path: E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\xUnit
+[09:10:00 ERR] Connection id "0HNI0BVOL3O1G", Request id "0HNI0BVOL3O1G:00000001": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at CRUDs.Filters.ResultFilters.PersonsListResultFilter.OnResultExecutionAsync(ResultExecutingContext context, ResultExecutionDelegate next) in E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\xUnit\Filters\ResultFilters\PersonsListResultFilter.cs:line 17
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultFilters>g__Awaited|28_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+[09:12:34 INF] User profile is available. Using 'C:\Users\KF9\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[09:12:34 INF] Now listening on: https://localhost:7139
+[09:12:34 INF] Now listening on: http://localhost:5258
+[09:12:36 INF] Request starting HTTP/2 GET https://localhost:7139/ - null null
+[09:12:37 INF] Executing endpoint 'CRUDs.Controllers.PersonsController.Index (CRUDs)'
+[09:12:37 INF] Route matched with {action = "Index", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, ServiceContacts.Enums.SortDirectionOptions) on controller CRUDs.Controllers.PersonsController (CRUDs).
+[09:12:37 INF] PersonsListActoinFilter.OnActionExecuting executed before action.
+[09:12:37 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed before action.
+[09:12:37 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed before action.
+[09:12:37 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed before action.
+[09:12:37 INF] This is index action method inside PersonsController
+[09:12:37 INF] Get Filtered Persons in the PersonService
+[09:12:39 INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PersonId], [p].[Address], [p].[CountryId], [p].[DateOfBirth], [p].[Email], [p].[Gender], [p].[Name], [p].[ReceiveNewsletter], [c].[Id], [c].[Name]
+FROM [Persons] AS [p]
+LEFT JOIN [Countries] AS [c] ON [p].[CountryId] = [c].[Id]
+[09:12:39 INF] Get Sorted Persons in the PersonService
+[09:12:39 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed after action.
+[09:12:39 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed after action.
+[09:12:39 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed after action.
+[09:12:39 INF] PersonsListActoinFilter.OnActionExecuted executed after action.
+[09:12:39 INF] PersonsListResultFilter.OnResultExecutionAsync - Before executing result.
+[09:12:39 INF] Executing ViewResult, running view Index.
+[09:12:39 INF] Executed ViewResult - view Index executed in 296.6684ms.
+[09:12:39 INF] PersonsListResultFilter.OnResultExecutionAsync - After executing result.
+[09:12:40 INF] Request starting HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - null null
+[09:12:40 INF] Request starting HTTP/2 GET https://localhost:7139/_vs/browserLink - null null
+[09:12:40 INF] Executed action CRUDs.Controllers.PersonsController.Index (CRUDs) in 2731.8982ms
+[09:12:40 INF] Request starting HTTP/2 GET https://localhost:7139/xUnit.styles.css - null null
+[09:12:40 INF] Executed endpoint 'CRUDs.Controllers.PersonsController.Index (CRUDs)'
+[09:12:40 INF] Request finished HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - 200 16494 application/javascript; charset=utf-8 31.0266ms
+[09:12:40 INF] Request finished HTTP/2 GET https://localhost:7139/xUnit.styles.css - 404 0 null 54.4962ms
+[09:12:40 ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at CRUDs.Filters.ResultFilters.PersonsListResultFilter.OnResultExecutionAsync(ResultExecutingContext context, ResultExecutionDelegate next) in E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\xUnit\Filters\ResultFilters\PersonsListResultFilter.cs:line 17
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultFilters>g__Awaited|28_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[09:12:40 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7139/xUnit.styles.css, Response status code: 404
+[09:12:40 WRN] The response has already started, the error page middleware will not be executed.
+[09:12:40 INF] Request finished HTTP/2 GET https://localhost:7139/_vs/browserLink - 200 null text/javascript; charset=UTF-8 158.9876ms
+[09:12:40 INF] Request finished HTTP/2 GET https://localhost:7139/ - 200 null text/html; charset=utf-8 3362.5456ms
+[09:12:41 INF] Request starting HTTP/2 GET https://localhost:7139/Persons/Create - null null
+[09:12:41 INF] Executing endpoint 'CRUDs.Controllers.PersonsController.Create (CRUDs)'
+[09:12:41 INF] Route matched with {action = "Create", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create() on controller CRUDs.Controllers.PersonsController (CRUDs).
+[09:12:41 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed before action.
+[09:12:41 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed before action.
+[09:12:41 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Countries] AS [c]
+[09:12:41 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed after action.
+[09:12:41 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed after action.
+[09:12:41 INF] Executing ViewResult, running view Create.
+[09:12:41 INF] Executed ViewResult - view Create executed in 94.457ms.
+[09:12:41 INF] Executed action CRUDs.Controllers.PersonsController.Create (CRUDs) in 156.6887ms
+[09:12:41 INF] Executed endpoint 'CRUDs.Controllers.PersonsController.Create (CRUDs)'
+[09:12:41 INF] Request finished HTTP/2 GET https://localhost:7139/Persons/Create - 200 null text/html; charset=utf-8 197.9572ms
+[09:12:41 INF] Request starting HTTP/2 GET https://localhost:7139/xUnit.styles.css - null null
+[09:12:41 INF] Request starting HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - null null
+[09:12:41 INF] Request starting HTTP/2 GET https://localhost:7139/_vs/browserLink - null null
+[09:12:41 INF] Request finished HTTP/2 GET https://localhost:7139/xUnit.styles.css - 404 0 null 6.7473ms
+[09:12:41 INF] Request finished HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - 200 16494 application/javascript; charset=utf-8 11.2355ms
+[09:12:41 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7139/xUnit.styles.css, Response status code: 404
+[09:12:41 INF] Request finished HTTP/2 GET https://localhost:7139/_vs/browserLink - 200 null text/javascript; charset=UTF-8 63.2884ms
+[09:13:00 INF] Request starting HTTP/2 POST https://localhost:7139/Persons/Create - application/x-www-form-urlencoded 386
+[09:13:00 INF] Executing endpoint 'CRUDs.Controllers.PersonsController.Create (CRUDs)'
+[09:13:00 INF] Route matched with {action = "Create", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ServiceContacts.DTOs.PersonDto.PersonAddRequest) on controller CRUDs.Controllers.PersonsController (CRUDs).
+[09:13:00 INF] FeatureDisabledResourceFilter.OnResourceExecutionAsync - Before executing resource.
+[09:13:00 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed before action.
+[09:13:00 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed before action.
+[09:13:00 INF] Executed DbCommand (20ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 100), @p2='?' (DbType = Guid), @p3='?' (DbType = DateTime2), @p4='?' (Size = 40), @p5='?' (Size = 10), @p6='?' (Size = 40), @p7='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Persons] ([PersonId], [Address], [CountryId], [DateOfBirth], [Email], [Gender], [Name], [ReceiveNewsletter])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+[09:13:00 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed after action.
+[09:13:00 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed after action.
+[09:13:00 INF] Executing RedirectResult, redirecting to /?Id=3ccf34be-14f5-4123-90f8-c94cb70d2152&Name=test2&Email=test@example.com&DateOfBirth=06%2F02%2F2019%2000%3A00%3A00&Gender=male&CountryId=1a6b0c2a-9b4f-4a09-8b8e-8a2b0c6d7e0f&Address=fgfgfg&ReceiveNewsletter=True&Age=7.
+[09:13:00 INF] FeatureDisabledResourceFilter.OnResourceExecutionAsync - After executing resource.
+[09:13:00 INF] Executed action CRUDs.Controllers.PersonsController.Create (CRUDs) in 424.7489ms
+[09:13:00 INF] Executed endpoint 'CRUDs.Controllers.PersonsController.Create (CRUDs)'
+[09:13:00 INF] Request finished HTTP/2 POST https://localhost:7139/Persons/Create - 302 null null 474.6738ms
+[09:13:00 INF] Request starting HTTP/2 GET https://localhost:7139/?Id=3ccf34be-14f5-4123-90f8-c94cb70d2152&Name=test2&Email=test@example.com&DateOfBirth=06%2F02%2F2019%2000%3A00%3A00&Gender=male&CountryId=1a6b0c2a-9b4f-4a09-8b8e-8a2b0c6d7e0f&Address=fgfgfg&ReceiveNewsletter=True&Age=7 - null null
+[09:13:00 INF] Executing endpoint 'CRUDs.Controllers.PersonsController.Index (CRUDs)'
+[09:13:00 INF] Route matched with {action = "Index", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, ServiceContacts.Enums.SortDirectionOptions) on controller CRUDs.Controllers.PersonsController (CRUDs).
+[09:13:00 INF] PersonsListActoinFilter.OnActionExecuting executed before action.
+[09:13:00 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed before action.
+[09:13:00 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed before action.
+[09:13:00 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed before action.
+[09:13:00 INF] This is index action method inside PersonsController
+[09:13:00 INF] Get Filtered Persons in the PersonService
+[09:13:00 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PersonId], [p].[Address], [p].[CountryId], [p].[DateOfBirth], [p].[Email], [p].[Gender], [p].[Name], [p].[ReceiveNewsletter], [c].[Id], [c].[Name]
+FROM [Persons] AS [p]
+LEFT JOIN [Countries] AS [c] ON [p].[CountryId] = [c].[Id]
+[09:13:00 INF] Get Sorted Persons in the PersonService
+[09:13:00 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed after action.
+[09:13:00 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed after action.
+[09:13:00 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed after action.
+[09:13:00 INF] PersonsListActoinFilter.OnActionExecuted executed after action.
+[09:13:00 INF] PersonsListResultFilter.OnResultExecutionAsync - Before executing result.
+[09:13:00 INF] Executing ViewResult, running view Index.
+[09:13:00 INF] Executed ViewResult - view Index executed in 27.5563ms.
+[09:13:00 INF] PersonsListResultFilter.OnResultExecutionAsync - After executing result.
+[09:13:00 INF] Request starting HTTP/2 GET https://localhost:7139/xUnit.styles.css - null null
+[09:13:00 INF] Request starting HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - null null
+[09:13:00 INF] Executed action CRUDs.Controllers.PersonsController.Index (CRUDs) in 206.2791ms
+[09:13:00 INF] Request finished HTTP/2 GET https://localhost:7139/xUnit.styles.css - 404 0 null 6.4229ms
+[09:13:00 INF] Request finished HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - 200 16494 application/javascript; charset=utf-8 9.6223ms
+[09:13:00 INF] Executed endpoint 'CRUDs.Controllers.PersonsController.Index (CRUDs)'
+[09:13:00 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7139/xUnit.styles.css, Response status code: 404
+[09:13:00 INF] Request starting HTTP/2 GET https://localhost:7139/_vs/browserLink - null null
+[09:13:00 ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at CRUDs.Filters.ResultFilters.PersonsListResultFilter.OnResultExecutionAsync(ResultExecutingContext context, ResultExecutionDelegate next) in E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\xUnit\Filters\ResultFilters\PersonsListResultFilter.cs:line 17
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultFilters>g__Awaited|28_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[09:13:00 WRN] The response has already started, the error page middleware will not be executed.
+[09:13:00 INF] Request finished HTTP/2 GET https://localhost:7139/_vs/browserLink - 200 null text/javascript; charset=UTF-8 60.41ms
+[09:13:00 INF] Request finished HTTP/2 GET https://localhost:7139/?Id=3ccf34be-14f5-4123-90f8-c94cb70d2152&Name=test2&Email=test@example.com&DateOfBirth=06%2F02%2F2019%2000%3A00%3A00&Gender=male&CountryId=1a6b0c2a-9b4f-4a09-8b8e-8a2b0c6d7e0f&Address=fgfgfg&ReceiveNewsletter=True&Age=7 - 200 null text/html; charset=utf-8 312.3847ms
+[09:13:04 INF] Request starting HTTP/2 GET https://localhost:7139/Persons/Delete?id=3ccf34be-14f5-4123-90f8-c94cb70d2152 - null null
+[09:13:04 INF] Executing endpoint 'CRUDs.Controllers.PersonsController.Delete (CRUDs)'
+[09:13:04 INF] Route matched with {action = "Delete", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(System.Nullable`1[System.Guid]) on controller CRUDs.Controllers.PersonsController (CRUDs).
+[09:13:04 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed before action.
+[09:13:04 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed before action.
+[09:13:04 INF] Executed DbCommand (14ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PersonId], [p].[Address], [p].[CountryId], [p].[DateOfBirth], [p].[Email], [p].[Gender], [p].[Name], [p].[ReceiveNewsletter], [c].[Id], [c].[Name]
+FROM [Persons] AS [p]
+LEFT JOIN [Countries] AS [c] ON [p].[CountryId] = [c].[Id]
+WHERE [p].[PersonId] = @__id_0
+[09:13:04 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed after action.
+[09:13:04 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed after action.
+[09:13:04 INF] Executing ViewResult, running view Delete.
+[09:13:05 INF] Executed ViewResult - view Delete executed in 39.3791ms.
+[09:13:05 INF] Executed action CRUDs.Controllers.PersonsController.Delete (CRUDs) in 288.002ms
+[09:13:05 INF] Executed endpoint 'CRUDs.Controllers.PersonsController.Delete (CRUDs)'
+[09:13:05 INF] Request finished HTTP/2 GET https://localhost:7139/Persons/Delete?id=3ccf34be-14f5-4123-90f8-c94cb70d2152 - 200 null text/html; charset=utf-8 504.0211ms
+[09:13:05 INF] Request starting HTTP/2 GET https://localhost:7139/xUnit.styles.css - null null
+[09:13:05 INF] Request finished HTTP/2 GET https://localhost:7139/xUnit.styles.css - 404 0 null 8.6854ms
+[09:13:05 INF] Request starting HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - null null
+[09:13:05 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7139/xUnit.styles.css, Response status code: 404
+[09:13:05 INF] Request starting HTTP/2 GET https://localhost:7139/_vs/browserLink - null null
+[09:13:05 INF] Request finished HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - 200 16494 application/javascript; charset=utf-8 6.5811ms
+[09:13:05 INF] Request finished HTTP/2 GET https://localhost:7139/_vs/browserLink - 200 null text/javascript; charset=UTF-8 58.0749ms
+[09:13:06 INF] Request starting HTTP/2 POST https://localhost:7139/Persons/Delete - application/x-www-form-urlencoded 222
+[09:13:06 INF] Executing endpoint 'CRUDs.Controllers.PersonsController.DeleteConfirmation (CRUDs)'
+[09:13:06 INF] Route matched with {action = "Delete", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteConfirmation(System.Nullable`1[System.Guid]) on controller CRUDs.Controllers.PersonsController (CRUDs).
+[09:13:06 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed before action.
+[09:13:06 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed before action.
+[09:13:06 INF] Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PersonId], [p].[Address], [p].[CountryId], [p].[DateOfBirth], [p].[Email], [p].[Gender], [p].[Name], [p].[ReceiveNewsletter], [c].[Id], [c].[Name]
+FROM [Persons] AS [p]
+LEFT JOIN [Countries] AS [c] ON [p].[CountryId] = [c].[Id]
+WHERE [p].[PersonId] = @__id_0
+[09:13:06 INF] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PersonId], [p].[Address], [p].[CountryId], [p].[DateOfBirth], [p].[Email], [p].[Gender], [p].[Name], [p].[ReceiveNewsletter]
+FROM [Persons] AS [p]
+WHERE [p].[PersonId] = @__id_0
+[09:13:06 INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Persons]
+OUTPUT 1
+WHERE [PersonId] = @p0;
+[09:13:06 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed after action.
+[09:13:06 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed after action.
+[09:13:06 INF] Executing RedirectResult, redirecting to /.
+[09:13:06 INF] Executed action CRUDs.Controllers.PersonsController.DeleteConfirmation (CRUDs) in 164.979ms
+[09:13:06 INF] Executed endpoint 'CRUDs.Controllers.PersonsController.DeleteConfirmation (CRUDs)'
+[09:13:06 INF] Request finished HTTP/2 POST https://localhost:7139/Persons/Delete - 302 null null 255.2216ms
+[09:13:06 INF] Request starting HTTP/2 GET https://localhost:7139/ - null null
+[09:13:06 INF] Executing endpoint 'CRUDs.Controllers.PersonsController.Index (CRUDs)'
+[09:13:06 INF] Route matched with {action = "Index", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, ServiceContacts.Enums.SortDirectionOptions) on controller CRUDs.Controllers.PersonsController (CRUDs).
+[09:13:06 INF] PersonsListActoinFilter.OnActionExecuting executed before action.
+[09:13:06 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed before action.
+[09:13:06 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed before action.
+[09:13:06 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed before action.
+[09:13:06 INF] This is index action method inside PersonsController
+[09:13:06 INF] Get Filtered Persons in the PersonService
+[09:13:06 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PersonId], [p].[Address], [p].[CountryId], [p].[DateOfBirth], [p].[Email], [p].[Gender], [p].[Name], [p].[ReceiveNewsletter], [c].[Id], [c].[Name]
+FROM [Persons] AS [p]
+LEFT JOIN [Countries] AS [c] ON [p].[CountryId] = [c].[Id]
+[09:13:06 INF] Get Sorted Persons in the PersonService
+[09:13:06 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed after action.
+[09:13:06 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed after action.
+[09:13:06 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed after action.
+[09:13:06 INF] PersonsListActoinFilter.OnActionExecuted executed after action.
+[09:13:06 INF] PersonsListResultFilter.OnResultExecutionAsync - Before executing result.
+[09:13:06 INF] Executing ViewResult, running view Index.
+[09:13:06 INF] Executed ViewResult - view Index executed in 9.0104ms.
+[09:13:06 INF] PersonsListResultFilter.OnResultExecutionAsync - After executing result.
+[09:13:06 INF] Request starting HTTP/2 GET https://localhost:7139/xUnit.styles.css - null null
+[09:13:06 INF] Request starting HTTP/2 GET https://localhost:7139/_vs/browserLink - null null
+[09:13:06 INF] Request starting HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - null null
+[09:13:06 INF] Request finished HTTP/2 GET https://localhost:7139/xUnit.styles.css - 404 0 null 8.711ms
+[09:13:06 INF] Executed action CRUDs.Controllers.PersonsController.Index (CRUDs) in 201.7113ms
+[09:13:06 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7139/xUnit.styles.css, Response status code: 404
+[09:13:06 INF] Request finished HTTP/2 GET https://localhost:7139/_vs/browserLink - 200 null text/javascript; charset=UTF-8 78.704ms
+[09:13:06 INF] Executed endpoint 'CRUDs.Controllers.PersonsController.Index (CRUDs)'
+[09:13:06 INF] Request finished HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - 200 16494 application/javascript; charset=utf-8 102.4001ms
+[09:13:06 ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at CRUDs.Filters.ResultFilters.PersonsListResultFilter.OnResultExecutionAsync(ResultExecutingContext context, ResultExecutionDelegate next) in E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\xUnit\Filters\ResultFilters\PersonsListResultFilter.cs:line 17
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultFilters>g__Awaited|28_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[09:13:06 WRN] The response has already started, the error page middleware will not be executed.
+[09:13:06 INF] Request finished HTTP/2 GET https://localhost:7139/ - 200 null text/html; charset=utf-8 448.8011ms

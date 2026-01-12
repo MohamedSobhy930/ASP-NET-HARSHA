@@ -1,4 +1,8 @@
 ﻿using CRUDs.Filters.ActionFilters;
+using CRUDs.Filters.AuthorizationFilters;
+using CRUDs.Filters.ExceptionFilters;
+using CRUDs.Filters.ResourceFilters;
+using CRUDs.Filters.ResultFilters;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Rotativa.AspNetCore;
@@ -11,16 +15,17 @@ using ServiceContacts.Enums;
 namespace CRUDs.Controllers
 {
     [Route("/[controller]/[action]")]
-    [TypeFilter(typeof(ResponseHeaderActionFilter) , Arguments = new object[] {"x-Custom_Controller" , "controller_value"}, Order = 1)]
+    [ResponseHeaderFilterFactory("x-Custom_Controller" , "controller_value" , 3)] 
     public class PersonsController(IPersonService personService, ICountriesService countriesService, ILogger<PersonsController> logger) : Controller
     {
         private readonly IPersonService _personService = personService;
         private readonly ICountriesService _countriesService = countriesService;
         private readonly ILogger<PersonsController> _logger = logger;
-
+        [Route("/")]
         [TypeFilter(typeof(PersonsListActoinFilter))]
-        [TypeFilter(typeof(ResponseHeaderActionFilter),
-            Arguments = new object[] { "X-Custom_Action" , "action_value" }, Order = 2)]
+        [ResponseHeaderFilterFactory("X-Custom_Action2" , "action_value2" , 1)] // action filter applied directly using attribute
+        [TypeFilter(typeof(PersonsListResultFilter))]
+        [TypeFilter(typeof(HandleExceptionFilter))]
         public async Task<IActionResult> Index
             (string searchBy ,
             string? searchPhrase,
@@ -45,15 +50,11 @@ namespace CRUDs.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Create(PersonAddRequest personAddRequest)
+        [TypeFilter(typeof(PersonCreateAndEditActionFilter))]
+        [TypeFilter(typeof(FeatureDisabledResourceFilter) , Arguments = new object[] { false })] //)]
+        public async Task<IActionResult> Create(PersonAddRequest personRequest)
         {
-            if (!ModelState.IsValid)
-            {
-                var countries = await _countriesService.GetAllCountries();
-                ViewBag.Countries = new SelectList(countries, nameof(CountryResponse.Id), nameof(CountryResponse.Name));
-                return View(personAddRequest);
-            }
-            PersonResponse person =await _personService.AddPerson(personAddRequest);
+            PersonResponse person =await _personService.AddPerson(personRequest);
             return RedirectToAction("Index", person);
         }
         [HttpGet]
@@ -68,18 +69,14 @@ namespace CRUDs.Controllers
             return View(personUpdateRequest);
         }
         [HttpPost]
-        public async Task<IActionResult> Update(PersonUpdateRequest request)
+        [ServiceFilter(typeof(PersonCreateAndEditActionFilter))] // same as TypeFilter but ServiceFilter uses DI container to create the filter instance ( means register the filter in the Program.cs)
+        public async Task<IActionResult> Update(PersonUpdateRequest personRequest)
         {
-            if(!ModelState.IsValid)
-            {
-                var countries =await _countriesService.GetAllCountries();
-                ViewBag.Countries = new SelectList(countries, nameof(CountryResponse.Id), nameof(CountryResponse.Name));
-                return View(request);
-            }
-            await _personService.UpdatePerson(request);
+            await _personService.UpdatePerson(personRequest);
             return RedirectToAction("Index");
         }
         [HttpGet]
+        [TypeFilter(typeof(TokenResultFilter))]
         public async Task<IActionResult> Delete(Guid? id)
         {
             var person =await _personService.GetPersonById(id);
@@ -89,6 +86,7 @@ namespace CRUDs.Controllers
         }
         [HttpPost]
         [ActionName("Delete")]
+        [TypeFilter(typeof(TokenAuthorizationFilter))]
         public async Task<IActionResult> DeleteConfirmation(Guid? Id)
         {
             await _personService.DeletePerson(Id);

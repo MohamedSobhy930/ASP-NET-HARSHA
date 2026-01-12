@@ -1,0 +1,30 @@
+[17:50:35 INF] Application started. Press Ctrl+C to shut down.
+[17:50:35 INF] Hosting environment: Development
+[17:50:35 INF] Content root path: E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\xUnit
+[17:52:22 INF] User profile is available. Using 'C:\Users\KF9\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[17:52:22 INF] Now listening on: https://localhost:7139
+[17:52:22 INF] Now listening on: http://localhost:5258
+[17:52:24 INF] Request starting HTTP/2 GET https://localhost:7139/ - null null
+[17:52:25 INF] Executing endpoint 'CRUDs.Controllers.PersonsController.Index (CRUDs)'
+[17:52:25 INF] Executed endpoint 'CRUDs.Controllers.PersonsController.Index (CRUDs)'
+[17:52:25 ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: A suitable constructor for type 'CRUDs.Filters.ActionFilters.ResponseHeaderActionFilter' could not be located. Ensure the type is concrete and all parameters of a public constructor are either registered as services or passed as arguments. Also ensure no extraneous arguments are provided.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.FindApplicableConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfoEx[] constructors, ConstructorInfo& matchingConstructor, Nullable`1[]& matchingParameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactoryInternal(Type instanceType, Type[] argumentTypes, ParameterExpression& provider, ParameterExpression& argumentArray, Expression& factoryExpressionBody)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(Type instanceType, Type[] argumentTypes)
+   at Microsoft.AspNetCore.Mvc.TypeFilterAttribute.CreateInstance(IServiceProvider serviceProvider)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.ProvideFilter(FilterProviderContext context, FilterItem filterItem)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.OnProvidersExecuting(FilterProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.CreateUncachedFiltersCore(IFilterProvider[] filterProviders, ActionContext actionContext, List`1 filterItems)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.GetAllFilters(IFilterProvider[] filterProviders, ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ControllerRequestDelegateFactory.<>c__DisplayClass12_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[17:52:25 INF] Request finished HTTP/2 GET https://localhost:7139/ - 500 null text/html; charset=utf-8 511.7972ms
+[17:52:25 INF] Request starting HTTP/2 GET https://localhost:7139/_vs/browserLink - null null
+[17:52:25 INF] Request starting HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - null null
+[17:52:25 INF] Request finished HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - 200 16494 application/javascript; charset=utf-8 24.5181ms
+[17:52:25 INF] Request finished HTTP/2 GET https://localhost:7139/_vs/browserLink - 200 null text/javascript; charset=UTF-8 111.2806ms

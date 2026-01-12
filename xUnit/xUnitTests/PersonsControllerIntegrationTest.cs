@@ -31,7 +31,6 @@ namespace xUnitTests
                 $"the server responded with {responseMessage.StatusCode}. Response body: {responseBody}");
 
             responseMessage.Content.Headers.ContentType.ToString().Should().Contain("text/html");
-            //responseBody.Should().Contain("<h1>Persons List</h1>");
         }
         #endregion
     }
