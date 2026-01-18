@@ -1,17 +1,20 @@
-[14:52:07 INF] User profile is available. Using 'C:\Users\KF9\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
-[14:52:07 INF] Now listening on: https://localhost:7139
-[14:52:07 INF] Now listening on: http://localhost:5258
-[14:52:08 INF] Request starting HTTP/2 GET https://localhost:7139/ - null null
-[14:52:08 INF] Executing endpoint 'CRUDs.Controllers.PersonsController.Index (CRUDs)'
-[14:52:09 INF] Route matched with {action = "Index", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, ServiceContacts.Enums.SortDirectionOptions) on controller CRUDs.Controllers.PersonsController (CRUDs).
-[14:52:11 INF] PersonsListActoinFilter.OnActionExecuting executed before action.
-[14:52:11 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed before action.
-[14:52:11 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed before action.
-[14:52:11 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed before action.
-[14:52:11 INF] This is index action method inside PersonsController
-[14:52:11 INF] Get Filtered Persons in the PersonService
-[14:52:23 ERR] An error occurred using the connection to database 'PersonsDb1' on server '(localdb)\MSSQLLocalDB'.
-[14:52:23 ERR] An exception occurred while iterating over the results of a query for context type 'Entities.AppDbContext'.
+[23:57:18 INF] Application started. Press Ctrl+C to shut down.
+[23:57:18 INF] Hosting environment: Development
+[23:57:18 INF] Content root path: E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\xUnit
+[23:58:06 INF] User profile is available. Using 'C:\Users\KF9\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[23:58:06 INF] Now listening on: https://localhost:7139
+[23:58:06 INF] Now listening on: http://localhost:5258
+[23:58:07 INF] Request starting HTTP/2 GET https://localhost:7139/ - null null
+[23:58:07 INF] Executing endpoint 'CRUDs.Controllers.PersonsController.Index (CRUDs)'
+[23:58:08 INF] Route matched with {action = "Index", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, ServiceContacts.Enums.SortDirectionOptions) on controller CRUDs.Controllers.PersonsController (CRUDs).
+[23:58:08 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - Before Action Execution
+[23:58:08 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - Before Action Execution
+[23:58:08 INF] PersonsListActoinFilter.OnActionExecuting executed before action.
+[23:58:08 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - Before Action Execution
+[23:58:08 INF] This is index action method inside PersonsController
+[23:58:08 INF] Get Filtered Persons in the PersonService
+[23:58:20 ERR] An error occurred using the connection to database 'PersonsDb1' on server '(localdb)\MSSQLLocalDB'.
+[23:58:20 ERR] An exception occurred while iterating over the results of a query for context type 'Entities.AppDbContext'.
 System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
  ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "PersonsDb1" requested by the login. The login failed.
 Login failed for user 'MOHAMED-SOBHY\KF9'.
@@ -37,7 +40,7 @@ Login failed for user 'MOHAMED-SOBHY\KF9'.
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
-ClientConnectionId:8dde18c9-d8c7-4e25-b41a-811cb9a316bf
+ClientConnectionId:da8d7fd5-b66d-49c9-89a0-270e094451da
 Error Number:4060,State:1,Class:11
    --- End of inner exception stack trace ---
    at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
@@ -67,21 +70,20 @@ Login failed for user 'MOHAMED-SOBHY\KF9'.
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
-ClientConnectionId:8dde18c9-d8c7-4e25-b41a-811cb9a316bf
+ClientConnectionId:da8d7fd5-b66d-49c9-89a0-270e094451da
 Error Number:4060,State:1,Class:11
    --- End of inner exception stack trace ---
    at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
-[14:52:24 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed after action.
-[14:52:24 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed after action.
-[14:52:24 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed after action.
-[14:52:24 INF] PersonsListActoinFilter.OnActionExecuted executed after action.
-[14:52:24 ERR] Exception Filter HandleExceptionFilter.OnException 
- System.InvalidOperationException 
- An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
-[14:52:24 INF] Executed action CRUDs.Controllers.PersonsController.Index (CRUDs) in 15009.8431ms
-[14:52:24 INF] Executed endpoint 'CRUDs.Controllers.PersonsController.Index (CRUDs)'
-[14:52:24 ERR] An unhandled exception has occurred while executing the request.
+[23:58:20 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - after Action Execution
+[23:58:20 INF] PersonsListActoinFilter.OnActionExecuted executed after action.
+[23:58:20 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - after Action Execution
+[23:58:20 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - after Action Execution
+[23:58:20 INF] Executed action CRUDs.Controllers.PersonsController.Index (CRUDs) in 12824.9477ms
+[23:58:20 INF] Executed endpoint 'CRUDs.Controllers.PersonsController.Index (CRUDs)'
+[23:58:21 ERR] Microsoft.Data.SqlClient.SqlException.Cannot open database "PersonsDb1" requested by the login. The login failed.
+Login failed for user 'MOHAMED-SOBHY\KF9'.
+[23:58:21 ERR] An unhandled exception has occurred while executing the request.
 System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
  ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "PersonsDb1" requested by the login. The login failed.
 Login failed for user 'MOHAMED-SOBHY\KF9'.
@@ -107,7 +109,7 @@ Login failed for user 'MOHAMED-SOBHY\KF9'.
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
-ClientConnectionId:8dde18c9-d8c7-4e25-b41a-811cb9a316bf
+ClientConnectionId:da8d7fd5-b66d-49c9-89a0-270e094451da
 Error Number:4060,State:1,Class:11
    --- End of inner exception stack trace ---
    at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
@@ -115,17 +117,14 @@ Error Number:4060,State:1,Class:11
    at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
    at Repos.PersonRepo.GetAllPersons() in E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\Repos\PersonRepo.cs:line 34
-   at Services.PersonService.GetFilteredPersons(String searchBy, String searchPhrase) in E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\Services\PersonService.cs:line 77
-   at CRUDs.Controllers.PersonsController.Index(String searchBy, String searchPhrase, String sortBy, SortDirectionOptions sortDirection) in E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\xUnit\Controllers\PersonsController.cs:line 40
+   at Services.PersonService.GetFilteredPersons(String searchBy, String searchPhrase) in E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\Services\PersonService.cs:line 78
+   at CRUDs.Controllers.PersonsController.Index(String searchBy, String searchPhrase, String sortBy, SortDirectionOptions sortDirection) in E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\xUnit\Controllers\PersonsController.cs:line 39
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ExceptionContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
@@ -134,13 +133,30 @@ Error Number:4060,State:1,Class:11
    at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
    at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
    at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-[14:52:24 INF] Request finished HTTP/2 GET https://localhost:7139/ - 500 null text/html; charset=utf-8 15860.1414ms
-[14:52:24 INF] Request starting HTTP/2 GET https://localhost:7139/_vs/browserLink - null null
-[14:52:24 INF] Request starting HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - null null
-[14:52:24 INF] Request finished HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - 200 16494 application/javascript; charset=utf-8 20.4532ms
-[14:52:24 INF] Request finished HTTP/2 GET https://localhost:7139/_vs/browserLink - 200 null text/javascript; charset=UTF-8 75.1092ms
-[14:52:24 INF] Request starting HTTP/2 GET https://localhost:7139/favicon.ico - null null
-[14:52:24 INF] Sending file. Request path: '/favicon.ico'. Physical path: 'E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\xUnit\wwwroot\favicon.ico'
-[14:52:24 INF] Request finished HTTP/2 GET https://localhost:7139/favicon.ico - 200 5430 image/x-icon 96.7906ms
+   at CRUDs.Middlewares.ExceptionHandlingMiddleware.InvokeAsync(HttpContext httpContext) in E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\xUnit\Middlewares\ExceptionHandlingMiddleware.cs:line 16
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+[23:58:21 INF] Executing endpoint 'xUnit.Controllers.HomeController.Error (CRUDs)'
+[23:58:21 INF] Route matched with {action = "Error", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Error() on controller xUnit.Controllers.HomeController (CRUDs).
+[23:58:21 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - Before Action Execution
+[23:58:21 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - after Action Execution
+[23:58:21 INF] Executing ViewResult, running view Error.
+[23:58:21 INF] Executed ViewResult - view Error executed in 117.4633ms.
+[23:58:21 INF] Executed action xUnit.Controllers.HomeController.Error (CRUDs) in 131.8597ms
+[23:58:21 INF] Executed endpoint 'xUnit.Controllers.HomeController.Error (CRUDs)'
+[23:58:21 INF] Request finished HTTP/2 GET https://localhost:7139/ - 500 null text/html; charset=utf-8 14090.049ms
+[23:58:21 INF] Request starting HTTP/2 GET https://localhost:7139/xUnit.styles.css - null null
+[23:58:21 INF] Request starting HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - null null
+[23:58:21 INF] Request finished HTTP/2 GET https://localhost:7139/xUnit.styles.css - 404 0 null 9.8368ms
+[23:58:21 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7139/xUnit.styles.css, Response status code: 404
+[23:58:21 INF] Request starting HTTP/2 GET https://localhost:7139/_vs/browserLink - null null
+[23:58:21 INF] Request finished HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - 200 16494 application/javascript; charset=utf-8 44.2349ms
+[23:58:21 INF] Request finished HTTP/2 GET https://localhost:7139/_vs/browserLink - 200 null text/javascript; charset=UTF-8 92.4827ms
+[23:58:47 INF] Request starting HTTP/2 GET https://localhost:7139/ - null null
+[23:58:47 INF] Executing endpoint 'CRUDs.Controllers.PersonsController.Index (CRUDs)'
+[23:58:47 INF] Route matched with {action = "Index", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, ServiceContacts.Enums.SortDirectionOptions) on controller CRUDs.Controllers.PersonsController (CRUDs).
+[23:58:47 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - Before Action Execution
+[23:58:47 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - Before Action Execution
+[23:58:47 INF] PersonsListActoinFilter.OnActionExecuting executed before action.
+[23:58:47 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - Before Action Execution
+[23:58:47 INF] This is index action method inside PersonsController
+[23:58:47 INF] Get Filtered Persons in the PersonService

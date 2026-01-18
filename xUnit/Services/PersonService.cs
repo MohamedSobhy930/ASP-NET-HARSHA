@@ -19,6 +19,7 @@ using System.Text;
 using System.Threading.Tasks;
 using RepoContracts;
 using Microsoft.Extensions.Logging;
+using Exceptions;
 
 namespace Services
 {
@@ -159,6 +160,8 @@ namespace Services
                 throw new ArgumentNullException(nameof(request));
             ValidationHelper.ModelValidation(request);
             Person? personFromDb = await _personRepo.GetPersonById(request.Id);
+            if(personFromDb == null)
+                throw new InvalidPersonIdException("Person with the provided Id does not exist.");
             personFromDb.Name = request.Name;
             personFromDb.Email = request.Email;
             personFromDb.CountryId = request.CountryId;

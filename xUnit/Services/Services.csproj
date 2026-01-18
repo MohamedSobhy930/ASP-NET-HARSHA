@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Exceptions\Exceptions.csproj" />
     <ProjectReference Include="..\RepoContracts\RepoContracts.csproj" />
     <ProjectReference Include="..\ServiceContacts\ServiceContacts.csproj" />
   </ItemGroup>

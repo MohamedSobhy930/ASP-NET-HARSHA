@@ -1,0 +1,15 @@
+[00:47:19 INF] Application started. Press Ctrl+C to shut down.
+[00:47:19 INF] Hosting environment: Development
+[00:47:19 INF] Content root path: E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\xUnit
+[00:48:32 INF] User profile is available. Using 'C:\Users\KF9\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[00:48:32 INF] Now listening on: https://localhost:7139
+[00:48:32 INF] Now listening on: http://localhost:5258
+[00:48:33 INF] Request starting HTTP/2 GET https://localhost:7139/ - null null
+[00:48:45 INF] Executing endpoint 'CRUDs.Controllers.PersonsController.Index (CRUDs)'
+[00:48:47 INF] Route matched with {action = "Index", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, ServiceContacts.Enums.SortDirectionOptions) on controller CRUDs.Controllers.PersonsController (CRUDs).
+[00:48:47 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - Before Action Execution
+[00:48:47 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - Before Action Execution
+[00:48:47 INF] PersonsListActoinFilter.OnActionExecuting executed before action.
+[00:48:47 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - Before Action Execution
+[00:48:47 INF] This is index action method inside PersonsController
+[00:48:47 INF] Get Filtered Persons in the PersonService

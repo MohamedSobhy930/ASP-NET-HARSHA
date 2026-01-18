@@ -15,7 +15,8 @@ using ServiceContacts.Enums;
 namespace CRUDs.Controllers
 {
     [Route("/[controller]/[action]")]
-    [ResponseHeaderFilterFactory("x-Custom_Controller" , "controller_value" , 3)] 
+    [ResponseHeaderFilterFactory("x-Custom_Controller" , "controller_value" , 3)]
+    //[TypeFilter(typeof(HandleExceptionFilter))]
     public class PersonsController(IPersonService personService, ICountriesService countriesService, ILogger<PersonsController> logger) : Controller
     {
         private readonly IPersonService _personService = personService;
@@ -25,7 +26,6 @@ namespace CRUDs.Controllers
         [TypeFilter(typeof(PersonsListActoinFilter))]
         [ResponseHeaderFilterFactory("X-Custom_Action2" , "action_value2" , 1)] // action filter applied directly using attribute
         [TypeFilter(typeof(PersonsListResultFilter))]
-        [TypeFilter(typeof(HandleExceptionFilter))]
         public async Task<IActionResult> Index
             (string searchBy ,
             string? searchPhrase,

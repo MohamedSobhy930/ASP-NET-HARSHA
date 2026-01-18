@@ -1,20 +1,20 @@
-[14:52:07 INF] Application started. Press Ctrl+C to shut down.
-[14:52:07 INF] Hosting environment: Development
-[14:52:07 INF] Content root path: E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\xUnit
-[14:53:26 INF] User profile is available. Using 'C:\Users\KF9\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
-[14:53:27 INF] Now listening on: https://localhost:7139
-[14:53:27 INF] Now listening on: http://localhost:5258
-[14:53:28 INF] Request starting HTTP/2 GET https://localhost:7139/ - null null
-[14:53:28 INF] Executing endpoint 'CRUDs.Controllers.PersonsController.Index (CRUDs)'
-[14:53:28 INF] Route matched with {action = "Index", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, ServiceContacts.Enums.SortDirectionOptions) on controller CRUDs.Controllers.PersonsController (CRUDs).
-[14:53:28 INF] PersonsListActoinFilter.OnActionExecuting executed before action.
-[14:53:28 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed before action.
-[14:53:28 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed before action.
-[14:53:28 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed before action.
-[14:53:28 INF] This is index action method inside PersonsController
-[14:53:28 INF] Get Filtered Persons in the PersonService
-[14:53:40 ERR] An error occurred using the connection to database 'PersonsDb1' on server '(localdb)\MSSQLLocalDB'.
-[14:53:40 ERR] An exception occurred while iterating over the results of a query for context type 'Entities.AppDbContext'.
+[00:44:07 INF] Application started. Press Ctrl+C to shut down.
+[00:44:07 INF] Hosting environment: Development
+[00:44:07 INF] Content root path: E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\xUnit\xUnit
+[00:45:57 INF] User profile is available. Using 'C:\Users\KF9\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[00:45:57 INF] Now listening on: https://localhost:7139
+[00:45:57 INF] Now listening on: http://localhost:5258
+[00:45:57 INF] Request starting HTTP/2 GET https://localhost:7139/ - null null
+[00:45:58 INF] Executing endpoint 'CRUDs.Controllers.PersonsController.Index (CRUDs)'
+[00:45:58 INF] Route matched with {action = "Index", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, ServiceContacts.Enums.SortDirectionOptions) on controller CRUDs.Controllers.PersonsController (CRUDs).
+[00:45:58 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - Before Action Execution
+[00:45:58 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - Before Action Execution
+[00:45:58 INF] PersonsListActoinFilter.OnActionExecuting executed before action.
+[00:45:58 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - Before Action Execution
+[00:45:58 INF] This is index action method inside PersonsController
+[00:45:58 INF] Get Filtered Persons in the PersonService
+[00:46:10 ERR] An error occurred using the connection to database 'PersonsDb1' on server '(localdb)\MSSQLLocalDB'.
+[00:46:10 ERR] An exception occurred while iterating over the results of a query for context type 'Entities.AppDbContext'.
 System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
  ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "PersonsDb1" requested by the login. The login failed.
 Login failed for user 'MOHAMED-SOBHY\KF9'.
@@ -40,7 +40,7 @@ Login failed for user 'MOHAMED-SOBHY\KF9'.
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
-ClientConnectionId:5f4267f6-8b82-45ee-9285-176488a448c2
+ClientConnectionId:f5f31da2-23eb-4bbf-be0e-eb3b31ac31a1
 Error Number:4060,State:1,Class:11
    --- End of inner exception stack trace ---
    at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
@@ -70,15 +70,19 @@ Login failed for user 'MOHAMED-SOBHY\KF9'.
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
-ClientConnectionId:5f4267f6-8b82-45ee-9285-176488a448c2
+ClientConnectionId:f5f31da2-23eb-4bbf-be0e-eb3b31ac31a1
 Error Number:4060,State:1,Class:11
    --- End of inner exception stack trace ---
    at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
-[14:53:40 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed after action.
-[14:53:40 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed after action.
-[14:53:40 INF] ResponseHeaderActionFilter.OnActionExecutionAsync executed after action.
-[14:53:40 INF] PersonsListActoinFilter.OnActionExecuted executed after action.
-[14:53:52 ERR] Exception Filter HandleExceptionFilter.OnException 
+[00:46:10 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - after Action Execution
+[00:46:10 INF] PersonsListActoinFilter.OnActionExecuted executed after action.
+[00:46:10 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - after Action Execution
+[00:46:10 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - after Action Execution
+[00:46:10 ERR] Exception Filter HandleExceptionFilter.OnException 
  System.InvalidOperationException 
  An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+[00:46:10 INF] Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+[00:46:10 INF] Executed action CRUDs.Controllers.PersonsController.Index (CRUDs) in 12495.8278ms
+[00:46:10 INF] Executed endpoint 'CRUDs.Controllers.PersonsController.Index (CRUDs)'
+[00:46:10 INF] Request finished HTTP/2 GET https://localhost:7139/ - 500 177 text/plain; charset=utf-8 12996.0379ms

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36301.6
+# Visual Studio Version 18
+VisualStudioVersion = 18.3.11310.294 d18.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDs", "xUnit\CRUDs.csproj", "{41708138-1A36-4421-A03A-F40150C02447}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepoContracts", "RepoContracts\RepoContracts.csproj", "{0551ECEC-BF77-4B25-ADA4-023374620F9D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repos", "Repos\Repos.csproj", "{84FD1CB4-1629-479C-8E32-B900F8B78067}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exceptions", "Exceptions\Exceptions.csproj", "{5FCDE812-4A9E-4CC8-AB13-8C66098CA45A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{84FD1CB4-1629-479C-8E32-B900F8B78067}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84FD1CB4-1629-479C-8E32-B900F8B78067}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84FD1CB4-1629-479C-8E32-B900F8B78067}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FCDE812-4A9E-4CC8-AB13-8C66098CA45A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FCDE812-4A9E-4CC8-AB13-8C66098CA45A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FCDE812-4A9E-4CC8-AB13-8C66098CA45A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FCDE812-4A9E-4CC8-AB13-8C66098CA45A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
