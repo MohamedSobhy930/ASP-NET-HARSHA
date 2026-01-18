@@ -8,6 +8,7 @@ using Rotativa.AspNetCore;
 using Repos;
 using ReposContracts;
 using Serilog;
+using StockAppAssignment.Filters.ActionFilters;
 namespace StockAppWithConfiguration
 {
     public class Program
@@ -39,7 +40,7 @@ namespace StockAppWithConfiguration
             builder.Services.AddScoped<IStockService,StockService>();
             builder.Services.AddScoped<IFinnhubRepo, FinnhubRepo>();
             builder.Services.AddScoped<IStocksRepo, StocksRepo>();
-
+            builder.Services.AddScoped<ValidateOrderActionFilter>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

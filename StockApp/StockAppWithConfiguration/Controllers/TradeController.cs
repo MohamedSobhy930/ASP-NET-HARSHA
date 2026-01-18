@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Rotativa.AspNetCore;
 using Rotativa.AspNetCore.Options;
+using StockAppAssignment.Filters.ActionFilters;
 using StockAppAssignment.Models;
 using StockAppWithConfiguration.Models;
 using StockAppWithConfigurationAssignment.Models;
@@ -51,35 +52,19 @@ namespace StockAppAssignment.Controllers
             }
             return View(stockTrade);
         }
-        [Route("[action]")]
-        [HttpPost]
+
+        [HttpPost("[action]")]
+        [ValidateOrderFilter]
         public async Task<IActionResult> BuyOrder(BuyOrderRequest order)
         {
-            order.DateAndTimeOfOrder = DateTime.Now;
-
-            ModelState.Clear();
-            TryValidateModel(order);
-
-            if (!ModelState.IsValid)
-            {
-                return RedirectToAction("Index");
-            }
             BuyOrderResponse response = await _stockService.CreateBuyOrder(order);
             return RedirectToAction("Orders");
         }
-        [Route("[action]")]
-        [HttpPost]
+
+        [HttpPost("[action]")]
+        [ValidateOrderFilter]
         public async Task<IActionResult> SellOrder(SellOrderRequest order)
         {
-            order.DateAndTimeOfOrder = DateTime.Now;
-
-            ModelState.Clear();
-            TryValidateModel(order);
-
-            if (!ModelState.IsValid)
-            {
-                return RedirectToAction("Index");
-            }
             SellOrderResponse response = await _stockService.CreateSellOrder(order);
             return RedirectToAction("Orders");
         }

@@ -1,10 +1,11 @@
-﻿using System;
+﻿using IServicesContracts.DTOs;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 /// <summary>
 /// Represents the data required to place a sell order.
 /// </summary>
-public class SellOrderRequest
+public class SellOrderRequest : IOrderRequest
 {
     [Required(ErrorMessage = "Stock Symbol is required.")]
     public string? StockSymbol { get; set; }
