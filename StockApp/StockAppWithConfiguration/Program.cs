@@ -9,6 +9,8 @@ using Repos;
 using ReposContracts;
 using Serilog;
 using StockAppAssignment.Filters.ActionFilters;
+using StockAppAssignment.Extensions;
+using StockAppAssignment.Middlewares;
 namespace StockAppWithConfiguration
 {
     public class Program
@@ -18,40 +20,26 @@ namespace StockAppWithConfiguration
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Services.AddControllersWithViews();
             builder.Services.AddHttpClient();
-            builder.Services.Configure<TradingOptions>(builder.Configuration.GetSection("TradingOptions"));
 
-            builder.Services.AddDbContext<AppDbContext>(options =>
-            {
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-            });
+            builder.Host.ConfigureLogging();
+            builder.Services.ConfigureServices(builder.Configuration , builder.Environment);
 
-            builder.Host.UseSerilog((HostBuilderContext context, IServiceProvider services, LoggerConfiguration loggerConfiguration) =>
-            {
-                loggerConfiguration
-                // read configuration settings from built-in Iconfiguration
-                .ReadFrom.Configuration(context.Configuration)
-                // read out current app services and provide them to serilog 
-                .ReadFrom.Services(services);
-            });
-
-            builder.Services.AddScoped<IFinnhubService,FinnhubService>();
-            builder.Services.AddScoped<IStockService,StockService>();
-            builder.Services.AddScoped<IFinnhubRepo, FinnhubRepo>();
-            builder.Services.AddScoped<IStocksRepo, StocksRepo>();
-            builder.Services.AddScoped<ValidateOrderActionFilter>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
+                app.UseDeveloperExceptionPage();
+            }
+            else
+            {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
+                app.UseExceptionHandlingMiddleware();
             }
             if(!app.Environment.IsEnvironment("Test"))
                 RotativaConfiguration.Setup("wwwroot", wkhtmltopdfRelativePath: "Rotativa");
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 

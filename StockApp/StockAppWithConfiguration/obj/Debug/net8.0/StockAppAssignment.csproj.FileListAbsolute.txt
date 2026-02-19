@@ -412,3 +412,5 @@ E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultim
 E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\StockApp\StockAppWithConfiguration\bin\Debug\net8.0\Serilog.Sinks.Console.dll
 E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\StockApp\StockAppWithConfiguration\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
 E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\StockApp\StockAppWithConfiguration\bin\Debug\net8.0\Serilog.Sinks.File.dll
+E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\StockApp\StockAppWithConfiguration\bin\Debug\net8.0\Exceptions.dll
+E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\StockApp\StockAppWithConfiguration\bin\Debug\net8.0\Exceptions.pdb
