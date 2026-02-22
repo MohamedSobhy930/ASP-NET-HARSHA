@@ -1,5 +1,0 @@
-[17:48:37 INF] User profile is available. Using 'C:\Users\KF9\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
-[17:48:38 INF] Now listening on: https://localhost:7139
-[17:48:38 INF] Now listening on: http://localhost:5258
-[17:48:43 INF] Request starting HTTP/2 GET https://localhost:7139/ - null null
-[17:48:44 INF] Executing endpoint 'CRUDs.Controllers.PersonsController.Index (CRUDs)'
