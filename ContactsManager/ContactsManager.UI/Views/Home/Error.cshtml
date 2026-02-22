@@ -1,0 +1,39 @@
+﻿@model xUnit.Models.ErrorViewModel
+@{
+    ViewData["Title"] = "Error";
+}
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 60vh;">
+    <div class="card border-0 shadow-lg" style="max-width: 500px; width: 100%;">
+        <div class="card-body text-center p-5">
+
+            <div class="mb-4">
+                <i class="bi bi-exclamation-triangle-fill text-danger display-1"></i>
+            </div>
+
+            <h2 class="fw-bold text-danger mb-3">Oops! Something went wrong.</h2>
+
+            <p class="text-muted mb-4 lead">
+                We encountered an unexpected error while processing your request. Our team has been notified.
+            </p>
+
+            @if (Model.ShowRequestId)
+            {
+                <div class="alert alert-light border mb-4 text-start">
+                    <small class="text-uppercase text-muted fw-bold" style="font-size: 0.7rem;">Support ID</small>
+                    <div class="font-monospace text-dark">@Model.RequestId</div>
+                </div>
+            }
+
+            <div class="d-grid gap-2">
+                <a asp-controller="Home" asp-action="Index" class="btn btn-primary btn-lg shadow-sm">
+                    <i class="bi bi-house-door me-2"></i> Return Home
+                </a>
+                <a href="javascript:history.back()" class="btn btn-outline-secondary">
+                    Go Back
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>

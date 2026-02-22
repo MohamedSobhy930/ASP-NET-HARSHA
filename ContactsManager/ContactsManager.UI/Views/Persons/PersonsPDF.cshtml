@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ServiceContacts.DTOs.PersonDto.PersonResponse>
+
+@{
+    // This is the most important line:
+    // It tells the view to use your new, clean layout instead of the main site layout.
+    Layout = "_PdfLayout";
+}
+
+<h1>Persons List</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Date of Birth</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Country</th>
+            <th>Address</th>
+            <th>Newsletter</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var person in Model)
+        {
+            <tr>
+                <td>@person.Name</td>
+                <td>@person.Email</td>
+                <td>@person.DateOfBirth?.ToString("yyyy-MM-dd")</td>
+                <td>@person.Age</td>
+                <td>@person.Gender</td>
+                <td>@person.Country</td>
+                <td>@person.Address</td>
+                <td>@(person.ReceiveNewsletter == true ? "Yes" : "No")</td>
+            </tr>
+        }
+    </tbody>
+</table>

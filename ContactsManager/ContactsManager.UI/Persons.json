@@ -1,0 +1,32 @@
+[
+  {
+    "PersonId": "f1a2b3c4-5d6e-7f8a-9b0c-1d2e3f4a5b6c",
+    "Name": "John Smith",
+    "Email": "john.smith@example.com",
+    "DateOfBirth": "1985-04-12T00:00:00",
+    "Gender": "Male",
+    "CountryId": "1a6b0c2a-9b4f-4a09-8b8e-8a2b0c6d7e0f",
+    "Address": "123 Main St, New York",
+    "ReceiveNewsletter": true
+  },
+  {
+    "PersonId": "a1b2c3d4-e5f6-a7b8-c9d0-e1f2a3b4c5d6",
+    "Name": "Fatima Al-Sayed",
+    "Email": "fatima.alsayed@example.com",
+    "DateOfBirth": "1992-08-20T00:00:00",
+    "Gender": "Female",
+    "CountryId": "8b5f3a0c-4d7e-4b9e-8b4f-0a8c1e6d7b2a",
+    "Address": "456 Nile Corniche, Cairo",
+    "ReceiveNewsletter": false
+  },
+  {
+    "PersonId": "e8b1b2a9-1d9c-4c6b-9f1e-3a7d5c9f2b8a",
+    "Name": "James Bond",
+    "Email": "james.bond@mi6.gov.uk",
+    "DateOfBirth": "1970-11-13T00:00:00",
+    "Gender": "Male",
+    "CountryId": "c4a0b6e8-2d7c-4a0b-8d6f-1a9c2e7d8b3a",
+    "Address": "10 Downing St, London",
+    "ReceiveNewsletter": false
+  }
+]

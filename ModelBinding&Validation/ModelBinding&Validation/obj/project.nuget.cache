@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Lx8nRaueP0g=",
+  "dgSpecHash": "645ye/+/awc=",
   "success": true,
-  "projectFilePath": "E:\\Programing\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\ModelBinding&Validation\\ModelBinding&Validation\\ModelBinding&Validation.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "E:\\Programming\\BackEnd .NET\\Level_3\\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\\Solutions\\ModelBinding&Validation\\ModelBinding&Validation\\ModelBinding&Validation.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\KF9\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.22\\microsoft.windowsdesktop.app.ref.8.0.22.nupkg.sha512",
+    "C:\\Users\\KF9\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.22\\microsoft.netcore.app.ref.8.0.22.nupkg.sha512",
+    "C:\\Users\\KF9\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.22\\microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512",
+    "C:\\Users\\KF9\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.22\\microsoft.netcore.app.host.win-x64.8.0.22.nupkg.sha512"
+  ],
   "logs": []
 }

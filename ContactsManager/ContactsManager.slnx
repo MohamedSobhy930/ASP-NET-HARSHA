@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="ContactsManager.Core/ContactsManager.Core.csproj" />
+    <Project Path="ContactsManager.Infrastructure/ContactsManager.Infrastructure.csproj" Id="fdcc97b6-ee17-457b-9e1d-7572dcd691ff" />
+    <Project Path="ContactsManager.UI/ContactsManager.UI.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="ContactsManager.ControllerTests/ContactsManager.ControllerTests.csproj" Id="751af92a-80e7-4140-b3e3-b9f35fe5ec27" />
+    <Project Path="ContactsManager.IntegrationTests/ContactsManager.IntegrationTests.csproj" Id="a04d009c-a46b-4fff-9f5d-c378447bf9cc" />
+    <Project Path="ContactsManager.ServiceTests/ContactsManager.ServiceTests.csproj" Id="049124fc-4819-484a-b7c7-fe308b1ebf6c" />
+  </Folder>
+</Solution>
