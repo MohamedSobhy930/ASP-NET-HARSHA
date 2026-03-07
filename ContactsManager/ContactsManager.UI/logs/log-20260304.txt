@@ -1,0 +1,301 @@
+[09:36:56 INF] User profile is available. Using 'C:\Users\KF9\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[09:36:57 INF] Now listening on: http://localhost:5022
+[09:36:58 INF] Request starting HTTP/1.1 GET http://localhost:5022/ - null null
+[09:36:59 WRN] Failed to determine the https port for redirect.
+[09:36:59 INF] Executing endpoint 'CRUDs.Controllers.PersonsController.Index (ContactsManager.UI)'
+[09:36:59 INF] Route matched with {action = "Index", controller = "Persons", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, ServiceContacts.Enums.SortDirectionOptions) on controller CRUDs.Controllers.PersonsController (ContactsManager.UI).
+[09:37:01 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - Before Action Execution
+[09:37:01 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - Before Action Execution
+[09:37:02 INF] PersonsListActoinFilter.OnActionExecuting executed before action.
+[09:37:02 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - Before Action Execution
+[09:37:02 INF] This is index action method inside PersonsController
+[09:37:02 INF] Get Filtered Persons in the PersonService
+[09:37:06 INF] Executed DbCommand (56ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PersonId], [p].[Address], [p].[CountryId], [p].[DateOfBirth], [p].[Email], [p].[Gender], [p].[Name], [p].[ReceiveNewsletter], [c].[Id], [c].[Name]
+FROM [Persons] AS [p]
+LEFT JOIN [Countries] AS [c] ON [p].[CountryId] = [c].[Id]
+[09:37:06 INF] Get Sorted Persons in the PersonService
+[09:37:06 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - after Action Execution
+[09:37:06 INF] PersonsListActoinFilter.OnActionExecuted executed after action.
+[09:37:06 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - after Action Execution
+[09:37:06 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - after Action Execution
+[09:37:06 INF] PersonsListResultFilter.OnResultExecutionAsync - Before executing result.
+[09:37:07 INF] Executing ViewResult, running view Index.
+[09:37:07 INF] Executed ViewResult - view Index executed in 656.5915ms.
+[09:37:07 INF] PersonsListResultFilter.OnResultExecutionAsync - After executing result.
+[09:37:09 INF] Request starting HTTP/1.1 GET http://localhost:5022/_framework/aspnetcore-browser-refresh.js - null null
+[09:37:09 INF] Request starting HTTP/1.1 GET http://localhost:5022/xUnit.styles.css - null null
+[09:37:09 INF] Executed action CRUDs.Controllers.PersonsController.Index (ContactsManager.UI) in 9801.0113ms
+[09:37:09 INF] Request starting HTTP/1.1 GET http://localhost:5022/_vs/browserLink - null null
+[09:37:09 INF] Request finished HTTP/1.1 GET http://localhost:5022/_framework/aspnetcore-browser-refresh.js - 200 16521 application/javascript; charset=utf-8 35.8509ms
+[09:37:09 INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+[09:37:09 INF] Executed endpoint 'CRUDs.Controllers.PersonsController.Index (ContactsManager.UI)'
+[09:37:09 ERR] System.InvalidOperationException.Headers are read-only, response has already started.
+[09:37:09 INF] AuthenticationScheme: Identity.Application was challenged.
+[09:37:10 ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at CRUDs.Filters.ResultFilters.PersonsListResultFilter.OnResultExecutionAsync(ResultExecutingContext context, ResultExecutionDelegate next) in E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\ContactsManager\ContactsManager.UI\Filters\ResultFilters\PersonsListResultFilter.cs:line 17
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at CRUDs.Middlewares.ExceptionHandlingMiddleware.InvokeAsync(HttpContext httpContext) in E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\ContactsManager\ContactsManager.UI\Middlewares\ExceptionHandlingMiddleware.cs:line 16
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+[09:37:10 INF] Request finished HTTP/1.1 GET http://localhost:5022/xUnit.styles.css - 302 0 null 759.8729ms
+[09:37:10 INF] Request finished HTTP/1.1 GET http://localhost:5022/_vs/browserLink - 200 null text/javascript; charset=UTF-8 802.7974ms
+[09:37:10 WRN] The response has already started, the error handler will not be executed.
+[09:37:10 INF] Request starting HTTP/1.1 GET http://localhost:5022/Account/Login?ReturnUrl=%2FxUnit.styles.css - null null
+[09:37:10 ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at CRUDs.Filters.ResultFilters.PersonsListResultFilter.OnResultExecutionAsync(ResultExecutingContext context, ResultExecutionDelegate next) in E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\ContactsManager\ContactsManager.UI\Filters\ResultFilters\PersonsListResultFilter.cs:line 17
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at CRUDs.Middlewares.ExceptionHandlingMiddleware.InvokeAsync(HttpContext httpContext) in E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\ContactsManager\ContactsManager.UI\Middlewares\ExceptionHandlingMiddleware.cs:line 16
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[09:37:10 INF] Executing endpoint 'ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI)'
+[09:37:10 WRN] The response has already started, the error page middleware will not be executed.
+[09:37:10 INF] Route matched with {action = "Login", controller = "Account", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller ContactsManager.UI.Controllers.AccountController (ContactsManager.UI).
+[09:37:10 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - Before Action Execution
+[09:37:10 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - after Action Execution
+[09:37:10 INF] Executing ViewResult, running view Login.
+[09:37:10 INF] Request finished HTTP/1.1 GET http://localhost:5022/ - 200 null text/html; charset=utf-8 11730.8655ms
+[09:37:10 INF] Executed ViewResult - view Login executed in 134.5188ms.
+[09:37:10 INF] Executed action ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI) in 200.2266ms
+[09:37:10 INF] Executed endpoint 'ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI)'
+[09:37:10 INF] Request finished HTTP/1.1 GET http://localhost:5022/Account/Login?ReturnUrl=%2FxUnit.styles.css - 200 null text/html; charset=utf-8 261.0488ms
+[09:37:14 INF] Request starting HTTP/1.1 GET http://localhost:5022/Persons/Create - null null
+[09:37:14 INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+[09:37:14 INF] AuthenticationScheme: Identity.Application was challenged.
+[09:37:14 INF] Request finished HTTP/1.1 GET http://localhost:5022/Persons/Create - 302 null null 25.7604ms
+[09:37:14 INF] Request starting HTTP/1.1 GET http://localhost:5022/Account/Login?ReturnUrl=%2FPersons%2FCreate - null null
+[09:37:14 INF] Executing endpoint 'ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI)'
+[09:37:14 INF] Route matched with {action = "Login", controller = "Account", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller ContactsManager.UI.Controllers.AccountController (ContactsManager.UI).
+[09:37:14 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - Before Action Execution
+[09:37:14 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - after Action Execution
+[09:37:14 INF] Executing ViewResult, running view Login.
+[09:37:14 INF] Executed ViewResult - view Login executed in 11.6304ms.
+[09:37:14 INF] Executed action ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI) in 29.249ms
+[09:37:14 INF] Executed endpoint 'ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI)'
+[09:37:14 INF] Request finished HTTP/1.1 GET http://localhost:5022/Account/Login?ReturnUrl=%2FPersons%2FCreate - 200 null text/html; charset=utf-8 57.8538ms
+[09:37:14 INF] Request starting HTTP/1.1 GET http://localhost:5022/xUnit.styles.css - null null
+[09:37:14 INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+[09:37:14 INF] AuthenticationScheme: Identity.Application was challenged.
+[09:37:14 INF] Request starting HTTP/1.1 GET http://localhost:5022/_framework/aspnetcore-browser-refresh.js - null null
+[09:37:14 INF] Request finished HTTP/1.1 GET http://localhost:5022/xUnit.styles.css - 302 0 null 11.894ms
+[09:37:14 INF] Request starting HTTP/1.1 GET http://localhost:5022/_vs/browserLink - null null
+[09:37:14 INF] Request finished HTTP/1.1 GET http://localhost:5022/_framework/aspnetcore-browser-refresh.js - 200 16521 application/javascript; charset=utf-8 8.3078ms
+[09:37:14 INF] Request starting HTTP/1.1 GET http://localhost:5022/Account/Login?ReturnUrl=%2FxUnit.styles.css - null null
+[09:37:14 INF] Executing endpoint 'ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI)'
+[09:37:14 INF] Route matched with {action = "Login", controller = "Account", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller ContactsManager.UI.Controllers.AccountController (ContactsManager.UI).
+[09:37:14 INF] Request finished HTTP/1.1 GET http://localhost:5022/_vs/browserLink - 200 null text/javascript; charset=UTF-8 47.1597ms
+[09:37:14 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - Before Action Execution
+[09:37:14 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - after Action Execution
+[09:37:14 INF] Executing ViewResult, running view Login.
+[09:37:14 INF] Executed ViewResult - view Login executed in 6.3251ms.
+[09:37:14 INF] Executed action ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI) in 50.2035ms
+[09:37:14 INF] Executed endpoint 'ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI)'
+[09:37:14 INF] Request finished HTTP/1.1 GET http://localhost:5022/Account/Login?ReturnUrl=%2FxUnit.styles.css - 200 null text/html; charset=utf-8 76.5695ms
+[09:37:24 INF] Request starting HTTP/1.1 GET http://localhost:5022/Account/Register - null null
+[09:37:24 INF] Executing endpoint 'ContactsManager.UI.Controllers.AccountController.Register (ContactsManager.UI)'
+[09:37:24 INF] Route matched with {action = "Register", controller = "Account", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register() on controller ContactsManager.UI.Controllers.AccountController (ContactsManager.UI).
+[09:37:24 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - Before Action Execution
+[09:37:24 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - after Action Execution
+[09:37:24 INF] Executing ViewResult, running view Register.
+[09:37:24 INF] Executed ViewResult - view Register executed in 61.6426ms.
+[09:37:24 INF] Executed action ContactsManager.UI.Controllers.AccountController.Register (ContactsManager.UI) in 69.1305ms
+[09:37:24 INF] Executed endpoint 'ContactsManager.UI.Controllers.AccountController.Register (ContactsManager.UI)'
+[09:37:24 INF] Request finished HTTP/1.1 GET http://localhost:5022/Account/Register - 200 null text/html; charset=utf-8 95.4667ms
+[09:37:24 INF] Request starting HTTP/1.1 GET http://localhost:5022/xUnit.styles.css - null null
+[09:37:24 INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+[09:37:24 INF] Request starting HTTP/1.1 GET http://localhost:5022/_framework/aspnetcore-browser-refresh.js - null null
+[09:37:24 INF] AuthenticationScheme: Identity.Application was challenged.
+[09:37:24 INF] Request finished HTTP/1.1 GET http://localhost:5022/_framework/aspnetcore-browser-refresh.js - 200 16521 application/javascript; charset=utf-8 8.1761ms
+[09:37:24 INF] Request finished HTTP/1.1 GET http://localhost:5022/xUnit.styles.css - 302 0 null 15.8603ms
+[09:37:24 INF] Request starting HTTP/1.1 GET http://localhost:5022/_vs/browserLink - null null
+[09:37:24 INF] Request starting HTTP/1.1 GET http://localhost:5022/Account/Login?ReturnUrl=%2FxUnit.styles.css - null null
+[09:37:24 INF] Executing endpoint 'ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI)'
+[09:37:24 INF] Route matched with {action = "Login", controller = "Account", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller ContactsManager.UI.Controllers.AccountController (ContactsManager.UI).
+[09:37:24 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - Before Action Execution
+[09:37:24 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - after Action Execution
+[09:37:24 INF] Executing ViewResult, running view Login.
+[09:37:24 INF] Executed ViewResult - view Login executed in 5.1429ms.
+[09:37:24 INF] Executed action ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI) in 23.6257ms
+[09:37:24 INF] Executed endpoint 'ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI)'
+[09:37:24 INF] Request finished HTTP/1.1 GET http://localhost:5022/Account/Login?ReturnUrl=%2FxUnit.styles.css - 200 null text/html; charset=utf-8 58.7342ms
+[09:37:24 INF] Request finished HTTP/1.1 GET http://localhost:5022/_vs/browserLink - 200 null text/javascript; charset=UTF-8 109.1233ms
+[09:37:54 INF] Request starting HTTP/1.1 POST http://localhost:5022/Account/Register - application/x-www-form-urlencoded 306
+[09:37:54 INF] Executing endpoint 'ContactsManager.UI.Controllers.AccountController.Register (ContactsManager.UI)'
+[09:37:54 INF] Route matched with {action = "Register", controller = "Account", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(ContactsManager.Core.DTOs.UserDto.RegisterDto) on controller ContactsManager.UI.Controllers.AccountController (ContactsManager.UI).
+[09:37:54 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - Before Action Execution
+[09:37:54 INF] Executed DbCommand (31ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+[09:37:54 INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTimeOffset), @p7='?' (Size = 256), @p8='?' (Size = 256), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PersonName], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+[09:37:54 INF] Executed DbCommand (6ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+[09:37:54 INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+[09:37:54 INF] Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Guid), @__get_Item_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__get_Item_0 AND [a].[RoleId] = @__get_Item_1
+[09:37:54 INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+[09:37:54 INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+[09:37:54 INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p17='?' (DbType = Guid), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p18='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PersonName] = @p11, [PhoneNumber] = @p12, [PhoneNumberConfirmed] = @p13, [SecurityStamp] = @p14, [TwoFactorEnabled] = @p15, [UserName] = @p16
+OUTPUT 1
+WHERE [Id] = @p17 AND [ConcurrencyStamp] = @p18;
+[09:37:54 INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+[09:37:55 INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+[09:37:55 INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+[09:37:55 INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+[09:37:55 INF] AuthenticationScheme: Identity.Application signed in.
+[09:37:55 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - after Action Execution
+[09:37:55 INF] Executing RedirectResult, redirecting to /.
+[09:37:55 INF] Executed action ContactsManager.UI.Controllers.AccountController.Register (ContactsManager.UI) in 985.9926ms
+[09:37:55 INF] Executed endpoint 'ContactsManager.UI.Controllers.AccountController.Register (ContactsManager.UI)'
+[09:37:55 INF] Request finished HTTP/1.1 POST http://localhost:5022/Account/Register - 302 null null 1020.4481ms
+[09:37:55 INF] Request starting HTTP/1.1 GET http://localhost:5022/ - null null
+[09:37:55 INF] Executing endpoint 'CRUDs.Controllers.PersonsController.Index (ContactsManager.UI)'
+[09:37:55 INF] Route matched with {action = "Index", controller = "Persons", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, ServiceContacts.Enums.SortDirectionOptions) on controller CRUDs.Controllers.PersonsController (ContactsManager.UI).
+[09:37:55 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - Before Action Execution
+[09:37:55 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - Before Action Execution
+[09:37:55 INF] PersonsListActoinFilter.OnActionExecuting executed before action.
+[09:37:55 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - Before Action Execution
+[09:37:55 INF] This is index action method inside PersonsController
+[09:37:55 INF] Get Filtered Persons in the PersonService
+[09:37:55 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PersonId], [p].[Address], [p].[CountryId], [p].[DateOfBirth], [p].[Email], [p].[Gender], [p].[Name], [p].[ReceiveNewsletter], [c].[Id], [c].[Name]
+FROM [Persons] AS [p]
+LEFT JOIN [Countries] AS [c] ON [p].[CountryId] = [c].[Id]
+[09:37:55 INF] Get Sorted Persons in the PersonService
+[09:37:55 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - after Action Execution
+[09:37:55 INF] PersonsListActoinFilter.OnActionExecuted executed after action.
+[09:37:55 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - after Action Execution
+[09:37:55 INF] ResponseHeaderActionFilter.OnActionExecutionAsync - after Action Execution
+[09:37:55 INF] PersonsListResultFilter.OnResultExecutionAsync - Before executing result.
+[09:37:55 INF] Executing ViewResult, running view Index.
+[09:37:55 INF] Executed ViewResult - view Index executed in 5.4573ms.
+[09:37:55 INF] PersonsListResultFilter.OnResultExecutionAsync - After executing result.
+[09:37:55 INF] Request starting HTTP/1.1 GET http://localhost:5022/xUnit.styles.css - null null
+[09:37:55 INF] Request starting HTTP/1.1 GET http://localhost:5022/_vs/browserLink - null null
+[09:37:55 INF] Executed action CRUDs.Controllers.PersonsController.Index (ContactsManager.UI) in 386.6656ms
+[09:37:55 INF] Request finished HTTP/1.1 GET http://localhost:5022/xUnit.styles.css - 404 0 null 16.962ms
+[09:37:55 INF] Executed endpoint 'CRUDs.Controllers.PersonsController.Index (ContactsManager.UI)'
+[09:37:55 INF] Request finished HTTP/1.1 GET http://localhost:5022/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.8999ms
+[09:37:55 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5022/xUnit.styles.css, Response status code: 404
+[09:37:55 ERR] System.InvalidOperationException.Headers are read-only, response has already started.
+[09:37:55 INF] Request starting HTTP/1.1 GET http://localhost:5022/_framework/aspnetcore-browser-refresh.js - null null
+[09:37:55 ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at CRUDs.Filters.ResultFilters.PersonsListResultFilter.OnResultExecutionAsync(ResultExecutingContext context, ResultExecutionDelegate next) in E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\ContactsManager\ContactsManager.UI\Filters\ResultFilters\PersonsListResultFilter.cs:line 17
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at CRUDs.Middlewares.ExceptionHandlingMiddleware.InvokeAsync(HttpContext httpContext) in E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\ContactsManager\ContactsManager.UI\Middlewares\ExceptionHandlingMiddleware.cs:line 16
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+[09:37:55 INF] Request finished HTTP/1.1 GET http://localhost:5022/_framework/aspnetcore-browser-refresh.js - 200 16521 application/javascript; charset=utf-8 320.496ms
+[09:37:55 WRN] The response has already started, the error handler will not be executed.
+[09:37:55 ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at CRUDs.Filters.ResultFilters.PersonsListResultFilter.OnResultExecutionAsync(ResultExecutingContext context, ResultExecutionDelegate next) in E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\ContactsManager\ContactsManager.UI\Filters\ResultFilters\PersonsListResultFilter.cs:line 17
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at CRUDs.Middlewares.ExceptionHandlingMiddleware.InvokeAsync(HttpContext httpContext) in E:\Programming\BackEnd .NET\Level_3\Udemy - Asp.Net Core 9 (.NET 9)   True Ultimate Guide 2025-2\Solutions\ContactsManager\ContactsManager.UI\Middlewares\ExceptionHandlingMiddleware.cs:line 16
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[09:37:55 WRN] The response has already started, the error page middleware will not be executed.
+[09:37:55 INF] Request finished HTTP/1.1 GET http://localhost:5022/ - 200 null text/html; charset=utf-8 787.6363ms

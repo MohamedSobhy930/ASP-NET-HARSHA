@@ -1,8 +1,8 @@
 ﻿using CRUDs.Filters.ActionFilters;
 using CRUDs.Filters.AuthorizationFilters;
-using CRUDs.Filters.ExceptionFilters;
 using CRUDs.Filters.ResourceFilters;
 using CRUDs.Filters.ResultFilters;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Rotativa.AspNetCore;
@@ -26,6 +26,7 @@ namespace CRUDs.Controllers
         [TypeFilter(typeof(PersonsListActoinFilter))]
         [ResponseHeaderFilterFactory("X-Custom_Action2" , "action_value2" , 1)] // action filter applied directly using attribute
         [TypeFilter(typeof(PersonsListResultFilter))]
+        [AllowAnonymous]
         public async Task<IActionResult> Index
             (string searchBy ,
             string? searchPhrase,

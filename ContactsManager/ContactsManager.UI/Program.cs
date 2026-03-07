@@ -1,15 +1,6 @@
 using CRUDs.Extensions;
-using CRUDs.Filters.ActionFilters;
 using CRUDs.Middlewares;
-using Entities;
-using Microsoft.EntityFrameworkCore;
-using OfficeOpenXml;
-using RepoContracts;
-using Repos;
 using Rotativa.AspNetCore;
-using Serilog;
-using ServiceContacts;
-using Services;
 
 namespace xUnit
 {
@@ -41,16 +32,21 @@ namespace xUnit
             }
             if (!app.Environment.IsEnvironment("Test"))
                 RotativaConfiguration.Setup("wwwroot", wkhtmltopdfRelativePath: "Rotativa");
+
+            app.UseHsts();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
-
-            app.MapControllerRoute(
-                name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                name: "areas",
+                pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"); 
+            });
 
             app.Run();
         }
