@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using CitiesManager.WebApi.Data;
-using CitiesManager.WebApi.Models;
+using CitiesManager.Infrastructure.Data;
+using CitiesManager.Core.Entities;
 using Asp.Versioning;
 
 namespace CitiesManager.WebApi.Controllers.v1

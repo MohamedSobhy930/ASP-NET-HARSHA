@@ -1,5 +1,5 @@
 using Asp.Versioning;
-using CitiesManager.WebApi.Data;
+using CitiesManager.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi;
 
@@ -41,12 +41,22 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policyBuilder =>
+    {
+        policyBuilder.WithOrigins(builder.Configuration.GetSection("AllowedOrigins").Get<string[]>()); 
+    });
+});
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 app.UseHsts();
 app.UseHttpsRedirection();
+
+app.UseRouting();
+app.UseCors();
 
 app.UseSwagger();
 app.UseSwaggerUI(options =>
