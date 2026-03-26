@@ -1,0 +1,143 @@
+[14:54:16 INF] User profile is available. Using 'C:\Users\KF9\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[14:54:17 INF] Now listening on: http://localhost:5050
+[14:54:17 INF] Application started. Press Ctrl+C to shut down.
+[14:54:17 INF] Hosting environment: Development
+[14:54:17 INF] Content root path: E:\Programming\Harsha\ASP-NET-HARSHA\StockApp\StockAppWithConfiguration
+[14:54:27 INF] Request starting HTTP/1.1 GET http://localhost:5050/ - null null
+[14:54:27 WRN] Failed to determine the https port for redirect.
+[14:54:27 INF] Executing endpoint 'StockAppAssignment.Controllers.StocksController.Explore (StockAppAssignment)'
+[14:54:27 INF] Route matched with {action = "Explore", controller = "Stocks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Explore(System.String) on controller StockAppAssignment.Controllers.StocksController (StockAppAssignment).
+[14:54:27 INF] Getting list of stocks
+[14:54:27 INF] Start processing HTTP request GET https://finnhub.io/api/v1/stock/symbol?*
+[14:54:27 INF] Sending HTTP request GET https://finnhub.io/api/v1/stock/symbol?*
+[14:54:28 INF] Received HTTP response headers after 1489.2244ms - 200
+[14:54:28 INF] End processing HTTP request after 1518.0482ms - 200
+[14:54:32 INF] Executing ViewResult, running view Explore.
+[14:54:32 INF] Getting company profile for AAPL
+[14:54:32 INF] Start processing HTTP request GET https://finnhub.io/api/v1/stock/profile2?*
+[14:54:32 INF] Sending HTTP request GET https://finnhub.io/api/v1/stock/profile2?*
+[14:54:32 INF] Received HTTP response headers after 200.2264ms - 200
+[14:54:32 INF] End processing HTTP request after 209.4622ms - 200
+[14:54:32 INF] Getting stock price quote for AAPL
+[14:54:32 INF] Start processing HTTP request GET https://finnhub.io/api/v1/quote?*
+[14:54:32 INF] Sending HTTP request GET https://finnhub.io/api/v1/quote?*
+[14:54:33 INF] Received HTTP response headers after 208.9479ms - 200
+[14:54:33 INF] End processing HTTP request after 214.8344ms - 200
+[14:54:33 INF] Executed ViewResult - view Explore executed in 710.3355ms.
+[14:54:33 INF] Executed action StockAppAssignment.Controllers.StocksController.Explore (StockAppAssignment) in 5985.5539ms
+[14:54:33 INF] Executed endpoint 'StockAppAssignment.Controllers.StocksController.Explore (StockAppAssignment)'
+[14:54:33 INF] Request finished HTTP/1.1 GET http://localhost:5050/ - 200 null text/html; charset=utf-8 6161.5771ms
+[14:54:33 INF] Request starting HTTP/1.1 GET http://localhost:5050/lib/bootstrap/dist/css/bootstrap.min.css - null null
+[14:54:33 INF] Request starting HTTP/1.1 GET http://localhost:5050/css/site.css?v=XsmX_mdUNERPcnRbfUIteuMZcifFHZ5okDNy3BIz0SE - null null
+[14:54:33 INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'E:\Programming\Harsha\ASP-NET-HARSHA\StockApp\StockAppWithConfiguration\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+[14:54:33 INF] Sending file. Request path: '/css/site.css'. Physical path: 'E:\Programming\Harsha\ASP-NET-HARSHA\StockApp\StockAppWithConfiguration\wwwroot\css\site.css'
+[14:54:33 INF] Request finished HTTP/1.1 GET http://localhost:5050/css/site.css?v=XsmX_mdUNERPcnRbfUIteuMZcifFHZ5okDNy3BIz0SE - 200 4573 text/css 124.3468ms
+[14:54:33 INF] Request finished HTTP/1.1 GET http://localhost:5050/lib/bootstrap/dist/css/bootstrap.min.css - 200 162726 text/css 125.6994ms
+[14:54:33 INF] Request starting HTTP/1.1 GET http://localhost:5050/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+[14:54:33 INF] Request starting HTTP/1.1 GET http://localhost:5050/StockAppWithConfiguration.styles.css - null null
+[14:54:33 INF] Request starting HTTP/1.1 GET http://localhost:5050/lib/jquery/dist/jquery.min.js - null null
+[14:54:33 INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'E:\Programming\Harsha\ASP-NET-HARSHA\StockApp\StockAppWithConfiguration\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+[14:54:33 INF] Request finished HTTP/1.1 GET http://localhost:5050/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 78474 text/javascript 63.3835ms
+[14:54:33 INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'E:\Programming\Harsha\ASP-NET-HARSHA\StockApp\StockAppWithConfiguration\wwwroot\lib\jquery\dist\jquery.min.js'
+[14:54:33 INF] Request finished HTTP/1.1 GET http://localhost:5050/StockAppWithConfiguration.styles.css - 404 0 null 15.1295ms
+[14:54:33 INF] Request finished HTTP/1.1 GET http://localhost:5050/lib/jquery/dist/jquery.min.js - 200 89503 text/javascript 65.6419ms
+[14:54:33 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5050/StockAppWithConfiguration.styles.css, Response status code: 404
+[14:54:33 INF] Request starting HTTP/1.1 GET http://localhost:5050/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+[14:54:33 INF] Sending file. Request path: '/js/site.js'. Physical path: 'E:\Programming\Harsha\ASP-NET-HARSHA\StockApp\StockAppWithConfiguration\wwwroot\js\site.js'
+[14:54:33 INF] Request finished HTTP/1.1 GET http://localhost:5050/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 231 text/javascript 18.3572ms
+[14:54:34 INF] Request starting HTTP/1.1 GET http://localhost:5050/favicon.ico - null null
+[14:54:34 INF] Sending file. Request path: '/favicon.ico'. Physical path: 'E:\Programming\Harsha\ASP-NET-HARSHA\StockApp\StockAppWithConfiguration\wwwroot\favicon.ico'
+[14:54:34 INF] Request finished HTTP/1.1 GET http://localhost:5050/favicon.ico - 200 5430 image/x-icon 27.1594ms
+[14:54:41 INF] Request starting HTTP/1.1 GET http://localhost:5050/Trade/Index - null null
+[14:54:41 INF] Executing endpoint 'StockAppAssignment.Controllers.TradeController.Index (StockAppAssignment)'
+[14:54:42 INF] Route matched with {action = "Index", controller = "Trade"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller StockAppAssignment.Controllers.TradeController (StockAppAssignment).
+[14:54:42 INF] TradeController.Index called with stockSymbol: null
+[14:54:42 INF] Getting company profile for MSFT
+[14:54:42 INF] Start processing HTTP request GET https://finnhub.io/api/v1/stock/profile2?*
+[14:54:42 INF] Sending HTTP request GET https://finnhub.io/api/v1/stock/profile2?*
+[14:54:43 INF] Received HTTP response headers after 181.56ms - 200
+[14:54:43 INF] End processing HTTP request after 188.3829ms - 200
+[14:54:43 INF] Getting stock price quote for MSFT
+[14:54:43 INF] Start processing HTTP request GET https://finnhub.io/api/v1/quote?*
+[14:54:43 INF] Sending HTTP request GET https://finnhub.io/api/v1/quote?*
+[14:54:43 INF] Received HTTP response headers after 185.859ms - 200
+[14:54:43 INF] End processing HTTP request after 193.5886ms - 200
+[14:54:43 INF] Executing ViewResult, running view Index.
+[14:54:43 INF] Executed ViewResult - view Index executed in 22.6802ms.
+[14:54:43 INF] Executed action StockAppAssignment.Controllers.TradeController.Index (StockAppAssignment) in 1234.9197ms
+[14:54:43 INF] Executed endpoint 'StockAppAssignment.Controllers.TradeController.Index (StockAppAssignment)'
+[14:54:43 INF] Request finished HTTP/1.1 GET http://localhost:5050/Trade/Index - 200 null text/html; charset=utf-8 1261.5714ms
+[14:54:43 INF] Request starting HTTP/1.1 GET http://localhost:5050/StockAppWithConfiguration.styles.css - null null
+[14:54:43 INF] Request finished HTTP/1.1 GET http://localhost:5050/StockAppWithConfiguration.styles.css - 404 0 null 4.8495ms
+[14:54:43 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5050/StockAppWithConfiguration.styles.css, Response status code: 404
+[14:54:47 INF] Request starting HTTP/1.1 GET http://localhost:5050/Trade - null null
+[14:54:47 INF] Executing endpoint 'StockAppAssignment.Controllers.TradeController.Orders (StockAppAssignment)'
+[14:54:47 INF] Route matched with {action = "Orders", controller = "Trade"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Orders() on controller StockAppAssignment.Controllers.TradeController (StockAppAssignment).
+[14:54:47 INF] Retrieving all buy orders.
+[14:54:50 INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BuyOrderID], [b].[DateAndTimeOfOrder], [b].[Price], [b].[Quantity], [b].[StockName], [b].[StockSymbol]
+FROM [BuyOrders] AS [b]
+[14:54:51 INF] Retrieving all sell orders.
+[14:54:51 INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[SellOrderID], [s].[DateAndTimeOfOrder], [s].[Price], [s].[Quantity], [s].[StockName], [s].[StockSymbol]
+FROM [SellOrders] AS [s]
+[14:54:51 INF] Executing ViewResult, running view Orders.
+[14:54:51 INF] Executed ViewResult - view Orders executed in 33.4748ms.
+[14:54:51 INF] Executed action StockAppAssignment.Controllers.TradeController.Orders (StockAppAssignment) in 3801.7167ms
+[14:54:51 INF] Executed endpoint 'StockAppAssignment.Controllers.TradeController.Orders (StockAppAssignment)'
+[14:54:51 INF] Request finished HTTP/1.1 GET http://localhost:5050/Trade - 200 null text/html; charset=utf-8 3838.8345ms
+[14:54:51 INF] Request starting HTTP/1.1 GET http://localhost:5050/StockAppWithConfiguration.styles.css - null null
+[14:54:51 INF] Request finished HTTP/1.1 GET http://localhost:5050/StockAppWithConfiguration.styles.css - 404 0 null 5.9589ms
+[14:54:51 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5050/StockAppWithConfiguration.styles.css, Response status code: 404
+[14:55:04 INF] Application is shutting down...
+[15:11:39 INF] User profile is available. Using 'C:\Users\KF9\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[15:11:39 INF] Now listening on: http://localhost:5050
+[15:11:39 INF] Application started. Press Ctrl+C to shut down.
+[15:11:39 INF] Hosting environment: Development
+[15:11:39 INF] Content root path: E:\Programming\Harsha\ASP-NET-HARSHA\StockApp\StockAppWithConfiguration
+[15:12:25 INF] Request starting HTTP/1.1 GET http://localhost:5050/ - null null
+[15:12:25 WRN] Failed to determine the https port for redirect.
+[15:12:25 INF] Executing endpoint 'StockAppAssignment.Controllers.StocksController.Explore (StockAppAssignment)'
+[15:12:25 INF] Route matched with {action = "Explore", controller = "Stocks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Explore(System.String) on controller StockAppAssignment.Controllers.StocksController (StockAppAssignment).
+[15:12:25 INF] Getting list of stocks
+[15:12:25 INF] Start processing HTTP request GET https://finnhub.io/api/v1/stock/symbol?*
+[15:12:25 INF] Sending HTTP request GET https://finnhub.io/api/v1/stock/symbol?*
+[15:12:27 INF] Received HTTP response headers after 1272.8309ms - 200
+[15:12:27 INF] End processing HTTP request after 1302.5226ms - 200
+[15:12:31 INF] Executing ViewResult, running view Explore.
+[15:12:31 INF] Getting company profile for AAPL
+[15:12:31 INF] Start processing HTTP request GET https://finnhub.io/api/v1/stock/profile2?*
+[15:12:31 INF] Sending HTTP request GET https://finnhub.io/api/v1/stock/profile2?*
+[15:12:31 INF] Received HTTP response headers after 182.1836ms - 200
+[15:12:31 INF] End processing HTTP request after 188.0879ms - 200
+[15:12:31 INF] Getting stock price quote for AAPL
+[15:12:31 INF] Start processing HTTP request GET https://finnhub.io/api/v1/quote?*
+[15:12:31 INF] Sending HTTP request GET https://finnhub.io/api/v1/quote?*
+[15:12:31 INF] Received HTTP response headers after 194.4545ms - 200
+[15:12:31 INF] End processing HTTP request after 201.3837ms - 200
+[15:12:31 INF] Executed ViewResult - view Explore executed in 595.6827ms.
+[15:12:31 INF] Executed action StockAppAssignment.Controllers.StocksController.Explore (StockAppAssignment) in 5895.9256ms
+[15:12:31 INF] Executed endpoint 'StockAppAssignment.Controllers.StocksController.Explore (StockAppAssignment)'
+[15:12:31 INF] Request finished HTTP/1.1 GET http://localhost:5050/ - 200 null text/html; charset=utf-8 6059.0211ms
+[15:12:31 INF] Request starting HTTP/1.1 GET http://localhost:5050/StockAppWithConfiguration.styles.css - null null
+[15:12:31 INF] Request starting HTTP/1.1 GET http://localhost:5050/css/site.css?v=XsmX_mdUNERPcnRbfUIteuMZcifFHZ5okDNy3BIz0SE - null null
+[15:12:31 INF] Request starting HTTP/1.1 GET http://localhost:5050/lib/jquery/dist/jquery.min.js - null null
+[15:12:31 INF] Request starting HTTP/1.1 GET http://localhost:5050/lib/bootstrap/dist/css/bootstrap.min.css - null null
+[15:12:31 INF] Request finished HTTP/1.1 GET http://localhost:5050/StockAppWithConfiguration.styles.css - 404 0 null 65.977ms
+[15:12:31 INF] Request starting HTTP/1.1 GET http://localhost:5050/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+[15:12:31 INF] Request starting HTTP/1.1 GET http://localhost:5050/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+[15:12:31 INF] The file /css/site.css was not modified
+[15:12:31 INF] The file /lib/jquery/dist/jquery.min.js was not modified
+[15:12:31 INF] The file /lib/bootstrap/dist/css/bootstrap.min.css was not modified
+[15:12:31 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5050/StockAppWithConfiguration.styles.css, Response status code: 404
+[15:12:31 INF] The file /lib/bootstrap/dist/js/bootstrap.bundle.min.js was not modified
+[15:12:31 INF] The file /js/site.js was not modified
+[15:12:31 INF] Request finished HTTP/1.1 GET http://localhost:5050/css/site.css?v=XsmX_mdUNERPcnRbfUIteuMZcifFHZ5okDNy3BIz0SE - 304 null text/css 258.5142ms
+[15:12:31 INF] Request finished HTTP/1.1 GET http://localhost:5050/lib/jquery/dist/jquery.min.js - 304 null text/javascript 252.7014ms
+[15:12:31 INF] Request finished HTTP/1.1 GET http://localhost:5050/lib/bootstrap/dist/css/bootstrap.min.css - 304 null text/css 221.0652ms
+[15:12:31 INF] Request finished HTTP/1.1 GET http://localhost:5050/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 304 null text/javascript 138.4535ms
+[15:12:31 INF] Request finished HTTP/1.1 GET http://localhost:5050/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 304 null text/javascript 137.6132ms
+[15:12:32 INF] Request starting HTTP/1.1 GET http://localhost:5050/favicon.ico - null null
+[15:12:32 INF] The file /favicon.ico was not modified
+[15:12:32 INF] Request finished HTTP/1.1 GET http://localhost:5050/favicon.ico - 304 null image/x-icon 12.5203ms
+[15:12:39 INF] Application is shutting down...
