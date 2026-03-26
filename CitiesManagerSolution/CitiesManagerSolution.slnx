@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Citiesmanager.Core/Citiesmanager.Core.csproj" Id="f0c68ac7-1865-43c2-9ddd-b17c85d22b56" />
+  <Project Path="CitiesManager.Infrastructure/CitiesManager.Infrastructure.csproj" Id="0f7b22bc-8503-460a-934e-f08af6af51f7" />
+  <Project Path="CitiesManager.WebApi/CitiesManager.WebApi.csproj" />
+</Solution>
