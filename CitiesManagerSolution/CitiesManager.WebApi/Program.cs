@@ -1,53 +1,8 @@
-using Asp.Versioning;
-using CitiesManager.Infrastructure.Data;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.OpenApi;
+using CitiesManager.WebApi.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddApiVersioning(config =>
-{
-    config.ApiVersionReader = new UrlSegmentApiVersionReader();
-    //config.ApiVersionReader = new QueryStringApiVersionReader(); 
-
-    // for the query string versioning  
-    config.AssumeDefaultVersionWhenUnspecified = true;
-    config.DefaultApiVersion = new ApiVersion(1, 0);
-}).AddMvc()
-.AddApiExplorer(options =>
-{
-    options.GroupNameFormat = "'v'VVV";
-    options.SubstituteApiVersionInUrl = true;
-});
-
-builder.Services.AddControllers();
-
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(options =>
-{
-    options.SwaggerDoc("v1", new OpenApiInfo()
-    {
-        Version = "v1",
-        Title = "Cities Manager API v1"
-    });
-    options.SwaggerDoc("v2", new OpenApiInfo()
-    {
-        Version = "v2",
-        Title = "Cities Manager API v2"
-    });
-});
-
-builder.Services.AddCors(options =>
-{
-    options.AddDefaultPolicy(policyBuilder =>
-    {
-        policyBuilder.WithOrigins(builder.Configuration.GetSection("AllowedOrigins").Get<string[]>()); 
-    });
-});
+builder.Services.ConfigureServices(builder.Configuration);
 
 var app = builder.Build();
 
@@ -65,6 +20,7 @@ app.UseSwaggerUI(options =>
     options.SwaggerEndpoint("/swagger/v2/swagger.json", "2.0");
 });
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
